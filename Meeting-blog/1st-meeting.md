@@ -1,4 +1,4 @@
-## WEEKLY REPORT | 07.04.2020
+## WEEKLY REPORT | 07.04.2020.
 
 ## 1-Last Week Goals 
 

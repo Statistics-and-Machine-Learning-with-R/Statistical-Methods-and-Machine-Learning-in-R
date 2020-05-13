@@ -1,0 +1,165 @@
+#-------------------------------------------------------------------------------------------------------------
+# Cleaning the workspace
+#-------------------------------------------------------------------------------------------------------------
+cat("\f")       # Clear old outputs
+rm(list=ls())   # Clear all variables
+
+#-------------------------------------------------------------------------------------------------------------
+# HEADER OF THE SOFTWARE OUTPUT
+#-------------------------------------------------------------------------------------------------------------
+sourceAuthor  <-  "Karen Gille/Robert Heyer/Abdullah Rizvi"
+sourceDate    <-  "12.05.2020"
+sourceVersion <-  "1.0.1"
+# Info about the software
+print(paste("Info"), quote = FALSE)
+print(paste("Date", sourceDate), quote = FALSE)
+print(paste("Version", sourceVersion), quote = FALSE)
+print(paste("Author", sourceAuthor), quote = FALSE)
+
+#*****Install Packages*****************************************************************************************
+# While the first run certain subpackages have to be installed'
+# *************************************************************************************************************
+# Package for package administration
+if(!require("miniCRAN")) install.packages("miniCRAN") 
+
+# Package for a layout theme for the violone plots
+if(!require("dplyr")) install.packages("dplyr") 
+
+# Required for DUNN Posthoc test for Kruskall Wallis
+if(!require("FSA")) install.packages("FSA") 
+
+# Add the associated libraries to the programm
+library("miniCRAN")
+library("dplyr")
+library("FSA")
+# *************************************************************************************************************
+
+################################################
+# MAIN 
+################################################
+
+#************************************************
+# Declaration of parameters 
+SEPARATOR = ";"  # Separator within the csv.-files
+
+# Output path
+outputname = "RESULTS_ANOVA.csv"
+# or
+outputname = "C:\\Users\\abdullah.rizvi\\Desktop\\Studies\\DE Project Meta_Prot_Stat\\results\\R1.csv"
+
+# Define start and end row of each group
+# Number of columns starting with column 1 (First column with row labels is ignored)
+x_Group_start  <- 1 # Start Group 1
+x_Group_end    <- 12 # End Group 1
+y_Group_start  <- 13 # Start Group 2
+y_Group_end    <- 47 # End Group 2
+z_Group_start  <- 48 # Start Group 3
+z_Group_end    <- 66 # End Group 3
+#************************************************
+
+#------------------------------------------------
+# METHODS: 1. Gets the matrix
+#------------------------------------------------
+# Start Filechoose
+print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
+fname <- file.choose() 
+matrix <- read.csv(fname, sep=SEPARATOR,row.names=1) 
+
+#--------------------------------------------------
+# Methods: 2. Calculates Anova and Kruskall Walles
+#--------------------------------------------------
+
+# Create a vector representing the assignment of the samples to the 3 groups as "1", "2" and "3" 
+groups <- rep(1:3,c(x_Group_end - x_Group_start + 1 ,y_Group_end - y_Group_start + 1, z_Group_end - z_Group_start + 1))
+groups <- factor(groups)
+
+# Create new output vectors for the results
+EMPTY                   <-  (rep("",nrow(matrix))) # + 1
+average                 <-  (rep(0, nrow(matrix))) # + 2
+average_group_1         <-  (rep(0, nrow(matrix))) # + 3
+average_group_2         <-  (rep(0, nrow(matrix))) # + 4
+average_group_3         <-  (rep(0, nrow(matrix))) # + 5
+
+result_anova            <-  (rep(0, nrow(matrix))) # + 7
+anova_2_1_diff_mean     <-  (rep(0, nrow(matrix))) # + 8
+anova_2_1_padj          <-  (rep(0, nrow(matrix))) # + 9
+anova_3_1_diff_mean     <-  (rep(0, nrow(matrix))) # + 10
+anova_3_1_padj          <-  (rep(0, nrow(matrix))) # + 11
+anova_3_2_diff_mean     <-  (rep(0, nrow(matrix))) # + 12
+anova_3_2_padj          <-  (rep(0, nrow(matrix))) # + 13
+
+result_kruskal_wallis   <-  (rep(0, nrow(matrix))) # + 15
+kruskall_1_2_padj       <-  (rep(0, nrow(matrix))) # + 16
+kruskall_1_3_padj       <-  (rep(0, nrow(matrix))) # + 17
+kruskall_2_3_padj       <-  (rep(0, nrow(matrix))) # + 18
+
+# Combined it to the output matrix
+Resulting_Matrix <- cbind( matrix,
+                    EMPTY, 
+                    average,
+                    average_group_1,
+                    average_group_2,
+                    average_group_3,
+                    EMPTY,
+                    result_anova,
+                    anova_2_1_diff_mean,
+                    anova_2_1_padj,
+                    anova_3_1_diff_mean,
+                    anova_3_1_padj,
+                    anova_3_2_diff_mean,
+                    anova_3_2_padj,
+                    EMPTY,
+                    result_kruskal_wallis,
+                    kruskall_1_2_padj,
+                    kruskall_1_3_padj,
+                    kruskall_2_3_padj)
+
+# Calculate the anova for all variables
+for (i in 1:nrow(matrix)) {
+  # Calculates the total and the group averages
+  Resulting_Matrix[i,ncol(matrix) + 2] <- mean( as.numeric( matrix[i, 1 : ncol(matrix)] ))
+  Resulting_Matrix[i,ncol(matrix) + 3] <- mean( as.numeric( matrix[i, x_Group_start : x_Group_end] ))
+  Resulting_Matrix[i,ncol(matrix) + 4] <- mean( as.numeric( matrix[i, y_Group_start : y_Group_end] ))
+  Resulting_Matrix[i,ncol(matrix) + 5] <- mean( as.numeric( matrix[i, z_Group_start : z_Group_end] ))
+  
+  # Calculates ANOVA 
+  anova <- aov(as.numeric(matrix[i,1:ncol(matrix)])  ~  groups  , data = matrix) 
+  Resulting_Matrix[i,ncol(matrix) + 7] <- unlist(summary(anova))["Pr(>F)1"]
+  # Post-hoc test: tukey test to check differences between the groups
+  tukey <- TukeyHSD(aov(as.numeric(matrix[i,1:ncol(matrix)])  ~  groups  , data = matrix))
+  tukey <- as.data.frame(tukey[1])
+  
+  # Add for comparisons differences of mean and adjusted p-value
+  Resulting_Matrix[i,ncol(matrix) + 8] =tukey[1,1]
+  Resulting_Matrix[i,ncol(matrix) + 9] =tukey[1,4]
+  Resulting_Matrix[i,ncol(matrix) + 10] =tukey[2,1]
+  Resulting_Matrix[i,ncol(matrix) + 11] =tukey[2,4]
+  Resulting_Matrix[i,ncol(matrix) + 12] =tukey[3,1]
+  Resulting_Matrix[i,ncol(matrix) + 13] =tukey[3,4]
+  
+  # Calculate Kruskall Walles  
+  kruskal <- kruskal.test(as.numeric(matrix[i,1:ncol(matrix)]) ~ groups, data = matrix)
+  Resulting_Matrix[i,ncol(matrix) + 15] <- kruskal["p.value"]
+  # Post-hoc test: DUNN Test
+  dunn <- dunnTest(as.numeric(matrix[i,1:ncol(matrix)]) ~ groups, data = matrix, method ="none")
+  dunn.res <- as.data.frame(dunn[2])
+  Resulting_Matrix[i,ncol(matrix) + 16] =dunn.res[1,4]
+  Resulting_Matrix[i,ncol(matrix) + 17] =dunn.res[2,4]
+  Resulting_Matrix[i,ncol(matrix) + 18] =dunn.res[3,4]
+}
+
+
+#--------------------------------------------------
+# Methods: 3. Export the results
+#--------------------------------------------------
+# https://stat.ethz.ch/R-manual/R-devel/library/utils/html/write.table.html
+write.table(Resulting_Matrix, file = paste(outputname), append = FALSE, quote = TRUE, sep = ";",
+            eol = "\n", na = "NA", dec = ".", row.names = TRUE,
+            col.names = NA, qmethod = c("escape", "double"),
+            fileEncoding = "")
+
+#--------------------------------------------------
+# Methods: 3. Finish
+#--------------------------------------------------
+print(paste("FINISHED"), quote = FALSE)
+

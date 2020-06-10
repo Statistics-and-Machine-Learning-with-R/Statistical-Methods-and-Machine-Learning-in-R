@@ -25,6 +25,6 @@
 * Provide Training session on 
   * ANOSIM & PERMANOVA
   * ANOVA & Kruskal-Wallis-Test
-* Reconstruct our tutorial structurel 
+* Reconstruct our tutorial structure 
  
 

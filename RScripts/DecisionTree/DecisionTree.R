@@ -35,7 +35,7 @@ View(TrainingSet)
 View(TestingSet)
 
 # Using rpart Function for Making the Tree
-#mytree <- rpart(Result ~ Wealth + Biology + History + Litrature + State + City   , data = my_data, method = "class" )
+#mytree <- rpart(Result ~ Wealth + Biology + History + Litrature + State + City   , data = my_data, method = "class", split = "information gain" )
 mytree <- rpart(Result ~ Mathematics + Biology + History + Litrature + State + City + Wealth  , data = TrainingSet)
 mytree
 
@@ -60,6 +60,6 @@ printcp(mytree)
 
 
 #Predicting Output
-testing$PassClass <- predict(mytree, newdata = testing, type = "class")
-testing$Prob <- predict(mytree, newdata = testing, type = "prob")
-testing
+TestingSet$PassClass <- predict(mytree, newdata = TestingSet, type = "class")
+TestingSet$Prob <- predict(mytree, newdata = TestingSet, type = "prob")
+TestingSet

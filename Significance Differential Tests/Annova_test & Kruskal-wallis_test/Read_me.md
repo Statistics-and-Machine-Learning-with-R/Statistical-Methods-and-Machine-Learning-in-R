@@ -7,14 +7,14 @@ The one-way analysis of variance (ANOVA) is used to determine whether there are 
 
   The main package for used for this test is "FSA" Package. 
   
-  Usage:
+  **Usage:**<br/>
   aov(formula, data = NULL, projections = FALSE, qr = TRUE,
     contrasts = NULL, ...)
        
-  * Parameters:
+  **Arguments:**
   
-  formula: a formula specifying the model. <br/>
-  data: a data frame in which the variables specified in the formula will be found. If missing, the variables are searched for in the standard way.
+  **formula:** a formula specifying the model. <br/>
+  **data:** a data frame in which the variables specified in the formula will be found. If missing, the variables are searched for in the standard way.
 
 
 
@@ -22,15 +22,15 @@ The one-way analysis of variance (ANOVA) is used to determine whether there are 
 In statistics, the Mann–Whitney U test is a nonparametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater than X.
 
 #### ABOUT PACKAGE
- Usage:
+ **Usage:**<br/>
  kruskal.test(x, ...)
            
- * Parameters:
+ **Arguments:**
 
-x: a numeric vector of data values, or a list of numeric data vectors. Non-numeric elements of a list will be coerced, with a warning.<br/>
-g: a vector or factor object giving the group for the corresponding elements of x. Ignored with a warning if x is a list.<br/>
-formula: a formula of the form response ~ group where response gives the data values and group a vector or factor of the corresponding groups.<br/>
-data: an optional matrix or data frame (or similar: see model.frame) containing the variables in the formula formula. By default the variables are taken from environment(formula).
+**x:** a numeric vector of data values, or a list of numeric data vectors. Non-numeric elements of a list will be coerced, with a warning.<br/>
+**g:** a vector or factor object giving the group for the corresponding elements of x. Ignored with a warning if x is a list.<br/>
+**formula:** a formula of the form response ~ group where response gives the data values and group a vector or factor of the corresponding groups.<br/>
+**data:** an optional matrix or data frame (or similar: see model.frame) containing the variables in the formula formula. By default the variables are taken from environment(formula).
 
 
 

@@ -12,12 +12,12 @@ The ANOSIM test is similar to an ANOVA hypothesis test, but it uses a dissimilar
        
   Arguments:
 
-  dat:          Data matrix or data frame in which rows are samples and columns are response variable(s), or a dissimilarity object or a symmetric square matrix of                               dissimilarities.
-  grouping:     Factor for grouping observations.
-  permutations: a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation matrix where each row                     gives the permuted indices. We are just giving the script number of permutations
-  distance:     Choice of distance metric that measures the dissimilarity between two observations. See vegdist for options. This will be used if dat was not a dissimilarity                     structure or a symmetr
-  strata:       An integer vector or factor specifying the strata for permutation. If supplied, observations are permuted only within the specified strata.
-  parallel:     Number of parallel processes or a predefined socket cluster. With parallel = 1 uses ordinary, non-parallel processing. The parallel processing is done with                       parallel package.
+  dat:          Data matrix or data frame in which rows are samples and columns are response variable(s), or a dissimilarity object or a symmetric square matrix of                               dissimilarities. <br />
+  grouping:     Factor for grouping observations.<br />
+  permutations: a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation matrix where each row                     gives the permuted indices. We are just giving the script number of permutations.<br />
+  distance:     Choice of distance metric that measures the dissimilarity between two observations. See vegdist for options. This will be used if dat was not a dissimilarity                     structure or a symmetr.<br />
+  strata:       An integer vector or factor specifying the strata for permutation. If supplied, observations are permuted only within the specified strata.<br />
+  parallel:     Number of parallel processes or a predefined socket cluster. With parallel = 1 uses ordinary, non-parallel processing. The parallel processing is done with                       parallel package.<br />
 
 
 

@@ -6,18 +6,18 @@ The ANOSIM test is similar to an ANOVA hypothesis test, but it uses a dissimilar
 
 #### ABOUT PACKAGE
 
-  Usage:
+  **Usage:
   anosim(dat, grouping, permutations = 999, distance = "bray", strata = NULL,
-    parallel = getOption("mc.cores"))
+    parallel = getOption("mc.cores"))**
        
-  Arguments:
+  **Arguments:**
 
-  dat:          Data matrix or data frame in which rows are samples and columns are response variable(s), or a dissimilarity object or a symmetric square matrix of                               dissimilarities. <br />
-  grouping:     Factor for grouping observations.<br />
-  permutations: a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation matrix where each row                     gives the permuted indices. We are just giving the script number of permutations.<br />
-  distance:     Choice of distance metric that measures the dissimilarity between two observations. See vegdist for options. This will be used if dat was not a dissimilarity                     structure or a symmetr.<br />
-  strata:       An integer vector or factor specifying the strata for permutation. If supplied, observations are permuted only within the specified strata.<br />
-  parallel:     Number of parallel processes or a predefined socket cluster. With parallel = 1 uses ordinary, non-parallel processing. The parallel processing is done with                       parallel package.<br />
+  **dat:**          Data matrix or data frame in which rows are samples and columns are response variable(s), or a dissimilarity object or a symmetric square matrix of                               dissimilarities. <br />
+  **grouping:**     Factor for grouping observations.<br />
+  **permutations:** a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation matrix where each row                     gives the permuted indices. We are just giving the script number of permutations.<br />
+  **distance:**     Choice of distance metric that measures the dissimilarity between two observations. See vegdist for options. This will be used if dat was not a dissimilarity                     structure or a symmetr.<br />
+  **strata:**       An integer vector or factor specifying the strata for permutation. If supplied, observations are permuted only within the specified strata.<br />
+  **parallel:**     Number of parallel processes or a predefined socket cluster. With parallel = 1 uses ordinary, non-parallel processing. The parallel processing is done with                       parallel package.<br />
 
 
 
@@ -26,21 +26,21 @@ PERMANOVA is a Multivariate ANOVA with permutations. It is meant to test differe
 PERMANOVA tests whether distances differ between groups.
 
 #### ABOUT PACKAGE
- Usage:
+ **Usage:
  adonis(formula, data, permutations = 999, method = "bray",
        strata = NULL, contr.unordered = "contr.sum",
-       contr.ordered = "contr.poly", parallel = getOption("mc.cores"), ...)
+       contr.ordered = "contr.poly", parallel = getOption("mc.cores"), ...)**
            
- Arguments:
+ **Arguments:**
  
- formula:                        a typical model formula such as Y ~ A + B*C, but where Y is either a dissimilarity object (inheriting from class "dist") or data frame or a                                      matrix; A, B, and C may be factors or continuous variables. If a dissimilarity object is supplied, no species coefficients can be calculated 
- data:                           the data frame from which A, B, and C would be drawn.
- permutations:                   a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation matrix                                    where each row gives the permuted indices. We are just giving the script number of permutations.<br />
- strata:                         An integer vector or factor specifying the strata for permutation. If given, observations are permuted only within the specified strata.<br />
- method:                         the name of any method used in vegdist to calculate pairwise distances if the left hand side of the formula was a data frame or a matrix..<br />
- contr.unordered, contr.ordered: contrasts used for the design matrix (default in R is dummy or treatment contrasts for unordered factors)..<br />
- parallel:                       Number of parallel processes or a predefined socket cluster. With parallel = 1 uses ordinary, non-parallel processing. The parallel processing                                    is done with parallel package.<br />
- ...                             Other arguments passed to vegdist.
+ **formula:**                        a typical model formula such as Y ~ A + B*C, but where Y is either a dissimilarity object (inheriting from class "dist") or data frame or a                                      matrix; A, B, and C may be factors or continuous variables. If a dissimilarity object is supplied, no species coefficients can be calculated 
+ **data:**                           the data frame from which A, B, and C would be drawn.
+ **permutations:**                   a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation                                          matrix where each row gives the permuted indices. We are just giving the script number of permutations.<br />
+ **strata:**                         An integer vector specifying the strata for permutation. If given, observations are permuted only within the specified strata.<br />
+ **method:**                         the name of any method used in vegdist to calculate pairwise distances.<br />
+ **contr.unordered, contr.ordered:** contrasts used for the design matrix (default in R is dummy or treatment contrasts for unordered factors)..<br />
+ **parallel:**                       Number of parallel processes or a predefined socket cluster. With parallel = 1 uses ordinary, non-parallel processing. The parallel                                              processing is done with parallel package.<br />
+ **...**                             Other arguments passed to vegdist.
 
 
 

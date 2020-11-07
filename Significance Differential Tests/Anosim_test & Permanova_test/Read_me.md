@@ -1,27 +1,18 @@
 # 
 ## ABOUT TESTS
 ### ANOSIM-TEST
-The ANOSIM test is similar to an ANOVA hypothesis test, but it uses a dissimilarity matrix as input instead of raw data. It is also non-parametric, meaning it doesn’t assume much about your data (like normal distribution etc), so it’s a good bet for often-skewed microbial abundance data. As a non-parametric test, ANOSIM uses ranked dissimilarities instead of actual distances. 
-
-
-* t is the t-test statistic value
-* df is the degrees of freedom
-* p-value is the significance level of the t-test 
-* conf.int is the confidence interval of the mean at 95%
-* sample estimates is he mean value of the sample
+The ANOSIM test is similar to an ANOVA hypothesis test, but it uses a dissimilarity matrix as input instead of raw data. It is also non-parametric, meaning it doesn’t assume much about your data (like normal distribution etc), so it’s a good bet for often-skewed microbial abundance data. As a non-parametric test, ANOSIM uses ranked dissimilarities instead of actual distances. The main point of the ANOSIM test is to determine if the differences between two or more groups are significant. We are performing ANOSIM-Test and PERMANOVA-Test on 'Input_file_Anosim&Permanova' and their Groupings using 'Groupings_file_Anosim&Permanova' , provided with the code.
 
 
 #### ABOUT PACKAGE
 
   Usage:
-  t.test(x, y = NULL,
-       alternative = c("two.sided", "less", "greater"),
-       mu = 0, paired = FALSE, var.equal = FALSE,
-       conf.level = 0.95, ...)
+  anosim(dat, grouping, permutations = 999, distance = "bray", strata = NULL,
+    parallel = getOption("mc.cores"))
        
-  Parameters:
+  Arguments:
 
-  x: a (non-empty) numeric vector of data values.
+  dat: Data matrix or data frame in which rows are samples and columns are response variable(s), or a dissimilarity object or a symmetric square matrix of dissimilarities.
   y: an optional (non-empty) numeric vector of data values.
   data: an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
 

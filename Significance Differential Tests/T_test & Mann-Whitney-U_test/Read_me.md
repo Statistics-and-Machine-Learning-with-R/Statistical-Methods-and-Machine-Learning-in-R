@@ -19,9 +19,9 @@ The t-test is any statistical hypothesis test in which the test statistic follow
        conf.level = 0.95, ...)
        
   Parameters:
-
-  x: a (non-empty) numeric vector of data values.
-  y: an optional (non-empty) numeric vector of data values.
+  
+  x: a (non-empty) numeric vector of data values.<br/>
+  y: an optional (non-empty) numeric vector of data values.<br/>
   data: an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
 
 
@@ -38,8 +38,9 @@ In statistics, the Mann–Whitney U test is a nonparametric test of the null hyp
             tol.root = 1e-4, digits.rank = Inf, ...)
            
  Parameters:
- x:numeric vector of data values. Non-finite (e.g., infinite or missing) values will be omitted.
- y: an optional numeric vector of data values: as with x non-finite values will be omitted.
+ 
+ x: numeric vector of data values. Non-finite (e.g., infinite or missing) values will be omitted.<br/>
+ y: an optional numeric vector of data values: as with x non-finite values will be omitted.<br/>
  data: an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
 
 

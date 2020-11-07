@@ -6,9 +6,9 @@ The ANOSIM test is similar to an ANOVA hypothesis test, but it uses a dissimilar
 
 #### ABOUT PACKAGE
 
-  **Usage:
+  **Usage:**<br/>
   anosim(dat, grouping, permutations = 999, distance = "bray", strata = NULL,
-    parallel = getOption("mc.cores"))**
+    parallel = getOption("mc.cores"))
        
   **Arguments:**
 
@@ -26,10 +26,10 @@ PERMANOVA is a Multivariate ANOVA with permutations. It is meant to test differe
 PERMANOVA tests whether distances differ between groups.
 
 #### ABOUT PACKAGE
- **Usage:
+ **Usage:**<br/>
  adonis(formula, data, permutations = 999, method = "bray",
        strata = NULL, contr.unordered = "contr.sum",
-       contr.ordered = "contr.poly", parallel = getOption("mc.cores"), ...)**
+       contr.ordered = "contr.poly", parallel = getOption("mc.cores"), ...)
            
  **Arguments:**
  

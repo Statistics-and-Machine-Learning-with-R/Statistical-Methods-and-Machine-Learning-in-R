@@ -22,25 +22,28 @@ The ANOSIM test is similar to an ANOVA hypothesis test, but it uses a dissimilar
 
 
 ### PERMANOVA-TEST
-In statistics, the Mann–Whitney U test is a nonparametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater than X.
+PERMANOVA is a Multivariate ANOVA with permutations. It is meant to test differences between groups like an ANOVA test, but with a lot of variables.
+PERMANOVA tests whether distances differ between groups.
 
 #### ABOUT PACKAGE
  Usage:
- wilcox.test(x, y = NULL,
-            alternative = c("two.sided", "less", "greater"),
-            mu = 0, paired = FALSE, exact = NULL, correct = TRUE,
-            conf.int = FALSE, conf.level = 0.95,
-            tol.root = 1e-4, digits.rank = Inf, ...)
+ adonis(formula, data, permutations = 999, method = "bray",
+       strata = NULL, contr.unordered = "contr.sum",
+       contr.ordered = "contr.poly", parallel = getOption("mc.cores"), ...)
            
- Parameters:
- x:numeric vector of data values. Non-finite (e.g., infinite or missing) values will be omitted.
- y: an optional numeric vector of data values: as with x non-finite values will be omitted.
- data: an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
-
+ Arguments:
+ formula:                        a typical model formula such as Y ~ A + B*C, but where Y is either a dissimilarity object (inheriting from class "dist") or data frame or a                                      matrix; A, B, and C may be factors or continuous variables. If a dissimilarity object is supplied, no species coefficients can be calculated 
+ data:                           the data frame from which A, B, and C would be drawn.
+ permutations:                   a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation matrix                                    where each row gives the permuted indices. We are just giving the script number of permutations.<br />
+ strata:                         An integer vector or factor specifying the strata for permutation. If given, observations are permuted only within the specified strata.<br />
+ method:                         the name of any method used in vegdist to calculate pairwise distances if the left hand side of the formula was a data frame or a matrix..<br />
+ contr.unordered, contr.ordered: contrasts used for the design matrix (default in R is dummy or treatment contrasts for unordered factors)..<br />
+ parallel:                       Number of parallel processes or a predefined socket cluster. With parallel = 1 uses ordinary, non-parallel processing. The parallel processing                                    is done with parallel package.<br />
+ ...                             Other arguments passed to vegdist.
 
 
 
 ## LINK TO THEORY
-* [T_Test](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/T-Test)
-* [U_Test](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/U-Test)
+* [ANOSIM_Test](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/ANOSIM)
+* [PERMANOVA_Test](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/Permutational-Multivariate-Analysis-of-Variance)
 

@@ -33,8 +33,8 @@ PERMANOVA tests whether distances differ between groups.
            
  **Arguments:**
  
- **formula:**                        a typical model formula such as Y ~ A + B*C, but where Y is either a dissimilarity object (inheriting from class "dist") or data frame or a                                      matrix; A, B, and C may be factors or continuous variables. If a dissimilarity object is supplied, no species coefficients can be calculated 
- **data:**                           the data frame from which A, B, and C would be drawn.
+ **formula:**                        a typical model formula such as Y ~ A + B*C, but where Y is either a dissimilarity object (inheriting from class "dist") or data frame or a                                      matrix; A, B, and C may be factors or continuous variables. If a dissimilarity object is supplied, no species coefficients can be                                                calculated<br /> 
+ **data:**                           the data frame from which A, B, and C would be drawn.<br />
  **permutations:**                   a list of control values for the permutations as returned by the function how, or the number of permutations required, or a permutation                                          matrix where each row gives the permuted indices. We are just giving the script number of permutations.<br />
  **strata:**                         An integer vector specifying the strata for permutation. If given, observations are permuted only within the specified strata.<br />
  **method:**                         the name of any method used in vegdist to calculate pairwise distances.<br />

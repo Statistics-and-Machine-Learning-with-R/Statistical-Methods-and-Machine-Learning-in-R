@@ -12,17 +12,17 @@ The t-test is any statistical hypothesis test in which the test statistic follow
 
 #### ABOUT PACKAGE
 
-  Usage:
+  **Usage:
   t.test(x, y = NULL,
        alternative = c("two.sided", "less", "greater"),
        mu = 0, paired = FALSE, var.equal = FALSE,
-       conf.level = 0.95, ...)
+       conf.level = 0.95, ...)** 
        
-  * Parameters:
+  **Arguments:** 
   
-  x: a (non-empty) numeric vector of data values.<br/>
-  y: an optional (non-empty) numeric vector of data values.<br/>
-  data: an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
+  **x:** a (non-empty) numeric vector of data values.<br/>
+  **y:** an optional (non-empty) numeric vector of data values.<br/>
+  **data:** an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
 
 
 
@@ -30,18 +30,18 @@ The t-test is any statistical hypothesis test in which the test statistic follow
 In statistics, the Mann–Whitney U test is a nonparametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater than X.
 
 #### ABOUT PACKAGE
- Usage:
+ **Usage:
  wilcox.test(x, y = NULL,
             alternative = c("two.sided", "less", "greater"),
             mu = 0, paired = FALSE, exact = NULL, correct = TRUE,
             conf.int = FALSE, conf.level = 0.95,
-            tol.root = 1e-4, digits.rank = Inf, ...)
+            tol.root = 1e-4, digits.rank = Inf, ...)**
            
- * Parameters:
+ **Parameters:**
  
- x: numeric vector of data values. Non-finite (e.g., infinite or missing) values will be omitted.<br/>
- y: an optional numeric vector of data values: as with x non-finite values will be omitted.<br/>
- data: an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
+ **x:** numeric vector of data values. Non-finite (e.g., infinite or missing) values will be omitted.<br/>
+ **y:** an optional numeric vector of data values: as with x non-finite values will be omitted.<br/>
+ **data:** an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
 
 
 

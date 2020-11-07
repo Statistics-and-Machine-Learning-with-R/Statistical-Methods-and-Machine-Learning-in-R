@@ -12,11 +12,11 @@ The t-test is any statistical hypothesis test in which the test statistic follow
 
 #### ABOUT PACKAGE
 
-  **Usage:
+  **Usage:**
   t.test(x, y = NULL,
        alternative = c("two.sided", "less", "greater"),
        mu = 0, paired = FALSE, var.equal = FALSE,
-       conf.level = 0.95, ...)** 
+       conf.level = 0.95, ...)
        
   **Arguments:** 
   
@@ -30,12 +30,12 @@ The t-test is any statistical hypothesis test in which the test statistic follow
 In statistics, the Mann–Whitney U test is a nonparametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater than X.
 
 #### ABOUT PACKAGE
- **Usage:
+ **Usage:**
  wilcox.test(x, y = NULL,
             alternative = c("two.sided", "less", "greater"),
             mu = 0, paired = FALSE, exact = NULL, correct = TRUE,
             conf.int = FALSE, conf.level = 0.95,
-            tol.root = 1e-4, digits.rank = Inf, ...)**
+            tol.root = 1e-4, digits.rank = Inf, ...)
            
  **Parameters:**
  

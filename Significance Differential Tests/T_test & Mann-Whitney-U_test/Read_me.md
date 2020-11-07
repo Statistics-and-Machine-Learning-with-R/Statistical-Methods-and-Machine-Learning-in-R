@@ -10,7 +10,7 @@ The t-test is any statistical hypothesis test in which the test statistic follow
 * sample estimates is he mean value of the sample
 
 
-### ABOUT PACKAGE
+#### ABOUT PACKAGE
 
   Usage:
   t.test(x, y = NULL,
@@ -29,7 +29,7 @@ The t-test is any statistical hypothesis test in which the test statistic follow
 ### U-TEST
 In statistics, the Mann–Whitney U test is a nonparametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater than X.
 
-### ABOUT PACKAGE
+#### ABOUT PACKAGE
  Usage:
  wilcox.test(x, y = NULL,
             alternative = c("two.sided", "less", "greater"),

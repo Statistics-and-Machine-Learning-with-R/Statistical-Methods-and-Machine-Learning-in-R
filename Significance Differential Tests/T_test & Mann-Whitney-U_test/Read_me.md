@@ -1,4 +1,4 @@
-## ABOUT TEST
+## ABOUT TESTS
 ### T-TEST
 The t-test is any statistical hypothesis test in which the test statistic follows a Student's t-distribution under the null hypothesis. A t-test is the most commonly applied when the test statistic would follow a normal distribution if the value of a scaling term in the test statistic were known. We are performing T-Test and U-Test on Meta Protein Dataset, provided with the code. 
 

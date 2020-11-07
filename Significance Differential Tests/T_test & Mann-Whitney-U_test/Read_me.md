@@ -10,14 +10,34 @@ The t-test is any statistical hypothesis test in which the test statistic follow
 * sample estimates is he mean value of the sample
 
 
+### ABOUT PACKAGES
+
+  Usage:
+  t.test(x, y = NULL,
+       alternative = c("two.sided", "less", "greater"),
+       mu = 0, paired = FALSE, var.equal = FALSE,
+       conf.level = 0.95, ...)
+       
+  Parameters:
+
+  x: a (non-empty) numeric vector of data values.
+  y: an optional (non-empty) numeric vector of data values.
+  data: an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).
+
+
+
 ### U-TEST
 In statistics, the Mann–Whitney U test is a nonparametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater than X.
 
 
 
 
-## ABOUT PACKAGES
+
+
 
 
 
 ## LINK TO THEORY
+* [T_Test](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/T-Test)
+* [U_Test](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/U-Test)
+

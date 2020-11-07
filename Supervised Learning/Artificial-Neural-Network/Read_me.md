@@ -15,19 +15,20 @@ The main packages for used for this test is "NEURALNET" AND "CARET" Packages.
            
  * Parameters:
 
-formula: a symbolic description of the model to be fitted.
-data: a data frame containing the variables specified in formula.
-hidden: a vector of integers specifying the number of hidden neurons (vertices) in each layer.
-threshold: a numeric value specifying the threshold for the partial derivatives of the error function as stopping criteria.
-stepmax: the maximum steps for the training of the neural network. Reaching this maximum leads to a stop of the neural network's training process.
-rep: the number of repetitions for the neural network's training.
-startweights: a vector containing starting values for the weights. Set to NULL for random initialization.
-learningrate.limit: a vector or a list containing the lowest and highest limit for the learning rate. Used only for RPROP and GRPROP.
-learningrate.factor: a vector or a list containing the multiplication factors for the upper and lower learning rate. Used only for RPROP and GRPROP.
-learningrate: a numeric value specifying the learning rate used by traditional backpropagation. Used only for traditional backpropagation.
-lifesign: a string specifying how much the function will print during the calculation of the neural network. 'none', 'minimal' or 'full'.
+formula: a symbolic description of the model to be fitted. <Br/>
+data: a data frame containing the variables specified in formula. <Br/>
+hidden: a vector of integers specifying the number of hidden neurons (vertices) in each layer.<Br/>
+threshold: a numeric value specifying the threshold for the partial derivatives of the error function as stopping criteria.<Br/>
+stepmax: the maximum steps for the training of the neural network. Reaching this maximum leads to a stop of the neural network's training process.<Br/>
+rep: the number of repetitions for the neural network's training.<Br/>
+startweights: a vector containing starting values for the weights. Set to NULL for random initialization.<Br/>
+learningrate.limit: a vector or a list containing the lowest and highest limit for the learning rate. Used only for RPROP and GRPROP.<Br/>
+learningrate.factor: a vector or a list containing the multiplication factors for the upper and lower learning rate. Used only for RPROP and GRPROP. <Br/>
+learningrate: a numeric value specifying the learning rate used by traditional backpropagation. Used only for traditional backpropagation.<Br/>
+lifesign: a string specifying how much the function will print during the calculation of the neural network. 'none', 'minimal' or 'full'. <Br/>
 lifesign.step: an integer specifying the stepsize to print the minimal threshold in full lifesign 
 
 
-
+## LINK TO THEORY
+* [Artificial-Neural-Network](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/Artificial-Neural-Network)
 

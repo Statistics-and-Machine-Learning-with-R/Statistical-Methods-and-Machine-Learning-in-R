@@ -10,7 +10,7 @@ Please see theory for details of each of the method in link given at the end.
 The main packages used for these tests are "PCA" , "PCoA" "RDA" and "NMDS" Functions in "factoextra" Package. 
  
  
- ###PCA
+ ## PCA
  
  **Usage:**<br/>
  PCA(X, scale.unit = TRUE, ncp = 5, graph = TRUE)
@@ -23,7 +23,7 @@ The main packages used for these tests are "PCA" , "PCoA" "RDA" and "NMDS" Funct
 **graph:** a logical value. If TRUE a graph is displayed.<br/>
 
 
-###RDA
+## RDA
 
 **Usage:**<br/>
 rda(X, Y, scaling = 1)
@@ -38,7 +38,7 @@ rda(X, Y, scaling = 1)
 **scaling:** caling used for x and y variables. 0: x and y only centered. 1: x and y standardized
 
 
-###PCoA
+## PCoA
 
 **Usage:**<br/>
 pcoa(D, correction="none", rn=NULL)

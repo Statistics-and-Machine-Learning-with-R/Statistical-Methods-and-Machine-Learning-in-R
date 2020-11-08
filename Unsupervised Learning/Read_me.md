@@ -120,8 +120,9 @@ eclust(x, FUNcluster = c("kmeans", "pam", "clara", "fanny", "hclust", "agnes",
 
 **seed:** integer used for seeding the random number generator.
 
-**...:** 
-other arguments to be passed to FUNcluster.
+**...:** other arguments to be passed to FUNcluster.
+
+
 ## LINK TO THEORY
 * [Unsupervised-Learning](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/Unsupervised-Learning)
 

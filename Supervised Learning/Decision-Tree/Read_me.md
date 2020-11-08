@@ -2,7 +2,7 @@
 ### DECISION TREE
 A decision tree is one of the supervised machine learning algorithms. This algorithm can be used for regression and classification problems, is mostly used for classification problems. A decision tree follows a set of if-else conditions to visualize the data and classify it according to the conditions.
 
-#### ABOUT PACKAGE
+## ABOUT PACKAGE
 
   The main packages for used for this test is "RPART" and "RPART.PLOT" Packages. 
   

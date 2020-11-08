@@ -9,12 +9,12 @@ Please see theory for details of each of the method in link given at the end.
 
 The main packages used for these tests are "PCA" , "PCoA" "RDA" and "NMDS" Functions in "factoextra" Package. 
  
+ 
  ##PCA
  
  **Usage:**<br/>
  PCA(X, scale.unit = TRUE, ncp = 5, graph = TRUE)
 
-           
  **Arguments:**<br/>
 
 **X:** a data frame. Rows are individuals and columns are numeric variables<br/>
@@ -22,17 +22,27 @@ The main packages used for these tests are "PCA" , "PCoA" "RDA" and "NMDS" Funct
 **ncp:** number of dimensions kept in the final results.<br/>
 **graph:** a logical value. If TRUE a graph is displayed.<br/>
 
+
 ##RDA
 
 **Usage:**<br/>
+rda(X, Y, scaling = 1)
 
 
  **Arguments:**<br/>
+ 
+ **X:** matrix of x variables
+
+**Y:**  matrix of y variables
+
+**scaling:** caling used for x and y variables. 0: x and y only centered. 1: x and y standardized
+
 
 ##PCoA
 
 **Usage:**<br/>
 pcoa(D, correction="none", rn=NULL)
+
 
  **Arguments:**<br/>
 

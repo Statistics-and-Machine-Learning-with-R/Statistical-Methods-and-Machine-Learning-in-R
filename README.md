@@ -39,16 +39,20 @@ Apart from Codes our team has also gathered the theoratical approach to all the 
 ***
 
 ## About Team:
-<a href="url"><img src="https://user-images.githubusercontent.com/49519053/98467030-6fa78e00-21d3-11eb-95f5-86759cf1863b.jpg" align="left" height="300" width="250" ></a>  <br/> <br/>
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/98467030-6fa78e00-21d3-11eb-95f5-86759cf1863b.jpg" align="right" height="300" width="250" ></a>  <br/> <br/>
+<br/>
+<br/>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Faizan Ali*** <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;***M.Sc Digital Engineering (OVGU-Magdeburg, Germany)*** <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;***E-mail: faizan1.ali@st.ovgu.de*** <br/>
+ &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;***Linked-In : https://www.linkedin.com/in/b-sc-ing-faizan-ali-539053159/***
+
 <br/>
 <br/>
 <br/>
 <br/>
-<br/>
- ***Faizan Ali*** <br/>
-***M.Sc Digital Engineering (OVGU-Magdeburg, Germany)*** <br/>
-***E-mail: faizan1.ali@st.ovgu.de*** <br/>
-***Linked-In : https://www.linkedin.com/in/b-sc-ing-faizan-ali-539053159/***
 
 
 

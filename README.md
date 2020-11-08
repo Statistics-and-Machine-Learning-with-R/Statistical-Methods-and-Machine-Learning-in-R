@@ -39,9 +39,28 @@ Apart from Codes our team has also gathered the theoratical approach to all the 
 ***
 
 ## About Team:
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ***Faizan Ali***  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; ***Syed Abdullah Rizvi*** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ***Rahul Mondal***  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ***Ammar Ateeq***
 
-<img width="200" alt="Screenshot 2020-04-14 at 2 29 02 PM" src="https://user-images.githubusercontent.com/49519053/79225394-ea3a4600-7e5c-11ea-9db4-a29dd807e4df.png"> &nbsp; &nbsp;
+<img width="200" alt="Screenshot 2020-04-14 at 2 29 02 PM" src="https://user-images.githubusercontent.com/49519053/79225394-ea3a4600-7e5c-11ea-9db4-a29dd807e4df.png"> &nbsp; &nbsp; <br/>
+ ***Faizan Ali*** <br/>
+
+***M.Sc Digital Engineering (OVGU-Magdeburg, Germany)*** <br/>
+
+***E-mail: faizan1.ali@st.ovgu.de*** <br/>
+
+***Linked-In : https://www.linkedin.com/in/b-sc-ing-faizan-ali-539053159/***
+
+
+**
+
+
+
+
+
+
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; ***Syed Abdullah Rizvi*** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ***Rahul Mondal***  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ***Ammar Ateeq***
+
 <img width="200" alt="Screenshot 2020-04-14 at 2 28 22 PM" src="https://user-images.githubusercontent.com/49519053/79225204-ae06e580-7e5c-11ea-993f-df6123d18d9c.png"> &nbsp; &nbsp;
 <img width="200" alt="Screenshot 2020-04-14 at 2 36 17 PM" src="https://user-images.githubusercontent.com/49519053/79225642-561cae80-7e5d-11ea-9e87-4c2aa3dcec51.png"> &nbsp; &nbsp;
 <img width="200" alt="Screenshot 2020-09-02 at 3 22 39 PM" src="https://user-images.githubusercontent.com/49519053/91989028-4d574700-ed30-11ea-9715-d3817b6b00b5.png">

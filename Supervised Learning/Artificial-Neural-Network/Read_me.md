@@ -1,8 +1,6 @@
 ### ARTIFICIAL NEURAL NETWORK
-Unsupervised learning is a type of machine learning that looks for previously undetected patterns in a data set with no pre-existing labels and with a minimum of human supervision.
-Two of the main methods used in unsupervised learning are principal component and cluster analysis. Cluster analysis is used in unsupervised learning to group, or segment, datasets with shared attributes in order to extrapolate algorithmic relationships.[2] Cluster analysis is a branch of machine learning that groups the data that has not been labelled, classified or categorized. Instead of responding to feedback, cluster analysis identifies commonalities in the data and reacts based on the presence or absence of such commonalities in each new piece of data.
-Apart from these methods, we have done **PCoA**, **CCA** and **NMDS** too.
-Please see theory for details of each of the method in link given at the end.
+An artificial neural network (ANN) is the component of artificial intelligence that is meant to simulate the functioning of a human brain. Processing units make up ANNs, which in turn consist of inputs and outputs. The inputs are what the ANN learns from to produce the desired output.
+
 
 #### ABOUT PACKAGE
 The main packages for used for this test is "NEURALNET" AND "CARET" Packages. 

@@ -77,7 +77,8 @@ method = NULL, index = "all", alphaBeale = 0.1)
 
 **max.nc:** maximal number of clusters, between 2 and (number of objects - 1), greater or equal to min.nc. By default, max.nc=15.<br/>
 
-**method:** the cluster analysis method to be used. This should be one of: "ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", "centroid", "kmeans".<br/>
+**method:** the cluster analysis method to be used. This should be one of: "ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", "centroid", "kmeans".
+
 **index:** the index to be calculated. This should be one of : "kl", "ch", "hartigan", "ccc", "scott", "marriot", "trcovw", "tracew", "friedman", "rubin", "cindex", "db", "silhouette", "duda", "pseudot2", "beale", "ratkowsky", "ball", "ptbiserial", "gap", "frey", "mcclain", "gamma", "gplus", "tau", "dunn", "hubert", "sdindex", "dindex", "sdbw", "all" (all indices except GAP, Gamma, Gplus and Tau), "alllong" (all indices with Gap, Gamma, Gplus and Tau included).<br/>
 
 **alphaBeale:** significance value for Beale's index. . <br/>

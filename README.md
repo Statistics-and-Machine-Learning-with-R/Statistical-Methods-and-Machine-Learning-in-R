@@ -39,8 +39,7 @@ Apart from Codes our team has also gathered the theoratical approach to all the 
 ***
 
 ## About Team:
-
-<img width="300" alt="Screenshot 2020-04-14 at 2 29 02 PM" src="https://user-images.githubusercontent.com/49519053/79225394-ea3a4600-7e5c-11ea-9db4-a29dd807e4df.png"> <br/>
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/98467030-6fa78e00-21d3-11eb-95f5-86759cf1863b.jpg" align="left" height="300" width="250" ></a>  <br/>
  ***Faizan Ali*** <br/>
 ***M.Sc Digital Engineering (OVGU-Magdeburg, Germany)*** <br/>
 

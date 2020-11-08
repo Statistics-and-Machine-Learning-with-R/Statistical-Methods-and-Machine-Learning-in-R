@@ -88,43 +88,30 @@ eclust(x, FUNcluster = c("kmeans", "pam", "clara", "fanny", "hclust", "agnes",
 
 **Arguments:**<br/>
 
-x
-numeric vector, data matrix or data frame
+**x:** numeric vector, data matrix or data frame
 
-FUNcluster
-a clustering function including "kmeans", "pam", "clara", "fanny", "hclust", "agnes" and "diana". Abbreviation is allowed.
+**FUNcluster:** a clustering function including "kmeans", "pam", "clara", "fanny", "hclust", "agnes" and "diana". Abbreviation is allowed.
 
-k
-the number of clusters to be generated. If NULL, the gap statistic is used to estimate the appropriate number of clusters. In the case of kmeans, k can be either the number of clusters, or a set of initial (distinct) cluster centers.
+**k:** the number of clusters to be generated. If NULL, the gap statistic is used to estimate the appropriate number of clusters. In the case of kmeans, k can be either the number of clusters, or a set of initial (distinct) cluster centers.
 
-k.max
-the maximum number of clusters to consider, must be at least two.
+**k.max:** the maximum number of clusters to consider, must be at least two.
 
-stand
-logical value; default is FALSE. If TRUE, then the data will be standardized using the function scale(). Measurements are standardized for each variable (column), by subtracting the variable's mean value and dividing by the variable's standard deviation.
+**stand:** logical value; default is FALSE. If TRUE, then the data will be standardized using the function scale(). Measurements are standardized for each variable (column), by subtracting the variable's mean value and dividing by the variable's standard deviation.
 
-graph
-logical value. If TRUE, cluster plot is displayed.
+**graph:** logical value. If TRUE, cluster plot is displayed.
 
-hc_metric
-character string specifying the metric to be used for calculating dissimilarities between observations. Allowed values are those accepted by the function dist() [including "euclidean", "manhattan", "maximum", "canberra", "binary", "minkowski"] and correlation based distance measures ["pearson", "spearman" or "kendall"]. Used only when FUNcluster is a hierarchical clustering function such as one of "hclust", "agnes" or "diana".
+**hc_metric:** character string specifying the metric to be used for calculating dissimilarities between observations. Allowed values are those accepted by the function dist() [including "euclidean", "manhattan", "maximum", "canberra", "binary", "minkowski"] and correlation based distance measures ["pearson", "spearman" or "kendall"]. Used only when FUNcluster is a hierarchical clustering function such as one of "hclust", "agnes" or "diana".
 
-hc_method
-the agglomeration method to be used (?hclust): "ward.D", "ward.D2", "single", "complete", "average", ...
+**hc_method:** the agglomeration method to be used (?hclust): "ward.D", "ward.D2", "single", "complete", "average", ...
 
-gap_maxSE
-a list containing the parameters (method and SE.factor) for determining the location of the maximum of the gap statistic (Read the documentation ?cluster::maxSE).
+**gap_maxSE:** a list containing the parameters (method and SE.factor) for determining the location of the maximum of the gap statistic (Read the documentation ?cluster::maxSE).
 
-nboot
-integer, number of Monte Carlo ("bootstrap") samples. Used only for determining the number of clusters using gap statistic.
+**nboot:** integer, number of Monte Carlo ("bootstrap") samples. Used only for determining the number of clusters using gap statistic.
 
-verbose
-logical value. If TRUE, the result of progress is printed.
+**verbose:** logical value. If TRUE, the result of progress is printed.
 
-seed
-integer used for seeding the random number generator.
-
-...
+**seed:** integer used for seeding the random number generator.
+**...:** 
 other arguments to be passed to FUNcluster.
 ## LINK TO THEORY
 * [Unsupervised-Learning](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/Unsupervised-Learning)

@@ -53,7 +53,8 @@ pcoa(D, correction="none", rn=NULL)
 
 ### ABOUT CLUSTERING PACKAGES
 
-NbClust Package is for determining the best number of clusters. NbClust package provides 30 indices for determining the number of clusters and proposes to user the best clustering scheme from the different results obtained by varying all combinations of number of clusters, distance measures, and clustering methods.
+**NbClust Package** is for determining the best number of clusters. NbClust package provides 30 indices for determining the number of clusters and proposes to user the best clustering scheme from the different results obtained by varying all combinations of number of clusters, distance measures, and clustering methods.
+**eclust Package** is for providing solution for enhancing the workflow of clustering analyses and ggplot2-based elegant data visualization
 
 
 ### NBClust
@@ -75,6 +76,56 @@ method = NULL, index = "all", alphaBeale = 0.1)
 **alphaBeale:** significance value for Beale's index. . <br/>
 
 
+### eclust
+
+
+**Usage:**<br/>
+eclust(x, FUNcluster = c("kmeans", "pam", "clara", "fanny", "hclust", "agnes",
+  "diana"), k = NULL, k.max = 10, stand = FALSE, graph = TRUE,
+  hc_metric = "euclidean", hc_method = "ward.D2", gap_maxSE = list(method
+  = "firstSEmax", SE.factor = 1), nboot = 100, verbose = interactive(),
+  seed = 123, ...)
+
+**Arguments:**<br/>
+
+x
+numeric vector, data matrix or data frame
+
+FUNcluster
+a clustering function including "kmeans", "pam", "clara", "fanny", "hclust", "agnes" and "diana". Abbreviation is allowed.
+
+k
+the number of clusters to be generated. If NULL, the gap statistic is used to estimate the appropriate number of clusters. In the case of kmeans, k can be either the number of clusters, or a set of initial (distinct) cluster centers.
+
+k.max
+the maximum number of clusters to consider, must be at least two.
+
+stand
+logical value; default is FALSE. If TRUE, then the data will be standardized using the function scale(). Measurements are standardized for each variable (column), by subtracting the variable's mean value and dividing by the variable's standard deviation.
+
+graph
+logical value. If TRUE, cluster plot is displayed.
+
+hc_metric
+character string specifying the metric to be used for calculating dissimilarities between observations. Allowed values are those accepted by the function dist() [including "euclidean", "manhattan", "maximum", "canberra", "binary", "minkowski"] and correlation based distance measures ["pearson", "spearman" or "kendall"]. Used only when FUNcluster is a hierarchical clustering function such as one of "hclust", "agnes" or "diana".
+
+hc_method
+the agglomeration method to be used (?hclust): "ward.D", "ward.D2", "single", "complete", "average", ...
+
+gap_maxSE
+a list containing the parameters (method and SE.factor) for determining the location of the maximum of the gap statistic (Read the documentation ?cluster::maxSE).
+
+nboot
+integer, number of Monte Carlo ("bootstrap") samples. Used only for determining the number of clusters using gap statistic.
+
+verbose
+logical value. If TRUE, the result of progress is printed.
+
+seed
+integer used for seeding the random number generator.
+
+...
+other arguments to be passed to FUNcluster.
 ## LINK TO THEORY
 * [Unsupervised-Learning](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/Unsupervised-Learning)
 

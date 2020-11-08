@@ -5,7 +5,7 @@ Two of the main methods used in unsupervised learning are principal component an
 Apart from these methods, we have done **PCoA**, **RDA** and **NMDS** too.
 Please see theory for details of each of the method in link given at the end.
 
-### ABOUT ORDINATION PACKAGES
+## ABOUT ORDINATION PACKAGES
 
 The main packages used for these tests are "PCA" , "PCoA" "RDA" and "NMDS" Functions in "factoextra" Package. 
  
@@ -52,7 +52,7 @@ pcoa(D, correction="none", rn=NULL)
 
 
 
-### ABOUT CLUSTERING PACKAGES
+## ABOUT CLUSTERING PACKAGES
 
 **NbClust Package** is for determining the best number of clusters. NbClust package provides 30 indices for determining the number of clusters and proposes to user the best clustering scheme from the different results obtained by varying all combinations of number of clusters, distance measures, and clustering methods.
 **eclust Package** is for providing solution for enhancing the workflow of clustering analyses and ggplot2-based elegant data visualization

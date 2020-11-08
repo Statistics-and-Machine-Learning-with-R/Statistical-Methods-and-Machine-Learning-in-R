@@ -40,17 +40,14 @@ Apart from Codes our team has also gathered the theoratical approach to all the 
 
 ## About Team:
 
-<img width="200" alt="Screenshot 2020-04-14 at 2 29 02 PM" src="https://user-images.githubusercontent.com/49519053/79225394-ea3a4600-7e5c-11ea-9db4-a29dd807e4df.png"> &nbsp; &nbsp; <br/>
+<img width="300" alt="Screenshot 2020-04-14 at 2 29 02 PM" src="https://user-images.githubusercontent.com/49519053/79225394-ea3a4600-7e5c-11ea-9db4-a29dd807e4df.png"> <br/>
  ***Faizan Ali*** <br/>
-
 ***M.Sc Digital Engineering (OVGU-Magdeburg, Germany)*** <br/>
 
 ***E-mail: faizan1.ali@st.ovgu.de*** <br/>
 
 ***Linked-In : https://www.linkedin.com/in/b-sc-ing-faizan-ali-539053159/***
 
-
-**
 
 
 

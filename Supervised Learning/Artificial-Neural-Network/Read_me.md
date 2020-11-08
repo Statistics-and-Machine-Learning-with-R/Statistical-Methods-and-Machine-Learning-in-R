@@ -1,8 +1,8 @@
-### ARTIFICIAL NEURAL NETWORK
+## ARTIFICIAL NEURAL NETWORK
 An artificial neural network (ANN) is the component of artificial intelligence that is meant to simulate the functioning of a human brain. Processing units make up ANNs, which in turn consist of inputs and outputs. The inputs are what the ANN learns from to produce the desired output.
 
 
-#### ABOUT PACKAGE
+## ABOUT PACKAGE
 The main packages for used for this test is "NEURALNET" AND "CARET" Packages. 
  **Usage:**<br/>
  neuralnet(formula, data, hidden = 1, threshold = 0.01,

@@ -13,7 +13,7 @@ By clicking on the provided link under this paragraph you will come across the p
 * One of them will be **.ppt** file, in order to get the theoratical slides. <br/>
 * Second file will be containing the code for respective topic having **.R** file format. <br/> 
 * Third file will be a **.jpg** file with Quiz questions. <br/>
-* Thrid file will also be **.R** file but there you will find the solution to Quiz, descriped in **.jpg** file.
+* Thrid file will also be **.R** file but there you will find the solution to Quiz, descriped in **.jpg** file. <br/>
 [Lecture Slides + Exercise FILL THE LINK LATER]()
 ***
 
@@ -25,14 +25,14 @@ To make the contribution open-source, our team has uploaded all the scripts in R
 * [SIGNIFICANCE DIFFERENTIAL TESTS](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significance%20Differential%20Tests).
   
  ***
- **Do not forget to clon the repository to you GITHUB-DEKSTOP. This way you will get the folders on your dekstop(with all the datasets and scripts)**
+ **Do not forget to clon the repository to you GITHUB-DEKSTOP.<br/> This way you will get the folders on your dekstop(with all the datasets and scripts).**
  
  ***
  
  
 # Theoratical Concepts:
 
-Apart from Codes our team has also gathered the theoratical approach to all the ANALYSIS which we automated using R. To get the link to that Section click on the link provided under this line/
+Apart from Codes our team has also gathered the theoratical approach to all the ANALYSIS which we automated using R. To get the link to that Section click on the link provided under this line: <br/>
 
 [Theory and Roadmap to BiInformatics](https://github.com/Rizvix0/DE_Project_MetaProtStat/wiki)
 

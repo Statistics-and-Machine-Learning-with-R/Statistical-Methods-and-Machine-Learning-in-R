@@ -51,6 +51,30 @@ pcoa(D, correction="none", rn=NULL)
 
 
 
+### ABOUT CLUSTERING PACKAGES
+
+NbClust Package is for determining the best number of clusters. NbClust package provides 30 indices for determining the number of clusters and proposes to user the best clustering scheme from the different results obtained by varying all combinations of number of clusters, distance measures, and clustering methods.
+
+
+### NBClust
+
+
+**Usage:**<br/>
+NbClust(data = NULL, diss = NULL, distance = "euclidean", min.nc = 2, max.nc = 15, 
+method = NULL, index = "all", alphaBeale = 0.1)
+
+ **Arguments:**<br/>
+
+**data:** matrix or dataset.<br/>
+**diss:** dissimilarity matrix to be used. By default, diss=NULL, but if it is replaced by a dissimilarity matrix, distance should be "NULL".<br/>
+**distance:** the distance measure to be used to compute the dissimilarity matrix. This must be one of: "euclidean", "maximum", "manhattan", "canberra", "binary", "minkowski" or "NULL". By default, distance="euclidean". If the distance is "NULL", the dissimilarity matrix (diss) should be given by the user. If distance is not "NULL", the dissimilarity matrix should be "NULL".<br/>
+**min.nc:** minimal number of clusters, between 1 and (number of objects - 1).<br/>
+**max.nc:** maximal number of clusters, between 2 and (number of objects - 1), greater or equal to min.nc. By default, max.nc=15.<br/>
+**method:** the cluster analysis method to be used. This should be one of: "ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", "centroid", "kmeans".<br/>
+**index:** the index to be calculated. This should be one of : "kl", "ch", "hartigan", "ccc", "scott", "marriot", "trcovw", "tracew", "friedman", "rubin", "cindex", "db", "silhouette", "duda", "pseudot2", "beale", "ratkowsky", "ball", "ptbiserial", "gap", "frey", "mcclain", "gamma", "gplus", "tau", "dunn", "hubert", "sdindex", "dindex", "sdbw", "all" (all indices except GAP, Gamma, Gplus and Tau), "alllong" (all indices with Gap, Gamma, Gplus and Tau included).<br/>
+**alphaBeale:** significance value for Beale's index. . <br/>
+
+
 ## LINK TO THEORY
 * [Unsupervised-Learning](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/Unsupervised-Learning)
 

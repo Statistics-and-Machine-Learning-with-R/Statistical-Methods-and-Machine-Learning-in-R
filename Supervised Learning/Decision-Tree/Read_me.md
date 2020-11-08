@@ -23,3 +23,4 @@ Alternatively, method can be a list of functions named init, split and eval. Exa
 
 ## LINK TO THEORY
 * [Desicion Tree](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/Decision-Tree)
+ 

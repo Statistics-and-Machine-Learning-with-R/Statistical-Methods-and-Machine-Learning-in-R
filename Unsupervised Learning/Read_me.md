@@ -47,6 +47,7 @@ pcoa(D, correction="none", rn=NULL)
  **Arguments:**<br/>
 
 **D:** A distance matrix of class dist or matrix.<br/>
+
 **correction:** Correction methods for negative eigenvalues (details below): "lingoes" and "cailliez". Default value: "none" . <br/>
 
 
@@ -67,12 +68,18 @@ method = NULL, index = "all", alphaBeale = 0.1)
  **Arguments:**<br/>
 
 **data:** matrix or dataset.<br/>
+
 **diss:** dissimilarity matrix to be used. By default, diss=NULL, but if it is replaced by a dissimilarity matrix, distance should be "NULL".<br/>
+
 **distance:** the distance measure to be used to compute the dissimilarity matrix. This must be one of: "euclidean", "maximum", "manhattan", "canberra", "binary", "minkowski" or "NULL". By default, distance="euclidean". If the distance is "NULL", the dissimilarity matrix (diss) should be given by the user. If distance is not "NULL", the dissimilarity matrix should be "NULL".<br/>
+
 **min.nc:** minimal number of clusters, between 1 and (number of objects - 1).<br/>
+
 **max.nc:** maximal number of clusters, between 2 and (number of objects - 1), greater or equal to min.nc. By default, max.nc=15.<br/>
+
 **method:** the cluster analysis method to be used. This should be one of: "ward.D", "ward.D2", "single", "complete", "average", "mcquitty", "median", "centroid", "kmeans".<br/>
 **index:** the index to be calculated. This should be one of : "kl", "ch", "hartigan", "ccc", "scott", "marriot", "trcovw", "tracew", "friedman", "rubin", "cindex", "db", "silhouette", "duda", "pseudot2", "beale", "ratkowsky", "ball", "ptbiserial", "gap", "frey", "mcclain", "gamma", "gplus", "tau", "dunn", "hubert", "sdindex", "dindex", "sdbw", "all" (all indices except GAP, Gamma, Gplus and Tau), "alllong" (all indices with Gap, Gamma, Gplus and Tau included).<br/>
+
 **alphaBeale:** significance value for Beale's index. . <br/>
 
 
@@ -111,6 +118,7 @@ eclust(x, FUNcluster = c("kmeans", "pam", "clara", "fanny", "hclust", "agnes",
 **verbose:** logical value. If TRUE, the result of progress is printed.
 
 **seed:** integer used for seeding the random number generator.
+
 **...:** 
 other arguments to be passed to FUNcluster.
 ## LINK TO THEORY

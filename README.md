@@ -51,3 +51,17 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 
 <br/>
 
+<br/>
+<br/>
+
+***
+
+
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/98542815-c96e8d80-2291-11eb-9554-8863560e2cf7.jpeg" align="left" height="300" width="250" ></a>  <br/> <br/>
+<br/>
+<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Ammar Ateeq*** <br/>
+&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;***M.Sc Data Knowledge Engineering (OVGU-Magdeburg, Germany)*** <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;***E-mail: ammarateeq@hotmail.com*** <br/>
+ &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;***Linked-In : https://www.linkedin.com/in/ammar-ateeq-291b94a7/***
+

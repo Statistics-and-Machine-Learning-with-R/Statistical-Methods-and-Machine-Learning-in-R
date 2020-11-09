@@ -92,4 +92,5 @@ table(res$Actual,res$Predicted)
 confusionMatrix(as.factor(res$Actual),as.factor(res$Predicted))
 #https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/
 
+
 #Finished

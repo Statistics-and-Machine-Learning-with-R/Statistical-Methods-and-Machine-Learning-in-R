@@ -3,7 +3,10 @@
 This repo has been created and organized to work as a mini guide for students with none or very little background in the field of Computer Science, especially in 
 Bio-Informatics, to have a general idea and understand the underlying concepts of Statistics paving its way towards Multivariate Statistics & ultimately Machine Learning Algorithms. We have written R scripts for the mentioned pathway as we proceeded which we have provided in our repository along with corresponding csv file which we used 
 in our scripting process. 
-### Download our codes, see how the process works for yourself in our elaborately commented scripts. Visit our wiki which has been designed to enhance your understanding concepts with provision of various sources from where we have learnt as well as actual images of results while we worked on the concepts & scripts
+***
+ * Download our codes, see how the process works for yourself in our elaborately commented scripts. 
+ * Visit our wiki which has been designed to enhance your understanding concepts with provision of various sources from where we have learnt as well as actual images of results while we worked on the concepts & scripts
+ ***
 
 _We tried to acknowledge every possible source which have helped us to create this repository. All of our personal contents are open source & feel free to use them for 
 learning, teaching, creating repositories_

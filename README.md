@@ -1,16 +1,30 @@
-# TABLE OF CONTENT:
+# Statistical Methods & Machine Learning with R
+
+This repo has been created and organized to work as a mini guide for students with none or very little background in the field of Computer Science, especially in 
+Bio-Informatics, to have a general idea and understand the underlying concepts of Statistics paving its way towards Multivariate Statistics & ultimately Machine Learning Algorithms. We have written R scripts for the mentioned pathway as we proceeded which we have provided in our repository along with corresponding csv file which we used 
+in our scripting process. 
+### Download our codes, see how the process works for yourself in our elaborately commented scripts. Visit our wiki which has been designed to enhance your understanding concepts with provision of various sources from where we have learnt as well as actual images of results while we worked on the concepts & scripts
+
+_We tried to acknowledge every possible source which have helped us to create this repository. All of our personal contents are open source & feel free to use them for 
+learning, teaching, creating repositories_
+
+**Happy Learning!!**
+
+
+## TABLE OF CONTENT:
 
 * Programming approach to Bio-Informatic Analysis.
 * Theoretical Concepts to the Analysis being performed.
 
 ***
 
-# R-Scripts for Bio-Informatics:
+## R-Scripts for Bio-Informatics:
 To make the contribution open-source, our team has uploaded all the scripts in R language. This may help to understand the usage of Programming in Bio-Informatic. Moreover, under the provided links you will find sub folders each containing a Data-set file, a Programming script in R, and a Read_me file (description about the program). In order to get the access to the scripts click on the links mentioned below.
-    
+  
+* [SIGNIFICANCE DIFFERENTIAL TESTS](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significance%20Differential%20Tests)  
+* [UNSUPERVISED LEARNING](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)
 * [SUPERVISED LEARNING](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Supervised%20Learning)
-* [UNSUPERVISED LEARNING](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning).
-* [SIGNIFICANCE DIFFERENTIAL TESTS](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significance%20Differential%20Tests).
+
   
  ***
  **Do not forget to clone the repository to you GITHUB-DEKSTOP.<br/> This way you will get the folders on your dekstop(with all the datasets and scripts).**
@@ -18,7 +32,7 @@ To make the contribution open-source, our team has uploaded all the scripts in R
  ***
  
  
-# Theoretical Concepts:
+## Theoretical Concepts:
 
 Apart from Codes our team has also gathered the theoretical approach to all the ANALYSIS which we automated using R. To get the link to that Section click on the link provided under this line: <br/>
 

@@ -2,19 +2,7 @@
 
 * Programming approach to Bio-Informatic Analysis.
 * Theoretical Concepts to the Analysis being performed.
-* Study Lectures + Exercises to learm **R for Bio_Informatic** from scratch.
-* Short Quiz from Lectures to Practice by coding.
 
-***
-# Learn R for Bio-Informatics:
-By clicking on the provided link under this paragraph you will come across the pipeline to learn R in order to improve or learn your Analytical skills for bio-information research. Our team has provided three files for each topic.<br/>
-<br/>
-
-* One of them will be a **.ppt** file, in order to get the theoretical slides. <br/>
-* Second file will be containing the code corresponding to the slides having **.R** file format. <br/> 
-* Third file will be a **.jpg** file with Quiz questions. <br/>
-* Fourth file will be a **.R** file but there you will find the solution to Quiz, described in **.jpg** file. <br/>
-[Lecture Slides + Exercise FILL THE LINK LATER]()
 ***
 
 # R-Scripts for Bio-Informatics:

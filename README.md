@@ -24,7 +24,7 @@ learning, teaching, creating repositories_
 ## R-Scripts for Bio-Informatics:
 To make the contribution open-source, our team has uploaded all the scripts in R language. This may help to understand the usage of Programming in Bio-Informatic. Moreover, under the provided links you will find sub folders each containing a Data-set file, a Programming script in R, and a Read_me file (description about the program). In order to get the access to the scripts click on the links mentioned below.
   
-* [SIGNIFICANCE DIFFERENTIAL TESTS](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significance%20Differential%20Tests)  
+* [SIGNIFICANT DIFFERENCE TESTS](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significance%20Differential%20Tests)  
 * [UNSUPERVISED LEARNING](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)
 * [SUPERVISED LEARNING](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Supervised%20Learning)
 

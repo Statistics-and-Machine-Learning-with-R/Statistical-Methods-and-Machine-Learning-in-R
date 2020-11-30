@@ -82,6 +82,25 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 <br/>
 <br/>
 
+***
+
+
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/100612409-39ad8380-3313-11eb-9eed-fbb748b150d4.jpeg" align="right" height="300" width="250" ></a>  <br/> <br/>
+<br/>
+<br/>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Syed Abdullah Rizvi***
+ <br/>
+&nbsp;***M.Sc Digital Engineering (OVGU-Magdeburg, Germany)*** 
+<br/>
+&nbsp;***E-mail: syedabdullahrizvi@gmail.com*** 
+<br/>
+&nbsp;***Linked-In : https://www.linkedin.com/in/rahul-mondal-0241b719b/***
+<br/>
+
+<br/>
+<br/>
+<br/>
+
 
 ***
 
@@ -91,7 +110,7 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Ammar Ateeq***
  <br/>
-&nbsp;***.Sc Data Knowledge Engineering (OVGU-Magdeburg, Germany)*** 
+&nbsp;***M.Sc Data Knowledge Engineering (OVGU-Magdeburg, Germany)*** 
 <br/>
 &nbsp;***E-mail: ammarateeq@hotmail.com*** 
 <br/>

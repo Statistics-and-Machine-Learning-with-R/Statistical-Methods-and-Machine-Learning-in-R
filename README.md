@@ -66,13 +66,16 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 ***
 
 
-<a href="url"><img src="https://user-images.githubusercontent.com/49519053/98546791-87484a80-2297-11eb-9c41-cb644e68f4a5.jpeg" align="left" height="300" width="250" ></a>  <br/> <br/>
+<a href="url"><img src="(https://user-images.githubusercontent.com/49519053/100611272-63fe4180-3311-11eb-9903-4c25ae532e93.jpeg" align="left" height="300" width="250" ></a>  <br/> <br/>
 <br/>
 <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Rahul Mondal*** <br/>
-&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;***M.Sc Digital Engineering (OVGU-Magdeburg, Germany)*** <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;   &nbsp;  &nbsp; &nbsp; &nbsp;***E-mail: rahulmondal415@gmail.com*** <br/>
- &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;***Linked-In : https://www.linkedin.com/in/rahul-mondal-0241b719b/***
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Rahul Mondal***
+ <br/>
+&nbsp;***M.Sc Digital Engineering (OVGU-Magdeburg, Germany)*** 
+<br/>
+&nbsp;***E-mail: rahulmondal415@gmail.com*** 
+<br/>
+&nbsp;***Linked-In : https://www.linkedin.com/in/rahul-mondal-0241b719b/***
 <br/>
 
 <br/>

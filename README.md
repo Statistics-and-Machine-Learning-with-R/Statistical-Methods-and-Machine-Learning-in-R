@@ -94,7 +94,7 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 <br/>
 &nbsp;***E-mail: syedabdullahrizvi@gmail.com*** 
 <br/>
-&nbsp;***Linked-In : https://www.linkedin.com/in/rahul-mondal-0241b719b/***
+&nbsp;***Linked-In : linkedin.com/in/abdullahrizvi/***
 <br/>
 
 <br/>

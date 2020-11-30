@@ -66,7 +66,7 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 ***
 
 
-<a href="url"><img src="(https://user-images.githubusercontent.com/49519053/100611272-63fe4180-3311-11eb-9903-4c25ae532e93.jpeg" align="left" height="300" width="250" ></a>  <br/> <br/>
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/100611696-028aa280-3312-11eb-9380-4f287c3c26ff.jpeg" align="right" height="300" width="250" ></a>  <br/> <br/>
 <br/>
 <br/>
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Rahul Mondal***

@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------------------------------------
-                                          " T-TEST AND U-TEST COMPUTATIONS"
+"U-TEST COMPUTATIONS"
 #-------------------------------------------------------------------------------------------------------------
 
 
@@ -9,14 +9,14 @@ rm(list=ls())   # Clear all variables
 
 
 #------------------------------------------------
-                                          "HEADER OF THE SOFTWARE OUTPUT"
+"HEADER OF THE SOFTWARE OUTPUT"
 #------------------------------------------------
 
 # Information about the software:
 sourceAuthor  <-  "META PRO STAT TEAM"
 sourceDate    <-  "30.04.2020"
 sourceVersion <-  "1.0.5"
-testName      <-  'T-Test and Mann-Whitney U-Test'
+testName      <-  'Mann-Whitney U-Test'
 
 
 
@@ -39,7 +39,6 @@ if(!require("dplyr")) install.packages("dplyr")             #package for Data-wr
 
 # Load packages:
 
-library("miniCRAN")
 library("dplyr")
 library(tidyr)
 library(ggplot2)
@@ -49,7 +48,7 @@ library(ggpubr)
 
 
 #------------------------------------------------
-                                      "STEP 0: Gets the matrix and Choose Groups"
+"STEP 0: Gets the matrix and Choose Groups"
 #------------------------------------------------
 
 # Choose a csv file
@@ -63,7 +62,7 @@ SEPARATOR = ";"  # Separator within the csv. -files
 matrix <- read.csv(fname, sep=SEPARATOR, row.names = 1) 
 
 # Output file name:
-outputname = "Result_of_T&U_test.csv"
+outputname = "Result_of_U_test.csv"
 
 
 # Define start and end rows of each group:
@@ -101,7 +100,7 @@ newMatrix <-  cbind(  matrix, EMPTY_First,pValue_TTest, BonferoniCorrection_TTes
                       shapiro_Wvalue,shapiro_Pvalue)
 
 #------------------------------------------------
-                                            "STEP 1: Normality Test"
+"STEP 1: Normality Test"
 #------------------------------------------------
 
 
@@ -115,7 +114,7 @@ for (i in 1:ncol(matrix)) {
 }
 
 #--------------------------------------------------
-                                      "STEP 2: Calculates U-Test and T-Test"
+"STEP 2: Calculation for U-Test"
 #--------------------------------------------------
 
 
@@ -126,37 +125,18 @@ for (i in 1:nrow(matrix)) {
   newMatrix[i,ncol(matrix) + 10]    <- mean(as.numeric( matrix[i, start_Col_Group_X : end_Col_Group_X] ))
   newMatrix[i,ncol(matrix) + 11]    <- mean(as.numeric( matrix[i, start_Col_Group_Y : end_Col_Group_Y] ))
   newMatrix[i,ncol(matrix) + 12]    <- mean( as.numeric( matrix[i, start_Col_Group_X : end_Col_Group_X] ))/
-                                       mean(as.numeric( matrix[i, start_Col_Group_Y : end_Col_Group_Y] ))
+    mean(as.numeric( matrix[i, start_Col_Group_Y : end_Col_Group_Y] ))
   
   
-  # Calculation of P-Value for TTest and U-Test
-  
-  newMatrix[i,ncol(matrix)+ 2]      <- t.test(as.numeric(matrix[i,start_Col_Group_X:end_Col_Group_X]),
-                                              as.numeric(matrix[i,start_Col_Group_Y:end_Col_Group_Y]),
-                                              alternative = c("two.sided"), paired = FALSE, 
-                                              var.equal = FALSE,conf.level = 0.95)$p.value
-?t.test()
-  
+  # Calculation of P-Value for U-Test
   
   newMatrix[i,ncol(matrix)+ 6]      <- wilcox.test(as.numeric(matrix[i,start_Col_Group_X:end_Col_Group_X]),
                                                    as.numeric(matrix[i,start_Col_Group_Y:end_Col_Group_Y]),
                                                    alternative = c("two.sided"), paired = FALSE, 
                                                    var.equal = FALSE,conf.level = 0.95)$p.value
-    
+  
   newMatrix[i,ncol(matrix) + 13]    <-  log2(newMatrix[i,ncol(matrix) + 12])
 }
-
-
-# Bonferroni and Benjamin-Hochberger Corrections for T-Test:
-
-#Save P-Value of T-Test in 'p':
-p <- newMatrix[1:nrow(matrix),ncol(matrix)+ 2] 
-
-#apply Bonferroni correction:
-newMatrix[1:nrow(matrix),ncol(matrix)+ 3]   <- p.adjust(p,method = "bonferroni", n = length(p))   
-#apply Benjamin-Hochberger correction:
-newMatrix[1:nrow(matrix),ncol(matrix)+ 4]   <-  p.adjust(p, method = "BH", n = length(p))
-
 
 
 
@@ -173,63 +153,30 @@ newMatrix[1:nrow(matrix),ncol(matrix)+ 8]   <-  p.adjust(p, method = "BH", n = l
 
 
 #--------------------------------------------------
-                                      "STEP 3: Visualization for Tests"
+"STEP 3: Visualization for Tests"
 #--------------------------------------------------
-
-
-
-"Visualization by Groups"
-
-
-#Box_plot for camparison of TTest and Mann-Whitney U test:
-
-ggboxplot(data= gather(data=newMatrix,
-                              key = 'TestNames',
-                              value = 'P_Value',
-                              pValue_TTest,pValue_UTest),
-           x = "TestNames", y = "P_Value", 
-          color = "TestNames", palette = c("#00AFBB", "#E7B800"),
-          ylab = "P-Values", xlab = "Test-Names")
-
-#Scatter_plot for comaprison of TTest and Mann-Whitney U test:
-
-ggplot(data=newMatrix)+geom_point(aes(x=Log2_average_group_1div2,y=pValue_TTest,color='T-Test'))+
-geom_point(aes(x=Log2_average_group_1div2,y=pValue_UTest,color='U-Test'))+
-  xlab('Log2(Group1avg/Group2avg)')+ylab('P-Values')+labs(color='Test-Type')+
-  ggtitle("P-Value comparison of T-Test & U-Test") + theme(plot.title = element_text(hjust = 0.5))
 
 
 
 
 "Visualization for Individual test"
 
-#Scatter-Plot for T-Test according to P-Value:
-
-pValueGreatTTest            <- newMatrix %>% filter(pValue_TTest>=0.05)      #filter matrix with p value >0.05
-pVlaueLessTTest             <- newMatrix  %>% filter(pValue_TTest <= 0.05)   #filter matrix with p value <0.05
-
-# Visualization for T-Test:
-ggplot()+geom_point(aes(x=pValueGreatTTest$average_group_1,y=pValueGreatTTest$average_group_2,color= '>0.05'))+
-geom_point(aes(x=pVlaueLessTTest$average_group_1,y=pVlaueLessTTest$average_group_2,color= '<0.05'))+
-geom_abline(aes(intercept=0,slope=1),color='blue')+xlab('Average of Group1')+ylab('Average of Group2')+labs(color='P-values')+
-ggtitle("Group abandance w.r.t P-Value(T-Test)") + theme(plot.title = element_text(hjust = 0.5))
 
 
-
-#Scatter-Plot for T-Test according to P-Value:
+#Scatter-Plot for U-Test according to P-Value:
 
 pValueGreatUTest            <- newMatrix %>% filter(pValue_UTest>=0.05)        #filter matrix with p value >0.05
 pVlaueLessUTest             <- newMatrix  %>% filter(pValue_UTest <= 0.05)     #filter matrix with p value <0.05
 
 # Visualization for U-Test:
 ggplot()+geom_point(aes(x=pValueGreatUTest$average_group_1,y=pValueGreatUTest$average_group_2,color= '>0.05'))+
-geom_point(aes(x=pVlaueLessUTest$average_group_1,y=pVlaueLessUTest$average_group_2,color= '<0.05'))+
-geom_abline(aes(intercept=0,slope=1),color='blue')+xlab('Average of Group1')+ylab('Average of Group2')+labs(color='P-values')+
-ggtitle("Group abandance  w.r.t  P-Value(U-Test)") + theme(plot.title = element_text(hjust = 0.5))
+  geom_point(aes(x=pVlaueLessUTest$average_group_1,y=pVlaueLessUTest$average_group_2,color= '<0.05'))+
+  geom_abline(aes(intercept=0,slope=1),color='blue')+xlab('Average of Group1')+ylab('Average of Group2')+labs(color='P-values')+
+  ggtitle("Group abandance  w.r.t  P-Value(U-Test)") + theme(plot.title = element_text(hjust = 0.5))
 
 
 #--------------------------------------------------
-                                    "STEP 4 : Export the results"
+"STEP 4 : Export the results"
 #--------------------------------------------------
 
 
@@ -240,10 +187,9 @@ write.table(newMatrix, file = paste(outputname), append = FALSE, quote = TRUE, s
 
 
 #--------------------------------------------------
-                                          "STEP 5: Finish"
+"STEP 5: Finish"
 #--------------------------------------------------
 print(paste("FINISHED"), quote = FALSE)
 
 
- 
-       
+

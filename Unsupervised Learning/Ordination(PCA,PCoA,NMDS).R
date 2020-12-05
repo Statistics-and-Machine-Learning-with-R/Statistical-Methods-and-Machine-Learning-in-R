@@ -1,6 +1,5 @@
 #-------------------------------------------------------------------------------------------------------------
-                                      " Ordination : PCA, PCOA AND NMDS
-                             Clustering : K-Means & Hierarchical(Agglomerative)" 
+" Ordination : PCA, PCOA AND NMDS" 
 #-------------------------------------------------------------------------------------------------------------
 
 
@@ -11,7 +10,7 @@ cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables
 
 #-------------------------------------------------------------------------------------------------------------
-                                     "HEADER OF THE SOFTWARE OUTPUT"
+"HEADER OF THE SOFTWARE OUTPUT"
 #-------------------------------------------------------------------------------------------------------------
 
 sourceAuthor  <-  "META PRO STAT TEAM"
@@ -35,10 +34,8 @@ if(!require("factoextra")) install.packages("factoextra")
 if(!require("vegan")) install.packages("vegan")
 if(!require("ape")) install.packages("ape",repo='https://mac.R-project.org',dependencies = F)
 #if(!require("ggbiplot")) install_github("vqv/ggbiplot")
-if(!require("ggdendro")) install.packages("ggdendro") 
 if(!require("reshape2")) install.packages("reshape2") 
-if(!require("grid")) install.packages("grid") 
-if(!require("NbClust")) install.packages("NbClust")
+
 
 
 
@@ -47,19 +44,14 @@ library("ggplot2")
 library("factoextra")
 library("vegan")
 library("ape")
-#library('ggbiplot')
-library('devtools')
-library("ggdendro")
 library("reshape2")
-library("grid")
-library("cluster")
-library("NbClust")
+
 
 
 
 
 #------------------------------------------------
-                             "Get the matrix and Choose Groups"
+"Get the matrix and Choose Groups"
 #------------------------------------------------
 
 # Choose a csv file
@@ -74,16 +66,16 @@ matrix <- file1[,1:4]  #all variables except 5th(States)
 
 
 #--------------------------------------------------
-                                 "Calculation and Visualization for ORDINATION"
+"Calculation and Visualization for ORDINATION"
 #--------------------------------------------------
 
 
-                                  "PCA(Principal Component Analysis)"
+"PCA(Principal Component Analysis)"
 
 
 #There are two general methods to perform PCA in R :
-  #Spectral decomposition which examines the covariances / correlations between variables
-  #Singular value decomposition which examines the covariances / correlations between individuals
+#Spectral decomposition which examines the covariances / correlations between variables
+#Singular value decomposition which examines the covariances / correlations between individuals
 
 #The function princomp() uses the spectral decomposition approach.
 #The functions prcomp() and PCA()[FactoMineR] use the singular value decomposition (SVD).
@@ -121,15 +113,15 @@ resInd$cos2           # Quality of representation
 #Graph of individuals. Individuals with a similar profile are grouped together.
 
 fviz_pca_ind(PCA,
-                   geom.ind = "point", # show points only (nbut not "text")
-                   col.ind = file1$State, # color by group
-                   addEllipses = TRUE, # Concentration ellipses,
-                   legend.title = "State"
+             geom.ind = "point", # show points only (nbut not "text")
+             col.ind = file1$State, # color by group
+             addEllipses = TRUE, # Concentration ellipses,
+             legend.title = "State"
 )
 
 
 ##Graph of variables. Positive correlated variables point to the same side of the plot. 
-  #Negative correlated variables point to opposite sides of the graph.
+#Negative correlated variables point to opposite sides of the graph.
 
 fviz_pca_var(PCA,
              col.var = "contrib", # Color by contributions to the PC
@@ -139,7 +131,7 @@ fviz_pca_var(PCA,
 
 # Biplot of individuals and variables.
 
- fviz_pca_biplot(PCA, repel = F,
+fviz_pca_biplot(PCA, repel = F,
                 
                 col.var = "black", # Variables color,
                 legend.title= 'States',
@@ -153,24 +145,24 @@ fviz_pca_var(PCA,
 #Overlay in forms of vectors:
 # fviz_add(q,groups,geom='arrow',color='red')
 
- 
+
 #Overlay in forms of individuals:
- 
+
 groups <-  as.factor(file1$Wealth)
- 
+
 fviz_pca_biplot(PCA,
-             col.ind = groups, # color by groups
-             palette = c("red",  "blue",'green'),
-             addEllipses = F, # Concentration ellipses
-             legend.title = "Groups",
-             
+                col.ind = groups, # color by groups
+                palette = c("red",  "blue",'green'),
+                addEllipses = F, # Concentration ellipses
+                legend.title = "Groups",
+                
 )
 
 
 
 
 
-                                      "Redundancy Analysis (RDA)"
+"Redundancy Analysis (RDA)"
 
 
 
@@ -225,7 +217,7 @@ biplot(RDA, choices = c(1,3),
 
 
 
-                                      "PCoA(Principal Coordinate Analysis)"
+"PCoA(Principal Coordinate Analysis)"
 
 
 
@@ -260,7 +252,7 @@ biplot(PCOA, choices = c(1,2),
 
 
 
-                                    "NMDS (Non-metric Multidimensional Scaling)"
+"NMDS (Non-metric Multidimensional Scaling)"
 
 
 # apply NMDS on matrix, metaMDS is included in package VEGAN which performs NMDS :
@@ -290,96 +282,8 @@ ordispider(NMDS_CALC,groups = file1$State,label = T)
 
 
 
-
-
-
-#----------------------------------------------
-                            "Calculation and Visualization for CLUSTERING"
-#----------------------------------------------
-
-
-
-# Determining the optimum number of clusters 
-nb <- NbClust(matrix, distance = "euclidean", min.nc = 2,
-              max.nc = 10, method = "complete", index ="all")
-
-# Visualize the result
-fviz_nbclust(nb) + theme_minimal()
-
-
-# Taking number of clusters from user
-
-K <- readline(prompt = "Input number of clusters required:")
-k<- as.integer(K)
-
-
-help(eclust)
-
-# Types of Cluster Distances
-# 1. "euclidean"  : SQRT(SUMMe_i:(xi-i)2).
-# 2. "maximum"    : Maximum distance between two components of x and y (supremum norm)
-# 3. "manhattan"  : Absolute distance between the two vectors (1 norm aka L1).
-# 4. "canberra"   : summe:i|xi?-yi|/(|xi|+|yi|). 
-# 5. "binary"     : The vectors are regarded as binary bits, so non-zero elements are "on" and zero elements are "off".
-# 6. "minkowski"  : The p norm, the pth root of the sum of the pth powers of the differences of the components.
-
-
-
-
-                                             "K-Means Clustering"
-
-
-
-
-# Performing K-means clustering giving number of clusters  
-
-k_means <- eclust(matrix, "kmeans",hc_metric = "euclidean", k , nstart = 25, graph = TRUE)
-
-
-# Visualize k-means clusters
-fviz_cluster(k_means, geom = "point", ellipse.type = "norm", palette = "jco", ggtheme = theme_minimal())  # Visualization of the clusters
-
-
-
-
-                                            "Hierarchical Clustering"
-                                            
-
-# Hierarchical clustering giving number of clusters
-h_clust <- eclust(matrix, "hclust", k , hc_metric = "euclidean", graph = FALSE)
-
-
-
-# Visualize Hierarchical clusters by dendograms
-fviz_dend(h_clust, show_labels = FALSE, palette = "jco", as.ggplot = TRUE)
-
-# Making heatmaps
-
-heatmap(as.matrix(h_clust$data))
-                                        
-
-          
-                                              "Quality Of Clustering"
-
-# Using Silhouette Function
-fviz_silhouette(k_means)
-fviz_silhouette(h_clust)
-
-
-                                                "NMDS & Clustering"
-
-# ordicluster: which connects similar communities 
-#(useful to see if treatments are effective in controlling community structure)
-
-ordicluster(ord_NMDS, h_clust)
-
-
-
-
-
-
 #--------------------------------------------------
-                                                  "Finish"
+"Finish"
 #--------------------------------------------------
 print(paste("FINISHED"), quote = FALSE)
 

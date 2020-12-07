@@ -22,7 +22,8 @@ learning, teaching, creating repositories_
 * **Lectures + Tutorials** for deeper Understanding.
 
 
-###  Programming approach to Bio-Informatics:
+##  Programming approach to Bio-Informatics:
+
 To make the contribution open-source, our team has uploaded all the scripts in R language. This may help to understand the usage of Programming in Bio-Informatic. Moreover, under the provided links you will find sub folders each containing a Data-set file, a Programming script in R, and a Read_me file (description about the program). In order to get the access to the scripts click on the links mentioned below.
   
 * [SIGNIFICANT DIFFERENCE TESTS](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests)  
@@ -32,13 +33,13 @@ To make the contribution open-source, our team has uploaded all the scripts in R
 
  
  
-### Theoretical Concepts:
+## Theoretical Concepts:
 
 Apart from Codes our team has also gathered the theoretical approach to all the ANALYSIS which we automated using R. To get the link to that Section click on the link provided under this line: <br/>
 
 [Theory and Roadmap to BiInformatics](https://github.com/Rizvix0/DE_Project_MetaProtStat/wiki)
 
-### Lectures + Tutorials:
+## Lectures + Tutorials:
 
 We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
 The tutorial has the following content :

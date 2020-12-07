@@ -187,9 +187,17 @@ write.table(newMatrix, file = paste(outputname), append = FALSE, quote = TRUE, s
 
 
 #--------------------------------------------------
+"STEP 5: PP-plot"
+#--------------------------------------------------
+# Setting up the plotting window with suitable margins
+par(mar=c(4,4,2,1))
+
+# Plotting the Probability plot
+ppPlot(p, "normal")  #'p' here contains our p-values obtained from the test
+
+
+#--------------------------------------------------
 "STEP 5: Finish"
 #--------------------------------------------------
 print(paste("FINISHED"), quote = FALSE)
-
-
 

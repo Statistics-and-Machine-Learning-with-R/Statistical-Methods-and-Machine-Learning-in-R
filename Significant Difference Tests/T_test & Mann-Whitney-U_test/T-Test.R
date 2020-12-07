@@ -31,10 +31,11 @@ print(paste("TEST",testName), quote = FALSE )
 # Installing  Packages
 
 # Package for package administration:
-if(!require("tidyr")) install.packages("tidyr")             #package for Data-wrangling
-if(!require("ggplot2")) install.packages("ggplot2")         #package for Data-visualization
-if(!require("ggpubr")) install.packages("ggpubr")           #package for Data-visualization
-if(!require("dplyr")) install.packages("dplyr")             #package for Data-wrangling
+if(!require("tidyr")) install.packages("tidyr")               #package for Data-wrangling
+if(!require("ggplot2")) install.packages("ggplot2")           #package for Data-visualization
+if(!require("ggpubr")) install.packages("ggpubr")             #package for Data-visualization
+if(!require("dplyr")) install.packages("dplyr")               #package for Data-wrangling
+if(!require("qualityTools")) install.packages("qualityTools") #package for PP-plots
 
 
 # Load packages:
@@ -43,7 +44,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 library(ggpubr)
-
+library(qualityTools)
 
 
 
@@ -161,7 +162,7 @@ newMatrix[1:nrow(matrix),ncol(matrix)+ 4]   <-  p.adjust(p, method = "BH", n = l
 
 "Visualization for Individual test"
 
-#Scatter-Plot for T-Test according to P-Value:
+# Scatter-Plot for T-Test according to P-Value:
 
 pValueGreatTTest            <- newMatrix %>% filter(pValue_TTest>=0.05)      #filter matrix with p value >0.05
 pVlaueLessTTest             <- newMatrix  %>% filter(pValue_TTest <= 0.05)   #filter matrix with p value <0.05
@@ -186,9 +187,16 @@ write.table(newMatrix, file = paste(outputname), append = FALSE, quote = TRUE, s
 
 
 #--------------------------------------------------
-"STEP 5: Finish"
+"STEP 5: PP-plot"
+#--------------------------------------------------
+# Setting up the plotting window with suitable margins
+par(mar=c(4,4,2,1))
+
+# Plotting the Probability plot
+ppPlot(p, "normal")  #'p' here contains our p-values obtained from the test
+
+
+#--------------------------------------------------
+"STEP 6: Finish"
 #--------------------------------------------------
 print(paste("FINISHED"), quote = FALSE)
-
-
-

@@ -40,8 +40,53 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 
 ### Lectures + Tutorials:
 
-...
-...
+We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
+The tutorial has the following content :
+
+* Introduction to R & RStudio
+* Data Types & Packages in R
+* Reading & Writing Data in R
+  * input
+  * output
+* Tidying Data: tidyr
+* Plotting Data: ggplot2
+* Correlation
+* Regression
+* Correlation + Regression
+* Group Significance Tests
+  * T-Test
+  * Mann-Whitney-U-Test
+  * Analysis of Variance (ANOVA)
+  * Kruskal-Wallis-Test
+  * Analysis of Similarities (ANOSIM)
+  * Permutational Multivariate Analysis of Variance (PERMANOVA)
+* Cluster Analysis
+  * K-Means
+  * DBSCAN
+  * Hierarchical (Agglomerative)
+* Ordination
+  * Principal Component Analysis (PCA)
+  * Principal Coordinate Analysis (PCoA)
+  * Non-metric Multidimensional Scaling (NMDS)
+* Clustering + Ordination
+* Statistical Learning Algorithms
+  * Unsupervised
+  * Reinforced
+  * Supervised
+* Machine Learning Algorithm: Decision Tree
+* Deep Learning Algorithm: Artificial Neural Network
+
+The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
+
+### Click on the following link to download our tutorial folder
+
+[Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
+
+### There are Read Me files in each exercise to guide you through the folders
+
+### The files inside the downloaded folder are password protected. To obtain the password & to receive the solutions for the tasks in each exercise, please drop a mail to 
+
+_heyer@mpi-magdeburg.mpg.de_ 
 
 ***
  

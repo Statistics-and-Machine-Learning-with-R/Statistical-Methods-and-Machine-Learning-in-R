@@ -44,6 +44,26 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 ***
 
 ## About Team:
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/101390010-7d2f6100-38c2-11eb-9a7c-fe3a15aa5635.png" align="right" height="300" width="250" ></a>  <br/> <br/>
+<br/>
+<br/>
+
+
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Dr. Robert Heyer***
+
+<br/>
+&nbsp;***E-mail: robert.heyer@ovgu.de*** 
+<br/>
+&nbsp;***Linked-In : https://www.linkedin.com/in/dr-ing-robert-heyer-a288a219b/***
+<br/>
+
+<br/>
+<br/>
+<br/>
+
+
+***
+
 <a href="url"><img src="https://user-images.githubusercontent.com/49519053/98467030-6fa78e00-21d3-11eb-95f5-86759cf1863b.jpg" align="right" height="300" width="250" ></a>  <br/> <br/>
 <br/>
 <br/>

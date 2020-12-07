@@ -83,7 +83,7 @@ The tutorial consists of presentation files along with a RScript which can be ru
 
 [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
 
-_Source : http://www.mpa.ovgu.de/index.php/statistical-analysis/ _
+_Source : http://www.mpa.ovgu.de/index.php/statistical-analysis/_
 
 ### There are Read Me files in each exercise to guide you through the folders
 

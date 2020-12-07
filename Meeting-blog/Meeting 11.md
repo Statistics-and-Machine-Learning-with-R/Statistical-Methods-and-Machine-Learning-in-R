@@ -23,3 +23,9 @@
  * Presentation prepared on 
    * DT
    * ANN
+
+## 3-Goals for the Following Week
+* Give Presentation to Students
+* Finalize codes in repository & separated out
+* Include a webpage at mpa.ovgu.de
+* FInalize exercise 4,5,6 & 7

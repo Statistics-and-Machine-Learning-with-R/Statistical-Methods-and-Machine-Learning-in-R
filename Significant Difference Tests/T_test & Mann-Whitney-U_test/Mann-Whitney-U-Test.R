@@ -197,7 +197,7 @@ ppPlot(p, "normal")  #'p' here contains our p-values obtained from the test
 
 
 #--------------------------------------------------
-"STEP 5: Finish"
+"STEP 6: Finish"
 #--------------------------------------------------
 print(paste("FINISHED"), quote = FALSE)
 

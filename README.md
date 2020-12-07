@@ -55,12 +55,12 @@ Apart from Codes our team has also gathered the theoretical approach to all the 
 <br/>
 
 
- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Dr. Robert Heyer**
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Dr. Robert Heyer***
 
 <br/>
-&nbsp;**E-mail: robert.heyer@ovgu.de**
+&nbsp;***E-mail: robert.heyer@ovgu.de***
 <br/>
-&nbsp;**Linked-In: https://www.linkedin.com/in/dr-ing-robert-heyer-a288a219b/**
+&nbsp;***Linked-In: https://www.linkedin.com/in/dr-ing-robert-heyer-a288a219b/***
 <br/>
 
 <br/>

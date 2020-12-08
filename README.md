@@ -92,7 +92,7 @@ _Source : http://www.mpa.ovgu.de/index.php/statistical-analysis/_
 _heyer@mpi-magdeburg.mpg.de_ 
 
 
-### Much Appreciation towards Julian Lange, Daniel Walke & Max Wolf for their feedbacks and making this Tutorial possible
+### Much Appreciation towards Julian Lange, Daniel Walke & Max Wolf for their valuable feedbacks and making this Tutorial possible
 
 ***
  

@@ -79,15 +79,9 @@ The tutorial has the following content :
 
 The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
 
-* **Click on the following link to download Lecture+ Tutorial folder**
+* **Click on the following link to download Lecture+ Tutorial folder** [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
 
-[Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
-
-_Source : http://www.mpa.ovgu.de/index.php/statistical-analysis/_
-
-
-
-* The files inside the downloaded folder are password protected. To obtain the password & to receive the solutions for the tasks in each exercise, please drop a mail to  _heyer@mpi-magdeburg.mpg.de_ 
+* The files inside the downloaded folder are **password protected**. To obtain the password & to receive the solutions for the tasks in each exercise, please drop a mail to  _heyer@mpi-magdeburg.mpg.de_ 
 
 * There are Read Me files in each exercise to guide you through the folders
 

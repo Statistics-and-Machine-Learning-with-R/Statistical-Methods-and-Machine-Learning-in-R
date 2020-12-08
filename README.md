@@ -91,6 +91,9 @@ _Source : http://www.mpa.ovgu.de/index.php/statistical-analysis/_
 
 _heyer@mpi-magdeburg.mpg.de_ 
 
+
+### Much Appreciation towards Julian Lange, Daniel Walke & Max Wolf for their feedbacks and making this Tutorial possible
+
 ***
  
  **Do not forget to clone the repository to you GITHUB-DEKSTOP.<br/> This way you will get the folders on your dekstop(with all the datasets and scripts).**

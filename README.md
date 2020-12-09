@@ -19,12 +19,12 @@ learning, teaching, creating repositories_
 
 * **Programming approach** to Bio-Informatic Analyses.
 * **Theoretical Concepts** to the Analyses being performed.
-* **Lectures + Tutorials** for deeper Understanding.
+* **Lectures + Tutorials** for Deeper Understanding.
 
 
 ###  Programming approach to Bio-Informatics:
 
-To make the contribution open-source, our team has uploaded all the scripts in R language. This may help to understand the usage of Programming in Bio-Informatic. Moreover, under the provided links you will find sub folders each containing a Data-set file, a Programming script in R, and a Read_me file (description about the program). In order to get the access to the scripts click on the links mentioned below.
+To make the contribution open-source, our team has uploaded all the scripts in R language. This may help to understand the usage of Programming in Bio-Informatic. Moreover, under the provided links you will find subfolders each containing a Data-set file, a Programming script in R, and a Read_me file (description about the program). In order to get access to the scripts click on the links mentioned below.
   
 * [SIGNIFICANT DIFFERENCE TESTS](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests)  
 * [UNSUPERVISED LEARNING](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)
@@ -35,7 +35,7 @@ To make the contribution open-source, our team has uploaded all the scripts in R
  
 ### Theoretical Concepts:
 
-Apart from Codes our team has also gathered the theoretical approach to all the ANALYSIS which we automated using R. To get the link to that Section click on the link provided under this line: <br/>
+Apart from Codes, our team has also gathered the theoretical approach to all the ANALYSIS which we automated using R. To get the link to that Section click on the link provided under this line: <br/>
 
 [Theory and Roadmap to BiInformatics](https://github.com/Rizvix0/DE_Project_MetaProtStat/wiki)
 
@@ -92,6 +92,11 @@ The tutorial consists of presentation files along with a RScript which can be ru
  
  **Do not forget to clone the repository to you GITHUB-DEKSTOP.<br/> This way you will get the folders on your dekstop(with all the datasets and scripts).**
  
+***
+
+## Feedback Form:
+If you want to provide your valuable feedack for further improvements and suggestion do visit the [Feedback Form](https://forms.gle/AfRu4zn4xzr2PqfT7)
+
 ***
 
 ## About Team:

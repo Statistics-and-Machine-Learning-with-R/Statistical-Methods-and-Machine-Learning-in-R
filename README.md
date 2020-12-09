@@ -55,8 +55,9 @@ The tutorial has the following content :
 * Regression
 * Correlation + Regression
 * Group Significance Tests <br/>
-  * t-Test
+
   * Mann-Whitney-U-Test
+  * t-test
   * Analysis of Variance (ANOVA)
   * Kruskal-Wallis-Test
   * Analysis of Similarities (ANOSIM)

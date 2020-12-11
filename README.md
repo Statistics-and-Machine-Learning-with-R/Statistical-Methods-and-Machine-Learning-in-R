@@ -37,7 +37,7 @@ To make the contribution open-source, our team has uploaded all the scripts in R
 
 Apart from Codes, our team has also gathered the theoretical approach to all the ANALYSIS which we automated using R. To get the link to that Section click on the link provided under this line: <br/>
 
-[Theory and Roadmap to BiInformatics](https://github.com/Rizvix0/DE_Project_MetaProtStat/wiki)
+[Theory and Roadmap](https://github.com/Rizvix0/DE_Project_MetaProtStat/wiki)
 
 ### Lectures + Tutorials:
 
@@ -77,6 +77,10 @@ The tutorial has the following content :
   * Supervised
 * Machine Learning Algorithm: Decision Tree
 * Deep Learning Algorithm: Artificial Neural Network
+
+### Visit our page at the MPA website
+http://www.mpa.ovgu.de/index.php/statistical-analysis/ 
+* Special thanks to Mr Kay Schallert for making this webpage possible
 
 The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
 

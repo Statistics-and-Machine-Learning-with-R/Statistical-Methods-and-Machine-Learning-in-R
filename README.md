@@ -42,7 +42,9 @@ Apart from Codes, our team has also gathered the theoretical approach to all the
 ### Lectures + Tutorials:
 
 We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
+
 **The download link for our tutorial is provided below**
+
 The tutorial has the following content :
 
 * Introduction to R & RStudio

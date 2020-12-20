@@ -81,7 +81,7 @@ The tutorial has the following content (**The download link for our tutorial is 
 
 ### Visit our page at the MPA website
 http://www.mpa.ovgu.de/index.php/statistical-analysis/ 
-* Special thanks to **Mr Kay Schallert for making this webpage possible**
+* Special thanks to **Mr Kay Schallert** for making this webpage possible
 
 The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
 

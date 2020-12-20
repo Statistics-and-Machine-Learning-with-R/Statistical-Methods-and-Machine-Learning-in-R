@@ -57,27 +57,27 @@ The tutorial has the following content (**The download link for our tutorial is 
 * Correlation + Regression
 * Group Significance Tests <br/>
 
-  * [T-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests/T_test%20%26%20Mann-Whitney-U_test)
-  * [Mann-Whitney-U-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests/T_test%20%26%20Mann-Whitney-U_test)
-  * [Analysis of Variance (ANOVA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests/ANOVA_test%20%26%20Kruskal-Wallis_test)
-  * [Kruskal-Wallis-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests/ANOVA_test%20%26%20Kruskal-Wallis_test)
+  * [T-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/T_test%20%26%20Mann-Whitney-U_test/T-Test.R)
+  * [Mann-Whitney-U-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/T_test%20%26%20Mann-Whitney-U_test/Mann-Whitney-U-Test.R)
+  * [Analysis of Variance (ANOVA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/ANOVA_test%20%26%20Kruskal-Wallis_test/ANOVA-Test.R)
+  * [Kruskal-Wallis-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/ANOVA_test%20%26%20Kruskal-Wallis_test/Kruskal-Wallis-Test.R)
   * [Analysis of Similarities (ANOSIM)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests/ANOSIM_test%20%26%20PERMANOVA_test)
   * [Permutational Multivariate Analysis of Variance (PERMANOVA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests/ANOSIM_test%20%26%20PERMANOVA_test)
 * Cluster Analysis
-  * [K-Means](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)
+  * [K-Means](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Clustering(K-means%2C%20Hierarchical).R)
   * DBSCAN
-  * [Hierarchical (Agglomerative)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)
+  * [Hierarchical (Agglomerative)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Clustering(K-means%2C%20Hierarchical).R)
 * Ordination
-  * [Principal Component Analysis (PCA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)
-  * [Principal Coordinate Analysis (PCoA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)
-  * [Non-metric Multidimensional Scaling (NMDS)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)
+  * [Principal Component Analysis (PCA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(PCA).R)
+  * [Principal Coordinate Analysis (PCoA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(PCoA).R)
+  * [Non-metric Multidimensional Scaling (NMDS)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(NMDS).R)
 * Clustering + Ordination
 * Statistical Learning Algorithms
   * Unsupervised
   * Reinforced
   * Supervised
-* [Machine Learning Algorithm: Decision Tree](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Supervised%20Learning/Decision-Tree)
-* [Deep Learning Algorithm: Artificial Neural Network](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Supervised%20Learning/Artificial-Neural-Network)
+* [Machine Learning Algorithm: Decision Tree](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Decision-Tree/DecisionTree.R)
+* [Deep Learning Algorithm: Artificial Neural Network](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Artificial-Neural-Network/Artificial%20Neural%20Network.R)
 
 ### Visit our page at the MPA website
 http://www.mpa.ovgu.de/index.php/statistical-analysis/ 

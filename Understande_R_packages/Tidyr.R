@@ -2,7 +2,7 @@
 
 # The tidyr package, provides four functions to help you change the layout of your data set:
   
-                        #   gather(): gather (collapse) columns into rows
+                        # gather(): gather (collapse) columns into rows
                         # spread(): spread rows into columns
                         # separate(): separate one column into multiple
                         # unite(): unite multiple columns into one

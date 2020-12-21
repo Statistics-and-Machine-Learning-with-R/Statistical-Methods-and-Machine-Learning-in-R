@@ -43,8 +43,9 @@ Apart from Codes, our team has also gathered the theoretical approach to all the
 
 We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
 
-The tutorial has the following content (**The download link for our tutorial is provided after the content**) :
+**The tutorial has the following content (The download link for our tutorial is provided after the content)** :
 
+_All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
 * Introduction to R & RStudio
 * Data Types & Packages in R
   * [Data Types](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Data%20Types%20in%20R.R)

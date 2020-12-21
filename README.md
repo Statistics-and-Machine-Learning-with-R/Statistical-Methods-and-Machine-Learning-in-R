@@ -74,7 +74,7 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
   * [Principal Component Analysis (PCA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(PCA).R)
   * [Principal Coordinate Analysis (PCoA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(PCoA).R)
   * [Non-metric Multidimensional Scaling (NMDS)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(NMDS).R)
-* Clustering + Ordination
+* [Clustering + Ordination](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/%5BClustering%20+%20Ordination%5D(K-Means+PCA).R)
 * Statistical Learning Algorithms
   * Unsupervised
   * Reinforced

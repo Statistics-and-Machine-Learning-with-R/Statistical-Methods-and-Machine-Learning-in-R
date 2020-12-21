@@ -45,6 +45,7 @@ We have also created a series of presentations & R Scripts which can act as a co
 
 **The tutorial has the following content (The download link for our tutorial is provided after the content)** :
 
+***
 _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
 * Introduction to R & RStudio
 * Data Types & Packages in R
@@ -81,6 +82,7 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
   * Supervised
 * [Machine Learning Algorithm: Decision Tree](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Decision-Tree/DecisionTree.R)
 * [Deep Learning Algorithm: Artificial Neural Network](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Artificial-Neural-Network/Artificial%20Neural%20Network.R)
+***
 
 ### Visit our page at the MPA website
 http://www.mpa.ovgu.de/index.php/statistical-analysis/ 

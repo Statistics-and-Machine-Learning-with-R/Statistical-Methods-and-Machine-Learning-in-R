@@ -47,14 +47,16 @@ The tutorial has the following content (**The download link for our tutorial is 
 
 * Introduction to R & RStudio
 * Data Types & Packages in R
+  * [Data Types]()
+  * [Packages in R]()
 * Reading & Writing Data in R
-  * input
-  * output
+  * [input]()
+  * [output]()
 * [Tidying Data: tidyr](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understande_R_packages/Tidyr.R)
-* Plotting Data: ggplot2
-* Correlation
-* Regression
-* Correlation + Regression
+* [Plotting Data: ggplot2]()
+* [Correlation]()
+* [Regression]()
+* [Correlation + Regression]()
 * Group Significance Tests <br/>
 
   * [T-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/T_test%20%26%20Mann-Whitney-U_test/T-Test.R)

@@ -40,6 +40,7 @@ comp
 plot(comp, pch=16)
 
 # Applying K-Means
+k_means_new <- eclust(comp, FUNcluster= "kmeans", k= 3, hc_metric = "euclidean" , nstart = 25, graph = TRUE)
+
 
 ####################################################################################
-k_means_new <- eclust(comp, FUNcluster= "kmeans", k= 3, hc_metric = "euclidean" , nstart = 25, graph = TRUE)

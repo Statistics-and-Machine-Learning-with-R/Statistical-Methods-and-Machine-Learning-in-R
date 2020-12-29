@@ -43,9 +43,9 @@ Apart from Codes, our team has also gathered the theoretical approach to all the
 
 We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
 
-[![Download Link Image](https://user-images.githubusercontent.com/57228346/103298827-6ed4f080-49fb-11eb-8763-bb6c46af20f1.png)](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-12-29T16:44:08.164Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\&quot; etag=\&quot;GdAJ_ltARrBamXZjPX7-\&quot; version=\&quot;14.1.2\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;yxcdT8LbyrVhV0v5MD9_\&quot; name=\&quot;Page-1\&quot;&gt;xZRLc5swEIB/DUc8IBJSHx1ikkNcz9Tt9NiRYUGKhUSECDi/vhJIPOr23BkGxLe7Wu1LXpRU/bPENTmIHJiHgrz3oicPoe1DrN8GXEcQo2AEpaT5iMIZnOgnWOjUWppDs1JUQjBF6zXMBOeQqRXDUopurVYItvZa4xJuwCnD7Jb+pLkiloZBMAtegJbEuv5ybwUVdsoWNATnolugaO9FiRRCjauqT4CZ3Lm8jHbpP6TTwSRw9ReDHw3I4/nN5AQFDJ91WQYlD8VM6z8WghtJo6421Pi9FU7gN0MhdlohQnU/C4dMMyFXFh6KiiIITEpmFJf2O3jD2pBIKFZ2RKl6cJLqp+u6TVXjjfgo200OhtS+rqoy4aG0rZnAeaNXKDCBpqEJ9aSwoo2iul7+ARQReeMfcEYoB/8VsOSUl35HFfG/bT5pfXu+J9Fxs7E+3ivll6FDpH5/b5WQFDN3fu0L/xmTZmMSHTb1YGaXIdH/ITq06A/Sl8df6iF92+8u56/HF55dfD+c+m7qp7kBkBQtz8HYhzqejlAFpxpnRtrp4R4qVjErbpQUF0imZoi22yRJU9NAlLEF322Tu/3jlKBlw9oe/gCpoF8ge8JnEBUoedUqVhq5YbK3CYrtfzfP5p3TIYuxdFOJ7XVQTlvPE6MXNivudzFDDs3zOqgvLr1o/xs=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
 
-<a href="https://user-images.githubusercontent.com/57228346/103298827-6ed4f080-49fb-11eb-8763-bb6c46af20f1.png)](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip" target="_blank">Click to Download</a>
 
 **The tutorial has the following content (The download link for our tutorial is provided after the content)** :
 

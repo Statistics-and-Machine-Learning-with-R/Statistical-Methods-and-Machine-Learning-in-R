@@ -43,7 +43,19 @@ Apart from Codes, our team has also gathered the theoretical approach to all the
 
 We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
 
-<a href="http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip" target="_blank">Download</a>
+The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
+
+* **Click on the following link to download Lecture+ Tutorial folder** [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
+
+(Open in new tab if link does not start download on clicking)
+
+* The files inside the downloaded folder are **password protected**. To obtain the password & to receive the solutions for the tasks in each exercise, please drop a mail to  _heyer@mpi-magdeburg.mpg.de_ 
+
+* There are Read Me files in each exercise to guide you through the folders
+
+* Much Appreciation towards **Julian Lange, Daniel Walke & Max Wolf** for their valuable feedbacks and making this Tutorial possible
+
+
 
 **The tutorial has the following content (The download link for our tutorial is provided after the content)** :
 
@@ -89,16 +101,6 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
 ### Visit our page at the MPA website
 http://www.mpa.ovgu.de/index.php/statistical-analysis/ 
 * Special thanks to **Mr Kay Schallert** for making this webpage possible
-
-The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
-
-* **Click on the following link to download Lecture+ Tutorial folder** [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
-
-* The files inside the downloaded folder are **password protected**. To obtain the password & to receive the solutions for the tasks in each exercise, please drop a mail to  _heyer@mpi-magdeburg.mpg.de_ 
-
-* There are Read Me files in each exercise to guide you through the folders
-
-* Much Appreciation towards **Julian Lange, Daniel Walke & Max Wolf** for their valuable feedbacks and making this Tutorial possible
 
 ***
  

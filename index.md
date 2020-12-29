@@ -22,7 +22,7 @@ learning, teaching, creating repositories_
 * **Lectures + Tutorials** for Deeper Understanding.
 
 
-###  Programming approach to Bio-Informatics:
+##  Programming approach to Bio-Informatics:
 
 To make the contribution open-source, our team has uploaded all the scripts in R language. This may help to understand the usage of Programming in Bio-Informatic. Moreover, under the provided links you will find subfolders each containing a Data-set file, a Programming script in R, and a Read_me file (description about the program). In order to get access to the scripts click on the links mentioned below.
   
@@ -33,18 +33,31 @@ To make the contribution open-source, our team has uploaded all the scripts in R
 
  
  
-### Theoretical Concepts:
+## Theoretical Concepts:
 
 Apart from Codes, our team has also gathered the theoretical approach to all the ANALYSIS which we automated using R. To get the link to that Section click on the link provided under this line: <br/>
 
 [Theory and Roadmap](https://github.com/Rizvix0/DE_Project_MetaProtStat/wiki)
 
-### Lectures + Tutorials:
+## Lectures + Tutorials:
 
 We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
 
+The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
+
+* **Click on the following link to download Lecture+ Tutorial folder** [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip) (Open in new tab if link does not start download on clicking or visit http://www.mpa.ovgu.de/index.php/statistical-analysis/)
+
+* The files inside the downloaded folder are **password protected**. To obtain the password & to receive the solutions for the tasks in each exercise, please drop a mail to  _heyer@mpi-magdeburg.mpg.de_ 
+
+* There are Read Me files in each exercise to guide you through the folders
+
+* Much Appreciation towards **Julian Lange, Daniel Walke & Max Wolf** for their valuable feedbacks and making this Tutorial possible
+
+
+
 **The tutorial has the following content (The download link for our tutorial is provided after the content)** :
 
+***
 _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
 * Introduction to R & RStudio
 * Data Types & Packages in R
@@ -54,7 +67,7 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
   * [input](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Data%20Input%20%26%20Output%20in%20R.R)
   * [output](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Data%20Input%20%26%20Output%20in%20R.R)
 * [Tidying Data: tidyr](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understande_R_packages/Tidyr.R)
-* [Plotting Data: ggplot2]()
+* [Plotting Data: ggplot2](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understande_R_packages/ggplot.R)
 * [Correlation](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Correlation%20%26%20Regression.R)
 * [Regression](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Correlation%20%26%20Regression.R)
 * [Correlation + Regression](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Correlation%20%26%20Regression.R)
@@ -74,27 +87,18 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
   * [Principal Component Analysis (PCA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(PCA).R)
   * [Principal Coordinate Analysis (PCoA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(PCoA).R)
   * [Non-metric Multidimensional Scaling (NMDS)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination(NMDS).R)
-* Clustering + Ordination
+* [Clustering + Ordination](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/%5BClustering%20+%20Ordination%5D(K-Means+PCA).R)
 * Statistical Learning Algorithms
   * Unsupervised
   * Reinforced
   * Supervised
 * [Machine Learning Algorithm: Decision Tree](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Decision-Tree/DecisionTree.R)
 * [Deep Learning Algorithm: Artificial Neural Network](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Artificial-Neural-Network/Artificial%20Neural%20Network.R)
+***
 
 ### Visit our page at the MPA website
 http://www.mpa.ovgu.de/index.php/statistical-analysis/ 
 * Special thanks to **Mr Kay Schallert** for making this webpage possible
-
-The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
-
-* **Click on the following link to download Lecture+ Tutorial folder** [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
-
-* The files inside the downloaded folder are **password protected**. To obtain the password & to receive the solutions for the tasks in each exercise, please drop a mail to  _heyer@mpi-magdeburg.mpg.de_ 
-
-* There are Read Me files in each exercise to guide you through the folders
-
-* Much Appreciation towards **Julian Lange, Daniel Walke & Max Wolf** for their valuable feedbacks and making this Tutorial possible
 
 ***
  

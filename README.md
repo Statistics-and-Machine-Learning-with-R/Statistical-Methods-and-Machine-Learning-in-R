@@ -43,12 +43,6 @@ Apart from Codes, our team has also gathered the theoretical approach to all the
 
 We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
 
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;target&quot;:&quot;blank&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2020-12-29T17:05:46.605Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36\&quot; etag=\&quot;VtUd7Q0mxsz3ahXjmKZE\&quot; version=\&quot;14.1.2\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;yxcdT8LbyrVhV0v5MD9_\&quot; name=\&quot;Page-1\&quot;&gt;xZRNc5swEIZ/DUc8WCSkPjrEJIe4nqnb6bEjwxopFhIVIuD8+kpC4iNuz53xYPHsLtLuvqsgTqv+WeKa7EUBLEBR0QfxU4DQ5iHRTwOuA7hP4gGUkhYDWk/gSD/AwcjRlhbQLByVEEzReglzwTnkasGwlKJbup0FW+5a4xJuwDHH7Jb+pIUijq6jaDK8AC2J2/rLvTNU2Ds70BBciG6G4l0Qp1IINayqPgVmaufrMsRl/7COB5PA1V8CfjQgD6c3UxMUMXzSbbFOAUqY9n88C24sjbq6VJPfrfCGsLGN2GqHGNX9ZLSVZkIuIgIUn89RZEoyoaR0/3Y3rAOJhPMijihV200y/eu6blXVeCXey3ZVgCF1qLuqTHooa2smcNHoFYpMotnapHpUWNFGUd2vcA+KiKIJ9zgnlEP4Clhyysuwo4qE31YftL4935PouPmwPt4r5RerEKmf31slJMXMn1/vhT/npNlQRI9NP5j5ii30f8jOTgeWJThBcOg06Sg3wrNWrx7Sl4df6iF7220vp6+HF55fwnA9qnJU2yQPJEXLCzDxa9u7irllo6S4QDrKIt5s0jTLjJQoYzO+3aR3u8exVHPpOjW/g1TQz5A7zTOICpS8ahdnjf1YuXsFJe69m6b0zvuQ2YD6+cTuYijHT0+zoxeuAv51Nk0eTZNr3WfXX7z7Aw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
-
-
-
-
 **The tutorial has the following content (The download link for our tutorial is provided after the content)** :
 
 ***

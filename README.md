@@ -45,6 +45,8 @@ We have also created a series of presentations & R Scripts which can act as a co
 
 [![Download Link Image](https://user-images.githubusercontent.com/57228346/103298827-6ed4f080-49fb-11eb-8763-bb6c46af20f1.png)](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
 
+<a href="https://user-images.githubusercontent.com/57228346/103298827-6ed4f080-49fb-11eb-8763-bb6c46af20f1.png)](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip" target="_blank">Click to Download</a>
+
 **The tutorial has the following content (The download link for our tutorial is provided after the content)** :
 
 ***

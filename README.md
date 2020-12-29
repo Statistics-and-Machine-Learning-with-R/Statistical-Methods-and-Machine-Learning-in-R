@@ -45,7 +45,7 @@ We have also created a series of presentations & R Scripts which can act as a co
 
 The tutorial consists of presentation files along with a RScript which can be run simultaneously as someone goes through the slides. There is a task as well with each exercise which can provide as an assessment for the learner. 
 
-* **Click on the following link to download Lecture+ Tutorial folder** [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)(Open in new tab if link does not start download on clicking or visit http://www.mpa.ovgu.de/index.php/statistical-analysis/)
+* **Click on the following link to download Lecture+ Tutorial folder** [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip) (Open in new tab if link does not start download on clicking or visit http://www.mpa.ovgu.de/index.php/statistical-analysis/)
 
 * The files inside the downloaded folder are **password protected**. To obtain the password & to receive the solutions for the tasks in each exercise, please drop a mail to  _heyer@mpi-magdeburg.mpg.de_ 
 

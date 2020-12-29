@@ -43,9 +43,8 @@ Apart from Codes, our team has also gathered the theoretical approach to all the
 
 We have also created a series of presentations & R Scripts which can act as a complete tutorial for an individual or a group to learn Statistical Methods & Machine Learning with R
 
-{% raw %}
 <button onclick="window.open('http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip')">Download</button>
-{% endraw %}
+
 
 
 

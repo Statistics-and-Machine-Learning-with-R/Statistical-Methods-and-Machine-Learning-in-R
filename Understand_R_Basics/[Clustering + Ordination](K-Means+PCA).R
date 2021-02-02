@@ -11,8 +11,8 @@ rm(list=ls())   # Clear all variables
 
 # Creating a data matrix
 
-data_matrix <- as.data.frame(iris)
-data_matrix
+data_csv <- file.choose()
+data_matrix <- read.csv(data_csv, header = TRUE, sep = ",")
 
 
 #------------------------------------
@@ -29,7 +29,7 @@ library("factoextra")
 
 
 # Get principal component vectors using prcomp
-pca <- prcomp(data_matrix[,(1:4)],scale=T,center = T)
+pca <- prcomp(data_matrix,scale=T,center = T)
 
 # First 2 principal components
 comp <- data.frame(pca$x[,1:2])

@@ -5,7 +5,7 @@
 # Please make sure your csv file contains only numeric variables for the code to run.
 
 # If your csv file has non numeric variables, make sure to remove them or alternatively you can choose a subset of 
-# your data at " # Normalizing " 
+# your data at " # Plotting QQ Plots " below
 
 
 # Cleaning the workplace

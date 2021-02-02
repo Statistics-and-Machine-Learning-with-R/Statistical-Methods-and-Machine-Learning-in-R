@@ -5,7 +5,7 @@
 # Please make sure your csv file contains only numeric variables for the code to run.
 
 # If your csv file has non numeric variables, make sure to remove them or alternatively you can choose a subset of 
-# your data at " # Normalizing " 
+# your data at " # Test for Normality " below
 
 # Cleaning the workplace
 
@@ -25,7 +25,7 @@ data_csv
 data_matrix <- as.numeric(unlist(data_csv))
 data_matrix <- as.data.frame(data_csv)
 
-# Testing for Normality
+# Test for Normality
 
 for (i in 1:NCOL(data_matrix)) {
   print(shapiro.test(data_matrix[,i]))

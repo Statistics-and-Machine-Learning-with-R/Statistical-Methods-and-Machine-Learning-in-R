@@ -62,7 +62,7 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
 * Introduction to R & RStudio
 * Data Types & Packages in R
   * [Data Types](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Data%20Types%20in%20R.R)
-  * [Packages in R](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Understande_R_packages)
+  * [Packages in R](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Understand_R_Packages)
 * Reading & Writing Data in R
   * [input](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Data%20Input%20%26%20Output%20in%20R.R)
   * [output](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Data%20Input%20%26%20Output%20in%20R.R)

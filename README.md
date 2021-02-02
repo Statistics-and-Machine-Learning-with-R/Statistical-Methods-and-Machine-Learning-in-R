@@ -66,8 +66,8 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
 * Reading & Writing Data in R
   * [input](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Data%20Input%20%26%20Output%20in%20R.R)
   * [output](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Data%20Input%20%26%20Output%20in%20R.R)
-* [Tidying Data: tidyr](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understande_R_packages/Tidyr.R)
-* [Plotting Data: ggplot2](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understande_R_packages/ggplot.R)
+* [Tidying Data: tidyr](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Packages/Tidyr.R)
+* [Plotting Data: ggplot2](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Packages/ggplot.R)
 * [Correlation](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Correlation%20%26%20Regression.R)
 * [Regression](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Correlation%20%26%20Regression.R)
 * [Correlation + Regression](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Understand_R_Basics/Correlation%20%26%20Regression.R)

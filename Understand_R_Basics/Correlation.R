@@ -1,6 +1,6 @@
-##############################
-## Correlation & Regression ##
-##############################
+#################
+## Correlation ##
+#################
 
 # Please make sure your csv file contains only numeric variables for the code to run.
 

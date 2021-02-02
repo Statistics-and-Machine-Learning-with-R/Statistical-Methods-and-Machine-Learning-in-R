@@ -10,8 +10,8 @@ rm(list=ls())   # Clear all variables
 
 # Creating a data matrix
 
-data_matrix <- as.data.frame(iris)
-data_matrix
+data_csv <- file.choose()
+data_matrix <- read.csv(data_csv, header = TRUE, sep = ",")
 
 
 
@@ -29,13 +29,18 @@ library("fpc")
 library("factoextra")
 
 
+# Input values for "eps" & "MinPts"
+
+eps1 <- readline(prompt = "Enter your value for epsilon : ")
+minPts <- readline(prompt = "Enter minPts for CLuster formation ")
+
 
 # Performing DBSCAN clustering on parameters eps & minPts
-dbscan <- fpc::dbscan(data_matrix[,(1:4)], eps = 0.6, MinPts = 3)      # performing dbscan leaving out the column species with epsilon of 0.6 & Min Points of 3
+dbscan <- fpc::dbscan(data_matrix, eps = eps1, MinPts = minPts)      # performing DBSCAN
 dbscan
 
 
 # Visualize clusters
-fviz_cluster(dbscan, data_matrix[,(1:4)], stand = FALSE, frame = FALSE, geom = "point")
+fviz_cluster(dbscan, data_matrix, stand = FALSE, ellipse = TRUE, geom = "point")
 
 ####################################################################

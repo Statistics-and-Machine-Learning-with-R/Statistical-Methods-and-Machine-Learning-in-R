@@ -17,13 +17,7 @@ rm(list=ls())   # Clear all variables
 print(paste("Please select Input CSV"), quote = FALSE)
 
 data <- file.choose()
-data_csv <- read.csv(data, header = TRUE, sep = ',')
-data_csv
-
-# Creating a Data Matrix
-
-data_matrix <- as.numeric(unlist(data_csv))
-data_matrix <- as.data.frame(data_csv)
+data_matrix <- read.csv(data, header = TRUE, sep = ',')
 
 # Test for Normality
 

@@ -19,17 +19,11 @@ rm(list=ls())   # Clear all variables
 print(paste("Please select Input CSV"), quote = FALSE)
 
 data <- file.choose()
-data_csv <- read.csv(data, header = TRUE, sep = ',')
-data_csv
-
-# Creating a data matrix
-
-data_matrix <- as.numeric(unlist(data_csv))
-data_matrix <- as.data.frame(data_csv)
+data_matrix <- read.csv(data, header = TRUE, sep = ',')
 
 # Normalizing
 
-data_matrix_out <- as.matrix(scale(data_matrix, center = TRUE, scale = TRUE))
+data_matrix_out <- as.data.frame(scale(data_matrix, center = TRUE, scale = TRUE))
 print(data_matrix_out)
 
 ###############################################

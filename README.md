@@ -5,7 +5,7 @@ Bio-Informatics, to have a general idea and understand the underlying concepts o
 in our scripting process. 
 
  * Download our codes, see how the process works for yourself in our elaborately commented scripts. 
- * Visit our wiki which has been designed to enhance your understanding concepts with provision of various sources from where we have learnt as well as actual images of results while we worked on the concepts & scripts
+ * Visit our [wiki](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/wiki) which has been designed to enhance your understanding concepts with provision of various sources from where we have learnt as well as actual images of results while we worked on the concepts & scripts
 
 _We tried to acknowledge every possible source which have helped us to create this repository. All of our personal contents are open source & feel free to use them for 
 learning, teaching, creating repositories_

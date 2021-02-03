@@ -3,7 +3,7 @@
 #####################################################
 
 
-# Cleaning the workspace to start over
+# Cleaning the workplace to start over
 
 cat("\f")       # Clear old outputs
 
@@ -16,6 +16,7 @@ rm(list=ls())   # Clear all variables
 if(!require("ggplot2")) install.packages("ggplot2") 
 if(!require("ggdendro")) install.packages("ggdendro") 
 if(!require("grid")) install.packages("grid") 
+if(!require("factoextra")) install.packages("factoextra")
 if(!require("NbClust")) install.packages("NbClust")
 
 
@@ -24,7 +25,7 @@ if(!require("NbClust")) install.packages("NbClust")
 library("ggplot2")
 library("ggdendro")
 library("grid")
-library("cluster")
+library("factoextra")
 library("NbClust")
 
 
@@ -37,9 +38,7 @@ library("NbClust")
 # Choose a csv file
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
 fname <- file.choose()
-matrix <- read.csv(fname, sep=',')
-
-#Extract continuous variables: (If there are columns/variables with categories,first remove them)
+matrix <- read.csv(fname, sep=',', header = TRUE)
 
 
 #----------------------------------------------
@@ -50,7 +49,7 @@ matrix <- read.csv(fname, sep=',')
 
 # Determining the optimum number of clusters 
 nb <- NbClust(matrix, distance = "euclidean", min.nc = 2,
-              max.nc = 10, method = "complete", index ="all")
+              max.nc = 5, method = "complete", index ="all")
 
 # Visualize the result
 fviz_nbclust(nb) + theme_minimal()
@@ -65,7 +64,7 @@ k<- as.integer(K)
 help(eclust)
 
 # Types of Cluster Distances
-# 1. "euclidean"  : SQRT(SUMMe_i:(xi-i)2).
+# 1. "euclidean"  : SQRT(sum_i:(xi-i)2).
 # 2. "maximum"    : Maximum distance between two components of x and y (supremum norm)
 # 3. "manhattan"  : Absolute distance between the two vectors (1 norm aka L1).
 # 4. "canberra"   : sum:i|xi?-yi|/(|xi|+|yi|). 

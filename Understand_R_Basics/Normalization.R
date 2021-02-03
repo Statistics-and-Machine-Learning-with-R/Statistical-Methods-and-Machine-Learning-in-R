@@ -26,4 +26,8 @@ data_matrix <- read.csv(data, header = TRUE, sep = ',')
 data_matrix_out <- as.data.frame(scale(data_matrix, center = TRUE, scale = TRUE))
 print(data_matrix_out)
 
-###############################################
+# Extracting new csv file of normalized values
+
+write.csv(data_matrix_out, "C:/Users/49171/Desktop/Normalized.csv")               # please edit this folder location for your system
+
+#########################################################

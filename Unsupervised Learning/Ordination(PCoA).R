@@ -1,6 +1,6 @@
-#-------------------------------------------------------------------------------------------------------------
-" Ordination : PCOA" 
-#-------------------------------------------------------------------------------------------------------------
+#######################
+## Ordination : PCOA ##
+#######################
 
 
 # Cleaning the workspace to start over
@@ -8,22 +8,6 @@
 cat("\f")       # Clear old outputs
 
 rm(list=ls())   # Clear all variables
-
-#-------------------------------------------------------------------------------------------------------------
-"HEADER OF THE SOFTWARE OUTPUT"
-#-------------------------------------------------------------------------------------------------------------
-
-sourceAuthor  <-  "META PRO STAT TEAM"
-sourceDate    <-  "10.08.2020"
-sourceVersion <-  "1.2.2"
-
-
-# Inforamtion about the software:
-
-print(paste("Date", sourceDate), quote = FALSE)
-print(paste("Version", sourceVersion), quote = FALSE)
-print(paste("Author", sourceAuthor), quote = FALSE)
-
 
 
 # Installing  Packages

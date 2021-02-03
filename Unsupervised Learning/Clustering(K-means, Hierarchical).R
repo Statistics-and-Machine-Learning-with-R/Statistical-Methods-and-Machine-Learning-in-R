@@ -2,6 +2,11 @@
 "Clustering : K-Means & Hierarchical(Agglomerative)" 
 #####################################################
 
+# Please make sure your csv file contains only numeric variables for the code to run.
+
+# If your csv file has non numeric variables, make sure to remove them or alternatively you can choose a subset of 
+# your data below
+
 
 # Cleaning the workplace to start over
 
@@ -21,7 +26,7 @@ if(!require("NbClust")) install.packages("NbClust")
 
 
 
-# Add the associated libraries to the programm
+# Add the associated libraries to the program
 library("ggplot2")
 library("ggdendro")
 library("grid")

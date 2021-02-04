@@ -14,7 +14,6 @@
 cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables
 
-
 # Loading Data Set
 
 print(paste("Please select Input CSV"), quote = FALSE)
@@ -28,4 +27,4 @@ for (i in 1:NCOL(data_matrix)) {
   qqnorm(data_matrix[,i])
   qqline(data_matrix[,i], col = "blue")
 }
-############################################
+#######################################################

@@ -43,7 +43,6 @@ rm(list=ls())   # Clear all variables
 C <- readline(prompt = "Input TRUE/FALSE for centering :")
 c <- as.logical(C)
 
-
 S <- readline(prompt = "Input TRUE/FALSE for scaling :")
 s <- as.logical(S)
 

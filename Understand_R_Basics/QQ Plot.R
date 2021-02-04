@@ -7,6 +7,7 @@
 # If your csv file has non numeric variables, make sure to remove them or alternatively you can choose a subset of 
 # your data at " # Plotting QQ Plots " below
 
+# To run the code, select the whole code and run as source (top right in this window) & enter parameter values in the console below
 
 # Cleaning the workplace
 

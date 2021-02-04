@@ -2,10 +2,17 @@
 ## Test for Normality : Shapiro Test ##
 #######################################
 
-# Please make sure your csv file contains only numeric variables for the code to run.
+# Please make sure your csv file contains only numeric variables with headers for the code to run.
 
 # If your csv file has non numeric variables, make sure to remove them or alternatively you can choose a subset of 
 # your data at " # Test for Normality " below
+
+# To run the code, select the whole code and run as source (top right in this window) & enter parameter values in the console below
+
+# Shapiro-Wilk Test Result in R :
+
+# * If W is very small then distribution is probably not normal
+# * p-value > 0.05 implies that the distribution of the data are not significantly different from normal distribution.
 
 # Cleaning the workplace
 

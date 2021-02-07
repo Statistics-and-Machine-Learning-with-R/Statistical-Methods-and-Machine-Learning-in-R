@@ -1,96 +1,125 @@
 
-#-------------------------------------------------------------------------------------------------------------
-                                              " Artificial Neural Network"
-#-------------------------------------------------------------------------------------------------------------
+"
+#####################################################
+Artificial Neural Network
+#####################################################
 
+1- Please select the dataset provided with the name 'German_state_results_New')
+                                        
+2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
+   which will be asked on running the code in the CONSOLE screen. In this case select:
+   
+   a- Select Dataset to work on (after screen pops out)
+   b- Select what type of activation function you want
+
+3- After providing all the parameters, the code will compute following:
+
+   * Computation and Visulaization of Neural Network
+   * Comparison of predicted output and corresponding actual test data
+   * Confusion Matrix to check false positives etc.
+
+"
+
+# Cleaning the workspace to start over
 cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables
 
+# STEPS:
+#  1. Import Dataset
+#  2. Get activation function from the user
+#  3. Split into Training and Testing Data
+#  4. Build Neural network
+#  5. Plot the Neural network
+#  6. Test the resulting output of the neural network(shown by printing the variable "res")
+#  7. Make confusion matrix
+
 
 #------------------------------------------------
-                                          "HEADER OF THE SOFTWARE & INPUT"
+"REQUIRED PACKAGES FOR ANN"
 #------------------------------------------------
 
+#Cleaning the workplace to start over
+cat("\f")       #Clear old outputs
+rm(list=ls())   #Clear all variables
 
-# Installing  Packages
-
-# Package for package administration
+#Installing  Packages
 if(!require("neuralnet")) install.packages("neuralnet") 
 if(!require("caret")) install.packages("caret") 
 
 library("neuralnet")
 library("caret")
 
+#------------------------------------------------
+"SELECTION OF DATASET AND PARAMETERS"
+#------------------------------------------------
 
-# Read the Data
 SEPARATOR = ";"  # Separator within the csv.-files
-
 print(paste("Please select Input CSV"), quote = FALSE)
 
-data <- file.choose()
-data_csv <- read.csv(data, header = TRUE, sep = ';')
-my_data <- data.matrix(data_csv)
-head(my_data)
+fname <- file.choose()
+data_csv <- read.csv(fname, header = TRUE, sep = ';')
+matrix <- data.matrix(data_csv)
+head(matrix)
 
+#taking user's input for acctivation function
+actfct <- as.character(readline(prompt = "Enter the activation function you like to use. 
+Write tanh for tanh and logistic for logistic functions:"))
+
+cat("\f")       # Clear old outputs
 
 #------------------------------------------------
-                                                "Train-Test Data Split"
+"Train-Test Data Split"
 #------------------------------------------------
 
-
-n = nrow(my_data)
+n = nrow(matrix)
 smp_size <- floor(0.75 * n)
-#set.seed(123) 
 index<- sample(seq_len(n),size = smp_size)
 
-
-# creating training set and test set
-trainsetset <- my_data[index,] 
-testset <- my_data[-index,]
+#Breaking into Training and Testing Sets:
+TrainingSet <- matrix[index,] 
+TestingSet <- matrix[-index,]
 
 
 #------------------------------------------------
-                                      "Neural Network Creation"
+"Neural Network Creation"
 #------------------------------------------------
 
 library(neuralnet)
 nn <- neuralnet( Result == "1" ~ Mathematics + Biology + History + Litrature + State + City + Wealth, 
-                data=trainsetset, hidden=c(4,2),act.fct = "logistic", linear.output=F, threshold=0.01)
+                 data=TrainingSet, hidden=c(4,2),act.fct = actfct, linear.output=F, threshold=0.01)
 nn
 nn$result.matrix
 plot(nn)
 
-
 #Test the resulting output
-predicted.nn <- neuralnet::compute(nn, testset)
+predicted.nn <- neuralnet::compute(nn, TestingSet)
 predicted.nn = as.data.frame(predicted.nn)
 
-head(predicted.nn$net.result)
-head(testset)
+head(predicted.nn$net.result)  #predicted output
+head(TestingSet)                  #TestingSet, with which we will compare the predicted output
 
-predicted.nn$net.result <- sapply(predicted.nn$net.result,round,digits=0)
+predicted.nn$net.result <- sapply(predicted.nn$net.result,round,digits=0) #rounding off the predicted output
 print(predicted.nn$net.result)
 
 #Adding and Multiplying with 2 to make all the '0's in predicted results to be '2' 
 #so to compare with '2's in the Actual result
 res <- data.frame("Predicted"=c(predicted.nn$net.result + 2 - (predicted.nn$net.result*2)), 
-                  "Actual" = c(as.data.frame(testset)$Result) )
+                  "Actual" = c(as.data.frame(TestingSet)$Result) )
 print(res)
-
 
 #RMSE
 RMSE(res$Actual,res$Predicted)
 
 
 #------------------------------------------------
-                                                  "Confusion Matrix"
+"Confusion Matrix"
 #------------------------------------------------
 
-#A confusion matrix is used to determine the number of true and false positives generated by our predictions. 
-
+#A confusion matrix is used to determine the number of true and false positives 
+#generated by our predictions. 
 table(res$Actual,res$Predicted)
 confusionMatrix(as.factor(res$Actual),as.factor(res$Predicted))
 #https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/
 
 
-#Finished
+print(paste("FINISHED"), quote = FALSE)

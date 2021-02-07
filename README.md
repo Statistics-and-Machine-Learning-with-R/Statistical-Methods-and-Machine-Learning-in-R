@@ -75,8 +75,7 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
 
   * [T-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/T_test%20%26%20Mann-Whitney-U_test/T_test.R)
   * [Mann-Whitney-U-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/T_test%20%26%20Mann-Whitney-U_test/Mann_whitney_U_test.R)
-  * [Analysis of Variance (ANOVA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/ANOVA_test%20%26%20Kruskal-Wallis_test/ANOVA-Test.R)
-  * [Kruskal-Wallis-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/ANOVA_test%20%26%20Kruskal-Wallis_test/Kruskal-Wallis-Test.R)
+  * [Analysis of Variance (ANOVA)Kruskal-Wallis-Test](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Significant%20Difference%20Tests/ANOVA_test%20%26%20Kruskal-Wallis_test/Anova_Kruskalwallis_test.R)
   * [Analysis of Similarities (ANOSIM)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests/ANOSIM_test%20%26%20PERMANOVA_test)
   * [Permutational Multivariate Analysis of Variance (PERMANOVA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests/ANOSIM_test%20%26%20PERMANOVA_test)
 * Cluster Analysis

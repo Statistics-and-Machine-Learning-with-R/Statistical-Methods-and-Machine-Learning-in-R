@@ -1,16 +1,25 @@
+"
+#####################################################
+Decision Tree
+#####################################################
 
-#-------------------------------------------------------------------------------------------------------------
-                                                          " DECISION TREE"
-#-------------------------------------------------------------------------------------------------------------
+1- Please select the dataset provided with the name 'German_state_results_New')
+                                        
+2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
+   which will be asked on running the code in the CONSOLE screen. In this case select:
+   
+   a- Select Dataset to work on (after screen pops out)
+
+3- After providing all the parameters, the code will compute following:
+
+   * Computation and Visulaization of Decision Tree
+   * Pruning and again visulaization of pruned tree
+   * Comparison of predicted output and corresponding actual test data
+
+"
 # Cleaning the workspace to start over
 cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables
-
-
-#------------------------------------------------
-                                          "HEADER OF THE SOFTWARE & INPUT"
-#------------------------------------------------
-
 
 # STEPS:
 #  1. Import Dataset
@@ -23,52 +32,54 @@ rm(list=ls())   # Clear all variables
 #  8. Again Plot Tree 
 #  9. Use Test Set for Predicting Results
 
+#------------------------------------------------
+"REQUIRED PACKAGES FOR DT"
+#------------------------------------------------
 
-install.packages("rpart")        #Package to create Decision Tree
-install.packages("rpart.plot")   # To Visulaize DT
+#Cleaning the workplace to start over
+cat("\f")       #Clear old outputs
+rm(list=ls())   #Clear all variables
+
+#Installing  Packages
+if(!require("rpart")) install.packages("rpart")             #Package to create Decision Tree
+if(!require("rpart.plot")) install.packages("rpart.plot")   # To Visulaize DT
 
 library(rpart)
 library(rpart.plot)
 
 
-# Choose a csv file
+#------------------------------------------------
+"SELECTION OF DATASET"
+#------------------------------------------------
+
+SEPARATOR = ";"  # Separator within the csv.-files
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
 fname <- file.choose()     #choose German_State_Results_New.csv
-
-# Declaration of parameters:
-SEPARATOR = ";"  # Separator within the csv. -files
-
-
-#Getting Data
-my_data<- read.csv(fname, sep=SEPARATOR) 
-head(my_data)
+matrix<- read.csv(fname, sep=SEPARATOR) 
+head(matrix)
 
 #------------------------------------------------
-                                              "Train-Test Data Split"
+"Train-Test Data Split"
 #------------------------------------------------
 
+n = nrow(matrix)
+smp_size <- floor(0.75 * n)
+index<- sample(seq_len(n),size = smp_size)
 
 #Breaking into Training and Testing Sets:
-
-n = nrow(my_data)
-split = sample(c(TRUE, FALSE), n, replace=TRUE, prob=c(0.75, 0.25))
-
-TrainingSet = my_data[split, ]
-TestingSet = my_data[!split, ]
-View(TrainingSet)
-View(TestingSet)
+TrainingSet <- matrix[index,]
+TestingSet <- matrix[-index,]
 
 #------------------------------------------------
-                                            "Decison Tree Creation"
+"Decison Tree Creation"
 #------------------------------------------------
 
 # Using rpart Function for Making the Tree
-#mytree <- rpart(Result ~ Wealth + Biology + History + Litrature + State + City   , data = my_data, method = "class", split = "information gain" )
 mytree <- rpart(Result ~ Mathematics + Biology + History + Litrature + State + City + Wealth  , data = TrainingSet)
 mytree
 
 #------------------------------------------------
-                                              "Plot Decison Tree"
+"Plot Decison Tree"
 #------------------------------------------------
 
 # Plotting the Tree
@@ -81,20 +92,19 @@ plotcp(mytree)
 #Measurng Importance of Variables
 mytree$variable.importance
 
-
 #Pruning the tree to Reduce Overfitting
-
 mytree <- prune(mytree, cp = 0.21)
 rpart.plot(mytree, extra = 4)
 mytree
 printcp(mytree)
 
 #------------------------------------------------
-                                        "Predict the Out-put"
+"Predict the Output"
 #------------------------------------------------
 
-
-s#Predicting Output
+#Predicting Output
 TestingSet$PassClass <- predict(mytree, newdata = TestingSet, type = "class")
 TestingSet$Prob <- predict(mytree, newdata = TestingSet, type = "prob")
 TestingSet
+
+print(paste("FINISHED"), quote = FALSE)

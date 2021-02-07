@@ -81,7 +81,7 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
 * Cluster Analysis
   * [K-Means, Hierarchical (Agglomerative) and DBSCAN ](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Clustering(K-means%2C%20Hierarchical).R)
 * Ordination
-  * [Principal Component Analysis (PCA) & Redundancy analysis (RDA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_pca:rda.R)
+  * [Principal Component Analysis (PCA) & Redundancy analysis (RDA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_pca_rda.R)
   * [Principal Coordinate Analysis (PCoA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_pcoa.R)
   * [Non-metric Multidimensional Scaling (NMDS)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_nmds.R)
 * [Clustering + Ordination](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Kmeans_pca_joint.R)

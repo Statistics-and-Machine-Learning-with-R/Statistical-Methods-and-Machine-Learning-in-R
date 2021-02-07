@@ -93,7 +93,7 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
   * Reinforced
   * Supervised
 * [Machine Learning Algorithm: Decision Tree](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Decision-Tree/DecisionTree.R)
-* [Deep Learning Algorithm: Artificial Neural Network](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Artificial-Neural-Network/Artificial%20Neural%20Network.R)
+* [Deep Learning Algorithm: Artificial Neural Network](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Supervised%20Learning/Artificial-Neural-Network/Artificial_neural_network.R)
 ***
 
 ### Visit our page at the MPA website

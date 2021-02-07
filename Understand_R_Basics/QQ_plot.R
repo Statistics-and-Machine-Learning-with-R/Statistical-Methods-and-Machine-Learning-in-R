@@ -1,6 +1,6 @@
-#---------------
-" Regression "
-#---------------
+#############
+## QQ Plot ##
+#############
 "
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
@@ -9,7 +9,7 @@ In this case select
 
     a - the dataset to work with
 
-3 - After the regression values are calculated you can view the results in the console below (or environment window to the right)
+3 - After the QQ Plots are generated, you can view them in the Plots window on the bottom right
 "
 
 cat("\f")       # Clear old outputs
@@ -17,13 +17,14 @@ rm(list=ls())   # Clear all variables
 
 # Loading Data Set
 print(paste("Please select Input CSV"), quote = FALSE)
+
 data <- file.choose()
-data_csv <- read.csv(data, header = TRUE, sep = ',')
-data_csv
+data_matrix <- read.csv(data, header = TRUE, sep = ',')
 
-# Linear Regression
-lm1 <- lm(data_csv)
+# Plotting QQ Plots
 
-summary(lm1)
-print(lm1)
-####################################
+for (i in 1:NCOL(data_matrix)) {
+  qqnorm(data_matrix[,i])
+  qqline(data_matrix[,i], col = "blue")
+}
+#######################################################

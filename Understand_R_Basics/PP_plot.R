@@ -1,6 +1,3 @@
-#--------------------------------------------------
-"PP-plot"
-#--------------------------------------------------
 if(!require("qualityTools")) install.packages("qualityTools")       #package for PP-plots
 library(qualityTools)
 

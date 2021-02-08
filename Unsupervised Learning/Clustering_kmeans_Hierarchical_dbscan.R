@@ -2,12 +2,14 @@
 1- Please make sure your csv file contains only numeric variables with headers for the code and one
    first column with Name of the Elements (for sample check the dataset provided with the
                                         name 'German_state_results')
+                                        
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    a- Select Dataset to work on (after screen pops out)
    b- Select what type of clustering you want out of Kmeans, Hierarchical and Dbscan
    c- Select No. of clusters in case of Kmeans and Hierarchical OR eps and minpts in case of DBscan
    d- You can also use optimum number of clusters as determined by the Nbclust function.
+   
 3- After providing all the parameters, the code will compute following:
    * Visulaization of each clustering algorithm along with the qulaity of clustering
 "
@@ -33,7 +35,13 @@ library("NbClust")
 "SELECTION OF DATASET AND PARAMETERS"
 #------------------------------------------------
 print(paste("Please select Input CSV"), quote = FALSE)
-file1 <- read.csv(file.choose(), header = TRUE, sep = ",")
+fname <- file.choose()
+
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
+
+#numeric data file
+file1 <- read.csv(fname, header = TRUE, sep = ask_sep)
 
 #Extract continuous variables:
 start_num <- as.integer(readline(prompt = "Enter value for START of range of numerical variable: "))
@@ -117,12 +125,12 @@ if (ask_clustering=='kmeans') {
   
   #Performing DBSCAN clustering on parameters eps & minPts
   dbscan <- fpc::dbscan(matrix, eps = eps, MinPts = minPts)      # performing DBSCAN
-
+  
   
   #Visualize clusters
   fviz_cluster(dbscan, matrix, stand = FALSE, ellipse = TRUE, geom = "point")
   
-
+  
 }
 print(paste("FINISHED"), quote = FALSE)
 options(warn = -1)

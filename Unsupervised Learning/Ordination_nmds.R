@@ -1,19 +1,17 @@
 "
 1- Please make sure your csv file contains  NUMERIC variables .
-
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    
    a- dataset to work on (after screen pops out)
-   b- Ranges of numeric data from columns
-   c- Distance measure to be implemented ('bray', 'manhattan' or 'eucladian')
+   b- Type of Separator for input and output file
+   c- Ranges of numeric data from columns
+   d- Distance measure to be implemented ('bray', 'manhattan' or 'eucladian')
    
 3- After providing all the parameters, the code will compute following:
    * STRESS plot              
    * INDIVIDUAL instances on Principl Coordinates
    * DISTANCE MATRIX will get saved at your current working directory into a CSV fromat
-
-
 "
 #------------------------------------------------
 "REQUIRED PACKAGES FOR PCoA"
@@ -40,7 +38,13 @@ outputname <- 'Distance_matrix_NMDS'
 
 #User input for data:
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
-file1 <- read.csv(file.choose(), sep=',')
+fname <- file.choose()
+
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(‘,’ or ‘;’) : "))
+
+#numerical data file
+file1 <- read.csv(fname, sep = ask_sep)
 cat("\f")       # Clear old outputs
 
 #Extract continuous variables:
@@ -54,7 +58,6 @@ cat("\f")       # Clear old outputs
 
 #User input for Distance Measure
 ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansure 'manhattan', 'euclidean', 'bray' : "))
-
 #------------------------------------------------
 "NMDS RESULTS"
 #------------------------------------------------
@@ -80,7 +83,6 @@ goodness(nmds)
 # Stress plot
 stressplot(nmds) 
 
-
 # Plotting points in ordination space
 plot(nmds, "sites")   # Produces distance 
 orditorp(nmds, "sites")  
@@ -89,14 +91,11 @@ orditorp(nmds, "sites")
 "EXPORT THE DISTANCE MATRIX INTO CSV"
 #--------------------------------------------------
 #Write DISTANCE MATRIX into csv file at your current working directory
-write.table(dist_matrix, file = paste(outputname), append = FALSE, quote = TRUE, sep = ",",
+write.table(dist_matrix, file = paste(outputname), append = FALSE, quote = TRUE, sep = ask_sep,
             eol = "\n", na = "NA", dec = ".", row.names = TRUE,
             col.names = NA, qmethod = c("escape", "double"),
             fileEncoding = "")
 
 cat("\f")       # Clear old outputs
 print(paste("FINISHED"), quote = FALSE)
-
-
-
 

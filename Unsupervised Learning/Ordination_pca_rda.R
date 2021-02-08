@@ -2,12 +2,14 @@
 1- Please make sure your csv file contains  NUMERIC variables with headers for the code and  
    last column with CATEGORICAL variables (for sample check the dataset provided with the 
    name ' German_State_Results').
+
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    
    a- dataset to work on (after screen pops out)
-   b- Ranges of both groups (Group-1 and Group-2)
-   c- which analysis to be implemented (PCA or RDA)
+   b- Type of Separator for the input file
+   c- Ranges of both groups (Group-1 and Group-2)
+   d- which analysis to be implemented (PCA or RDA)
    
 3- After providing all the parameters, the code will compute following:
    * For respective (PCA or RDA) analysis
@@ -41,7 +43,11 @@ cat("\f")       # Clear old outputs
 #------------------------------------------------
 #User input for data
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
-file1 <- read.csv(file.choose(), sep=',')
+fname <- file.choose()
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
+
+file1 <- read.csv(fname, sep = ask_sep)
 cat("\f")       # Clear old outputs
 
 #Extract continuous variables:
@@ -68,8 +74,6 @@ if (ask_pca_rda== 'pca'){
   
   #PCA calculations
   PCA <- prcomp(matrix, scale = ask_scale) #scale=T implies we can scale/center our data
-  
-  
   cat("\f")       # Clear old outputs
   
   ##scree plot PCA

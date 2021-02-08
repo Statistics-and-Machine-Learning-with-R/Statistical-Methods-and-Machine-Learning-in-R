@@ -16,7 +16,7 @@
 
 "
 #------------------------------------------------
-"REQUIRED PACKAGES FOR PCoA"
+"REQUIRED PACKAGES FOR CA"
 #------------------------------------------------
 cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables

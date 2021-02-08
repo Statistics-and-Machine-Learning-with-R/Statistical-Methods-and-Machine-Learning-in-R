@@ -1,10 +1,3 @@
-
-#############################################################
-### Input (Reading) Data & Output (Writing) csv file in R ###
-#############################################################
-
-
-
 # Cleaning the workspace
 
 cat("\f")       # Clear old outputs
@@ -28,5 +21,3 @@ print(data_matrix)
 #-------------------------------------------------------------------------------
 
 write.csv(df,"C:\\Users\\Ron\\Desktop\\PresentationDataset 1.csv", row.names = TRUE) # copy and paste address of your desired file location
-
-#######################################################################################

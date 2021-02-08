@@ -2,10 +2,11 @@
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
 2 - To run the code, select the whole code and run as source (top right in this window) & enter parameter values in the console below
-In this case select
+    In this case select
 
-    a - the dataset to work with
-    b - The parameters to be dealt with in this script which are center & scale
+    a- the dataset to work with
+    b- Type of separator used in the file
+    c- The parameters to be dealt with in this script which are center & scale
 
 ## The value of center determines how column centering is performed
 
@@ -27,7 +28,7 @@ In this case select
     * If scale = FALSE, no scaling is done
 
 3 - After the normalized values are calculated you can view the resulting matrix from the environment window on the right &
-it will be exported to your present working directory (location of this RScript)
+    it will be exported to your present working directory (location of this RScript)
 
 "
 cat("\f")       # Clear old outputs
@@ -37,6 +38,8 @@ rm(list=ls())   # Clear all variables
 #----------------------
 "Selecting Parameters"
 #----------------------
+
+ask_sep <- as.character(readline(prompt = " ENTER the SEPARATOR for file(',' or ';') : "))
 
 C <- readline(prompt = "Input TRUE/FALSE for centering :")
 c <- as.logical(C)
@@ -52,7 +55,7 @@ s <- as.logical(S)
 print(paste("Please select Input CSV"), quote = FALSE)
 
 data <- file.choose()
-data_matrix <- read.csv(data, header = TRUE, sep = ',')
+data_matrix <- read.csv(data, header = TRUE, sep = ask_sep)
 
 
 #--------------

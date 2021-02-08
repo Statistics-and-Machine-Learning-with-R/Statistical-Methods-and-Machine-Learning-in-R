@@ -1,6 +1,3 @@
-#----------------------
-" Normalization "
-#----------------------
 "
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
@@ -70,5 +67,3 @@ print(data_matrix_out)
 write.csv(data_matrix_out, file = "Normalized_Values.csv", row.names = TRUE)
 
 print(paste("FINISHED"), quote = FALSE)
-
-######################################################################################

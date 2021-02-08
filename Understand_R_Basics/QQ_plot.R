@@ -1,6 +1,3 @@
-#############
-## QQ Plot ##
-#############
 "
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
@@ -27,4 +24,3 @@ for (i in 1:NCOL(data_matrix)) {
   qqnorm(data_matrix[,i])
   qqline(data_matrix[,i], col = "blue")
 }
-#######################################################

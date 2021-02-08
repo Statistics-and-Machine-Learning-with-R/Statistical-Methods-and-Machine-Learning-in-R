@@ -100,9 +100,6 @@ for (i in 1:NG){
 index_for_new_groups = as.numeric(Group_end) - as.numeric(Group_start)+1
 
 
-# A counter
-counter = 4
-
 # Create a vector representing the assignment of the samples of 3 groups as "1", "2" and "3" 
 groups <- rep(1:NG,index_for_new_groups) # Making space for the groups
 
@@ -138,8 +135,8 @@ for (i in NG:2)
     anv_mean <- append(anv_mean, paste0('anova_',i,'_',j,'_diff_mean'))
     assign(paste0('anova_',i,'_',j,'_padj'), (rep(0, nrow(matrix))))      #for #anova_i_j_padj
     anv_padj <- append(anv_padj, paste0('anova_',i,'_',j,'_padj'))
-    assign(paste0('kruskall_',j,'_',i,'_padj'), (rep(0, nrow(matrix))))   #for kruskall_j_i_padj
-    krus_padj <- append(krus_padj, paste0('kruskall_',j,'_',i,'_padj'))
+    assign(paste0('kruskall_',i,'_',j,'_padj'), (rep(0, nrow(matrix))))   #for kruskall_i_j_padj
+    krus_padj <- append(krus_padj, paste0('kruskall_',i,'_',j,'_padj'))
     Grp_Comb <- Grp_Comb +1
   }
 }

@@ -29,6 +29,14 @@ The main packages for used for this test is "NEURALNET" AND "CARET" Packages.
 **lifesign:** a string specifying how much the function will print during the calculation of the neural network. 'none', 'minimal' or 'full'. <Br/>
 **lifesign.step:** an integer specifying the stepsize to print the minimal threshold in full lifesign 
 
+## STEPS:
+  1. Import Dataset
+  2. Get activation function from the user
+  3. Split into Training and Testing Data
+  4. Build Neural network
+  5. Plot the Neural network
+  6. Test the resulting output of the neural network(shown by printing the variable "res")
+  7. Make confusion matrix
 
 ## LINK TO THEORY
 * [Artificial-Neural-Network](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/wiki/Artificial-Neural-Network)

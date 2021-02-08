@@ -45,10 +45,11 @@ data_csv <- read.csv(fname, header = TRUE, sep = ';')
 matrix <- data.matrix(data_csv)
 head(matrix)
 
+cat("\f")       # Clear old outputs
+
 #taking user's input for acctivation function
 actfct <- as.character(readline(prompt = "Enter either of the activation functions you like to use. 'tanh' or 'logistic': "))
 
-cat("\f")       # Clear old outputs
 
 #------------------------------------------------
 "Train-Test Data Split"

@@ -19,6 +19,17 @@ A decision tree is one of the supervised machine learning algorithms. This algor
 
 Alternatively, method can be a list of functions named init, split and eval. Examples are given in the file ‘tests/usersplits.R’ in the sources, and in the vignettes ‘User Written Split Functions’.
 
+## STEPS FOR APPLYING DECISION TREE :
+  1. Import Dataset
+  2. Split Training and Testing Data
+  3. Build Tree
+  4. Acquire Tree Information -> mytree and printcp(mytree)
+  5. Plot Tree
+  6. Prune the Decision Tree
+  7. Again Acquire Tree Information -> mytree and printcp(mytree)
+  8. Again Plot Tree 
+  9. Use Test Set for Predicting Results
+
 
 
 ## LINK TO THEORY

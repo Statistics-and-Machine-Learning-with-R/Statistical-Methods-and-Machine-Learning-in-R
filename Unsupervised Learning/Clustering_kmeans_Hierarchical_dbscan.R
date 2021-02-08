@@ -67,13 +67,13 @@ fviz_nbclust(nb) + theme_minimal()
 #---------------------
 "K-Means Clustering"
 #---------------------
-if (ask_clustering=='kmclust') {
+if (ask_clustering=='kmeans') {
   
   #Taking number of clusters from user
   k <- as.integer(readline(prompt = "Input number of clusters required:"))
   
   #Performing K-means clustering giving number of clusters
-  k_means <- eclust(matrix, "kmeans",hc_metric = "euclidean", 4 , nstart = 25, graph = TRUE)
+  k_means <- eclust(matrix, "kmeans",hc_metric = "euclidean", k , nstart = 25, graph = TRUE)
   
   #Visualize k-means clusters
   fviz_cluster(k_means, geom = "point", ellipse.type = "norm", palette = "jco", ggtheme = theme_minimal())  # Visualization of the clusters
@@ -84,14 +84,14 @@ if (ask_clustering=='kmclust') {
   #-------------------------
   "Hierarchical Clustering"
   #-------------------------
-} else if(ask_clustering=='hiclust'){
+} else if(ask_clustering=='hierarchical'){
   
   #Taking number of clusters from user #
   K <- readline(prompt = "Input number of clusters required:")
   k<- as.integer(K)
   
   #Hierarchical clustering giving number of clusters
-  h_clust <- eclust(matrix, "hclust", 4 , hc_metric = "euclidean", graph = FALSE)
+  h_clust <- eclust(matrix, "hclust", k , hc_metric = "euclidean", graph = FALSE)
   
   #Visualize Hierarchical clusters by dendrograms
   fviz_dend(h_clust, show_labels = FALSE, palette = "jco", as.ggplot = TRUE)
@@ -105,7 +105,7 @@ if (ask_clustering=='kmclust') {
   #--------------------
   "DBSCAN"
   #--------------------
-} else if (ask_clustering=='dbclust') {
+} else if (ask_clustering=='dbscan') {
   
   #Parameters which you will be needing to give for Dbscan
   #epsilon (eps) - minimum radius for each point where the algorithm will search for minPts
@@ -117,13 +117,13 @@ if (ask_clustering=='kmclust') {
   
   #Performing DBSCAN clustering on parameters eps & minPts
   dbscan <- fpc::dbscan(matrix, eps = eps, MinPts = minPts)      # performing DBSCAN
-  dbscan
+
   
   #Visualize clusters
   fviz_cluster(dbscan, matrix, stand = FALSE, ellipse = TRUE, geom = "point")
   
-  #Quality Of clustering Using Silhouette Function
-  fviz_silhouette(dbscan)
+
 }
 print(paste("FINISHED"), quote = FALSE)
+options(warn = -1)
 cat("\f")       #Clear old outputs

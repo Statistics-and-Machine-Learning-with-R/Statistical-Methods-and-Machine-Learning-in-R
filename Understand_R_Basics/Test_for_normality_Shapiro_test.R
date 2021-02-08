@@ -50,7 +50,7 @@ ask_sep <- as.character(readline(prompt = " ENTER the SEPARATOR for file(',' or 
 print(paste("Please select Input CSV"), quote = FALSE)
 
 data <- file.choose()
-data_matrix <- read.csv(data, header = TRUE, sep = ',')
+data_matrix <- read.csv(data, header = TRUE, sep = ask_sep)
 
 ask_type <- as.character(readline(prompt = " Specify how you want to perform Shapiro Test (type 'r' for rowwise or 'c' for columnwise) : "))
 

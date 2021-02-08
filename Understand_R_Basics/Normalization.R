@@ -56,7 +56,7 @@ data_matrix <- read.csv(data, header = TRUE, sep = ',')
 "Normalization"
 #--------------
 
-data_matrix_out <- as.data.frame(scale(data_matrix, center = TRUE , scale = TRUE))
+data_matrix_out <- as.data.frame(scale(data_matrix, center = c , scale = s))
 print(data_matrix_out)
 
 

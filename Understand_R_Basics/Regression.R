@@ -1,6 +1,3 @@
-#---------------
-" Regression "
-#---------------
 "
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
@@ -26,4 +23,3 @@ lm1 <- lm(data_csv)
 
 summary(lm1)
 print(lm1)
-####################################

@@ -37,11 +37,13 @@ library("caret")
 "SELECTION OF DATASET AND PARAMETERS"
 #------------------------------------------------
 
-SEPARATOR = ";"  # Separator within the csv.-files
 print(paste("Please select Input CSV"), quote = FALSE)
 
+#choose file
 fname <- file.choose()
-data_csv <- read.csv(fname, header = TRUE, sep = ';')
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : ")) #hint ";"
+data_csv <- read.csv(fname, header = TRUE, sep = ask_sep)
 matrix <- data.matrix(data_csv)
 head(matrix)
 

@@ -1,6 +1,4 @@
-#--------------------------------------------------
-"STEP 4 : Perform ANOSIM and PERMANOVA"
-#--------------------------------------------------
+
 
 groupDifferenceData <- function(NORMDATA,groups,groupSimMethod, perm) {
   
@@ -98,7 +96,7 @@ groupDifferenceData <- function(NORMDATA,groups,groupSimMethod, perm) {
   
   
   #--------------------------------------------------
-  "STEP 5 : Export the results"
+  "Export the results"
   #--------------------------------------------------
   
   
@@ -112,4 +110,5 @@ groupDifferenceData <- function(NORMDATA,groups,groupSimMethod, perm) {
               fileEncoding = "")
   
   print("4b. Finish tests for group differences")
+  cat("\f")       # Clear old outputs
 }

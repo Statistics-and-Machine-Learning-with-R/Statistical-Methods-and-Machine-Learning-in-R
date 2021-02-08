@@ -15,16 +15,6 @@
 cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables
 
-# STEPS:
-#  1. Import Dataset
-#  2. Split Training and Testing Data
-#  3. Build Tree
-#  4. Acquire Tree Information -> mytree and printcp(mytree)
-#  5. Plot Tree
-#  6. Prune the Decision Tree
-#  7. Again Acquire Tree Information -> mytree and printcp(mytree)
-#  8. Again Plot Tree 
-#  9. Use Test Set for Predicting Results
 
 #------------------------------------------------
 "REQUIRED PACKAGES FOR DT"

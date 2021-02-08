@@ -1,7 +1,4 @@
 "
-#####################################################
-Anosim and Permanova 
-#####################################################
 
 1- Please know that you will need following files for this script
    a- Anosim_and_Permanova_2.R file
@@ -42,8 +39,7 @@ library("ggpubr")
 library("vegan")
 
 
-#Setting working directory to the folder in which the 'Anosim_and_Permanova_2.R is located
-setwd('D:/Studies/DE Project Meta_Prot_Stat/Permanova') #provide link to directory of files
+#Set your working directory to the folder in which the 'Anosim_and_Permanova_2.R is located
 
 # Class for the input file for making objects which are 
 setClass(Class="CSV_data",

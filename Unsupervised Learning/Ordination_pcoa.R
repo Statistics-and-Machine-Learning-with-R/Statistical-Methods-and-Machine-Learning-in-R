@@ -41,7 +41,12 @@ outputname <- 'Distance_matrix_PCOA'
 
 #User input for data:
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
-file1 <- read.csv(file.choose(), sep=',')
+fname <- file.choose()
+
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(‘,’ or ‘;’) : "))
+
+file1 <- read.csv(fname, sep = ask_sep)
 cat("\f")       # Clear old outputs
 
 #Extract continuous variables:
@@ -86,7 +91,7 @@ biplot(PCOA,file1[,start_num : end_num])
 #--------------------------------------------------
 
 #Write to csv file on current working directory
-write.table(dist_matrix, file = paste(outputname), append = FALSE, quote = TRUE, sep = ",",
+write.table(dist_matrix, file = paste(outputname), append = FALSE, quote = TRUE, sep = ask_sep,
             eol = "\n", na = "NA", dec = ".", row.names = TRUE,
             col.names = NA, qmethod = c("escape", "double"),
             fileEncoding = "")

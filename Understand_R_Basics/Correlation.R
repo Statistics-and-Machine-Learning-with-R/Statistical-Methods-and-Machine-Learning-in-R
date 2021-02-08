@@ -1,6 +1,3 @@
-#----------------
-" Correlation " 
-#----------------
 "
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
@@ -35,5 +32,3 @@ Correlation_Test_s <- cor(data_csv, method = "spearman", use = "all.obs")
 View(Correlation_Test_k)
 View(Correlation_Test_p)
 View(Correlation_Test_s)
-
-#################################################################################

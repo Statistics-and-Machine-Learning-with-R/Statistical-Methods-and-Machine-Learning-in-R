@@ -1,6 +1,3 @@
-#-------------------------------------
-" Test for Normality : Shapiro Test "
-#-------------------------------------
 "
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
@@ -18,6 +15,10 @@ In this case select
      * If W is very small then distribution is probably not normal
      * p-value > 0.05 implies that the distribution of the data is not significantly different from normal distribution.
        (accept the NULL Hypothesis)
+   
+     
+    # Normalization does not change the distribution of a variable. If a variable did not pass test for normality
+    # before normalization, it would not even after normalization
 "
 
 cat("\f")       # Clear old outputs
@@ -37,7 +38,3 @@ data_matrix <- read.csv(data, header = TRUE, sep = ',')
 for (i in 1:NCOL(data_matrix)) {
   print(shapiro.test(data_matrix[,i]))
 }
-
-# Normalization does not change the distribution of a variable. If a variable did not pass test for normality
-# before normalization, it would not even after normalization
-############################################################################

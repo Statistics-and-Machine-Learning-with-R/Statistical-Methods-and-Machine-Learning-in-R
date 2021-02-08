@@ -44,8 +44,11 @@ c <- as.logical(C)
 S <- readline(prompt = "Input TRUE/FALSE for scaling :")
 s <- as.logical(S)
 
-# Loading Data Set 
 
+
+#----------------------
+"Loading Data Set"
+#----------------------
 print(paste("Please select Input CSV"), quote = FALSE)
 
 data <- file.choose()

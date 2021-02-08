@@ -10,7 +10,6 @@
    
 3- After providing all the parameters, the code will compute following:
    * PP-Plot
-
 "
 #--------------------------------------------------
 "Loading Required Packages"

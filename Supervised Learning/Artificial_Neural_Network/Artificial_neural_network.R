@@ -17,15 +17,6 @@
 cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables
 
-# STEPS:
-#  1. Import Dataset
-#  2. Get activation function from the user
-#  3. Split into Training and Testing Data
-#  4. Build Neural network
-#  5. Plot the Neural network
-#  6. Test the resulting output of the neural network(shown by printing the variable "res")
-#  7. Make confusion matrix
-
 
 #------------------------------------------------
 "REQUIRED PACKAGES FOR ANN"

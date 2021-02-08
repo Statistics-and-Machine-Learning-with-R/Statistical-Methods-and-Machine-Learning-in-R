@@ -36,10 +36,13 @@ library(rpart.plot)
 "SELECTION OF DATASET"
 #------------------------------------------------
 
-SEPARATOR = ";"  # Separator within the csv.-files
+# choose file
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
+
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : ")) #hint ";"
 fname <- file.choose()     #choose German_State_Results_New.csv
-matrix<- read.csv(fname, sep=SEPARATOR) 
+matrix<- read.csv(fname, sep= ask_sep) 
 head(matrix)
 
 #------------------------------------------------

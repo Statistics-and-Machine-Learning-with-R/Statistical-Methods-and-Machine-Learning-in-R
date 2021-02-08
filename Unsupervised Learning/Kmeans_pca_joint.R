@@ -29,9 +29,12 @@ cat("\f")       # Clear old outputs
 #------------------------------------------------
 "SELECTION OF DATSET AND PARAMETERS"
 #------------------------------------------------
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(‘,’ or ‘;’) : ")) #hint ","
+
 #User input for data
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
-file1 <- read.csv(file.choose(), sep=',')
+file1 <- read.csv(file.choose(), sep= ask_sep)
 cat("\f")       # Clear old outputs
 
 #Extract continuous variables:

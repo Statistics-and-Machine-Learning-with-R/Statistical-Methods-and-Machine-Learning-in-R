@@ -114,5 +114,6 @@ if (ask_pca_rda== 'pca'){
   
 }
 
-cat("\f")       # Clear old outputs
+options(warn = -1)
+cat("\f")       #Clear old outputs
 print(paste("FINISHED"), quote = FALSE)  

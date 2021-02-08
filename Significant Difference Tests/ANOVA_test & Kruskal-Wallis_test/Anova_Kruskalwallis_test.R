@@ -57,19 +57,22 @@ cat("\f")       # Clear old outputs
 "SELECTION OF DATSET AND PARAMETERS"
 #------------------------------------------------
 
+
+
 # Choose a csv file
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
 fname <- file.choose() #Hint: MetaProtein.csv
 
-# Declaration of parameters 
-SEPARATOR = ";"                        # Separator within the csv.-files
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = " ENTER the SEPARATOR for file(',' or ';') : "))
 
-matrix <- read.csv(fname, sep=SEPARATOR, row.names=1)  # sep=SEPARATOR (use this if you are using a seperator)
+#file wtih mumerical data only
+matrix <- read.csv(fname, sep=ask_sep, row.names=1)  
 
 # Output path
-outputname = "RESULTS_ANOVA.csv"       #File name for results output
+outputname = "RESULTS_ANOVA_and_KW.csv"      #File name for results output
 
-#List for Start of the groups:
+#List for Start of the groups:sw
 Group_start <- list()
 
 #List for End of the groups:
@@ -88,7 +91,10 @@ for (i in 1:NG){
 }
 
 
-"Manually Enter the range of Groups"
+
+#------------------------------------------------
+"CALCULATIONS FOR Anova and Kruskall Walles Test"
+#------------------------------------------------
 
 # Final ranges for new groups 
 index_for_new_groups = as.numeric(Group_end) - as.numeric(Group_start)+1
@@ -96,11 +102,6 @@ index_for_new_groups = as.numeric(Group_end) - as.numeric(Group_start)+1
 
 # A counter
 counter = 4
-
-#------------------------------------------------
-"CALCULATIONS FOR Anova and Kruskall Walles Test"
-#------------------------------------------------
-
 
 # Create a vector representing the assignment of the samples of 3 groups as "1", "2" and "3" 
 groups <- rep(1:NG,index_for_new_groups) # Making space for the groups
@@ -172,7 +173,7 @@ for (i in 1:nrow(matrix)) {
   
   for (j in 1:NG)  #Average of each group
   {   
-    Resulting_Matrix[i,ncol(matrix) + (counter +j)  ] <- mean( as.numeric( matrix[i, Group_start[[j]] : Group_end[[j]]] )) #for single gro
+    Resulting_Matrix[i,ncol(matrix) + (4 +j)  ] <- mean( as.numeric( matrix[i, Group_start[[j]] : Group_end[[j]]] )) #for single gro
     
   }
   
@@ -196,13 +197,13 @@ for (i in 1:nrow(matrix)) {
   #loops and logic for comparisons between groups
   #Diff Mean of annova from tuckey
   for (k in 1:Grp_Comb) {
-    Resulting_Matrix[i,ncol(matrix) + ((counter +NG)  + k ) ] =tukey[k,1] #In Tuckey, [x,y]=[1,1]=[group =1st Index, Diff_mean = 1st Index]
+    Resulting_Matrix[i,ncol(matrix) + ((4 +NG)  + k ) ] =tukey[k,1] #In Tuckey, [x,y]=[1,1]=[group =1st Index, Diff_mean = 1st Index]
   }
   
   
   #Padj of annova from tuckey
   for (l in 1:Grp_Comb) {
-    Resulting_Matrix[i,ncol(matrix)+ (((counter+NG)+ Grp_Comb) + l)] =tukey[l,4] #In Tuckey, [x,y]=[1,4]=[group =1st Index, Padj = 4th Index]
+    Resulting_Matrix[i,ncol(matrix)+ (((4+NG)+ Grp_Comb) + l)] =tukey[l,4] #In Tuckey, [x,y]=[1,4]=[group =1st Index, Padj = 4th Index]
   }
   
   
@@ -221,7 +222,7 @@ for (i in 1:nrow(matrix)) {
   #Padj of Kruskal Waliis from from Dunn Test
   
   for (m in 1:Grp_Comb) {
-    Resulting_Matrix[i,ncol(matrix) + ((((counter+NG)+ Grp_Comb)+Grp_Comb) + m) ] =dunn.res[m,4] #In Dunn, [x,y]=[1,4]=[group =1st Index, Padj = 4th Index]
+    Resulting_Matrix[i,ncol(matrix) + ((((4+NG)+ Grp_Comb)+Grp_Comb) + m) ] =dunn.res[m,4] #In Dunn, [x,y]=[1,4]=[group =1st Index, Padj = 4th Index]
   }
   
 }

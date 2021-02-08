@@ -1,4 +1,8 @@
 "
+#WHY COLUMN WISE?
+# HOW THE MATRIX LOOKS
+# COLUMN TO ROW
+# OUTFILE FILE MISSING (ADD IT)
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
 2 - To run the code, select the whole code and run as source (top right in this window) & enter parameter values in the console below
@@ -35,6 +39,6 @@ data_matrix <- read.csv(data, header = TRUE, sep = ',')
 "Test for Normality"
 #--------------------
 
-for (i in 1:NCOL(data_matrix)) {
+for (i in 1:NROW(data_matrix)) {
   print(shapiro.test(data_matrix[,i]))
 }

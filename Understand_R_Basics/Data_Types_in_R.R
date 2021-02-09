@@ -1,10 +1,3 @@
-
-######################
-## Data Types in R ###
-######################
-
-
-
 # Cleaning the workspace
 
 cat("\f")       # Clear old outputs

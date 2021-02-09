@@ -1,4 +1,4 @@
-# Cleaning the workspace
+# Cleaning the workplace
 
 cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables

@@ -1,6 +1,7 @@
 
 "
-1- Please make sure your csv file contains  NUMERIC variables .
+1- Please make sure your csv file contains  NUMERIC variables. (for sample check the dataset provided with the 
+   name ' German_State_Results')
 
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:

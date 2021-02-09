@@ -1,6 +1,19 @@
 "
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
+                       Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+      
+      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      
+      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      
+      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+
 2 - To run the code, select the whole code and run as source (top right in this window) & enter parameter values in the console below
     In this case select
 
@@ -28,7 +41,7 @@
     * If scale = FALSE, no scaling is done
 
 3 - After the normalized values are calculated you can view the resulting matrix from the environment window on the right &
-    it will be exported to your present working directory (location of this RScript)
+    it will be exported to your present working directory (location of this RScript) as a csv file
 
 "
 cat("\f")       # Clear old outputs

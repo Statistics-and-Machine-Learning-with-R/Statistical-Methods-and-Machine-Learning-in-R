@@ -22,7 +22,7 @@
     c- Columns(Variables) or rows(Instances) to be performed Shapiro Test on
 
 3 - After the normalized values are calculated you can view the resulting matrix from the environment window on the right &
-    it will be exported to your present working directory (location of this RScript)
+    it will be exported to your present working directory (location of this RScript) as a csv file
 
     # Shapiro-Wilk Test Result in R :
     # Null Hypothesis - a variable is normally distributed in some population.

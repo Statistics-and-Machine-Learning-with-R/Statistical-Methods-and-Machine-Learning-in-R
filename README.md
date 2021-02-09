@@ -83,6 +83,7 @@ _All THE PERMALINKS BELOW WILL GUIDE YOU TO OUR RSCRIPTS FOR YOUR UNDERSTANDING_
   * [Principal Component Analysis (PCA) & Redundancy analysis (RDA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_pca_rda.R)
   * [Principal Coordinate Analysis (PCoA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_pcoa.R)
   * [Non-metric Multidimensional Scaling (NMDS)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_nmds.R)
+  * [Correspondence Analysis (CA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_ca.R)
   * [Canonical correlation analysis (CCA)](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Ordination_cca.R)
 * [Clustering + Ordination](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/blob/master/Unsupervised%20Learning/Kmeans_pca_joint.R)
 * Statistical Learning Algorithms

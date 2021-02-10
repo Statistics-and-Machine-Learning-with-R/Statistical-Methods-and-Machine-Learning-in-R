@@ -3,6 +3,19 @@
 1- Please make sure your csv file contains only numeric variables with headers for the code and one 
    first column with Name of the Elements (for sample check the dataset provided with the 
    name 'practice file').
+                     Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+      
+      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      
+      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      
+      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    
@@ -47,18 +60,11 @@ library("tidyr")
 library("ggplot2")
 library("ggpubr")
 
-
-
-
-
 # Cleaning the workspace to start over
 cat("\f")       # Clear old outputs
 #------------------------------------------------
 "SELECTION OF DATSET AND PARAMETERS"
 #------------------------------------------------
-
-
-
 # Choose a csv file
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
 fname <- file.choose() #Hint: MetaProtein.csv
@@ -90,8 +96,6 @@ for (i in 1:NG){
   Group_end[i] <- readline(prompt = "Enter values for End of group: ")
 }
 
-
-
 #------------------------------------------------
 "CALCULATIONS FOR Anova and Kruskall Walles Test"
 #------------------------------------------------
@@ -99,13 +103,11 @@ for (i in 1:NG){
 # Final ranges for new groups 
 index_for_new_groups = as.numeric(Group_end) - as.numeric(Group_start)+1
 
-
 # Create a vector representing the assignment of the samples of 3 groups as "1", "2" and "3" 
 groups <- rep(1:NG,index_for_new_groups) # Making space for the groups
 
 groups <- factor(groups) # Making in factors so the system understand the groups, so that all 1s
 #can be identified as single group of 1 and 2s as single group of 2 and so on
-
 
 # Create new output vectors for the results
 EMPTY                   <-  (rep("",nrow(matrix))) # + 1

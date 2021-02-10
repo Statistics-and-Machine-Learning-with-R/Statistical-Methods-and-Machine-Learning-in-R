@@ -1,5 +1,18 @@
 "
 1- Please make sure your csv file contains  p-Values as variables .
+                       Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+      
+      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      
+      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      
+      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    

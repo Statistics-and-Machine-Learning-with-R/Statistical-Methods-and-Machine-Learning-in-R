@@ -55,14 +55,14 @@ cat("\f")       # Clear old outputs
 # use = "complete.obs" when you have missing values
 # use = "all.obs" when you DO NOT have missing values
 
-Correlation_Test_k <- cor(data_csv, method = "kendall", use = "all.obs")
-Correlation_Test_p <- cor(data_csv, method = "pearson", use = "all.obs")
-Correlation_Test_s <- cor(data_csv, method = "spearman", use = "all.obs")
+Correlation_Test_k <- cor(data_csv, method = "kendall", use = "complete.obs")
+Correlation_Test_p <- cor(data_csv, method = "pearson", use = "complete.obs")
+Correlation_Test_s <- cor(data_csv, method = "spearman", use = "complete.obs")
 
 # view as a data matrix inside the RStudio
-View(Correlation_Test_k)  
-View(Correlation_Test_p)
-View(Correlation_Test_s)
+#View(Correlation_Test_k)  
+#View(Correlation_Test_p)
+#View(Correlation_Test_s)
 
 # exporting csv file to present working directory
 write.csv(as.matrix(Correlation_Test_k), file = "Correlation_Values_Kendall.csv", row.names = TRUE)  

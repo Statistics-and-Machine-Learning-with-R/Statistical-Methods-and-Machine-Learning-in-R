@@ -2,6 +2,19 @@
 1- Please make sure your csv file contains only numeric variables with headers for the code and one 
    first column with Name of the Elements (for sample check the dataset provided with the 
    name 'practice file').
+                        Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+      
+      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      
+      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      
+      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    

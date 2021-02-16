@@ -61,7 +61,7 @@ cat("\f")       #Clear old outputs
 end_num   <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
 
 #User input for type of CLUSTERING
-ask_clustering <- as.character(readline(prompt = "Enter either type of CLUSTERING, 'kmeans' or 'hierarchical' or 'dbscan: "))
+ask_clustering <- as.character(readline(prompt = "Enter either type of CLUSTERING, 'kmeans' or 'hierarchical' or 'dbscan' : "))
 
 #numerical data
 matrix <- file1[,start_num : end_num] #all cont. variables
@@ -90,7 +90,7 @@ if (ask_clustering=='kmeans') {
   
   #Determining the optimum number of clusters
   nb <- NbClust(matrix, distance = ask_dis, min.nc = 2, max.nc = 5, method = "kmeans", index ="all")
-
+  
   #Visualize the result
   print(fviz_nbclust(nb) + theme_minimal())
   

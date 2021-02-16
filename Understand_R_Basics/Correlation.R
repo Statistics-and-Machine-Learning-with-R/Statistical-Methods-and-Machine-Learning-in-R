@@ -28,9 +28,16 @@ NOTE: First Column is treated as 1 in the Selection of Data:
 3 - After the normalized values are calculated you can view the resulting matrices from the environment window (right) &
     they will be exported to your present working directory (location of this RScript) as csv files
              Method can be kendall, pearson or spearman
-             * Correlation_Test_k contains the kendall correlation values (exported as Correlation_Values_Kendall.csv)
-             * Correlation_Test_p contains the pearson correlation values (exported as Correlation_Values_Pearson.csv)
-             * Correlation_Test_s contains the spearman correlation values (exported as Correlation_Values_Spearman.csv)
+             
+             For column wise
+             * Cor_c_Test_k contains the kendall correlation values (exported as Correlation_Col_Kendall.csv)
+             * Cor_c_Test_p contains the pearson correlation values (exported as Correlation_Col_Pearson.csv)
+             * Cor_c_Test_s contains the spearman correlation values (exported as Correlation_Col_Spearman.csv)
+             
+             For row wise
+             * Cor_r_Test_k contains the kendall correlation values (exported as Correlation_Row_Kendall.csv)
+             * Cor_r_Test_p contains the pearson correlation values (exported as Correlation_Row_Pearson.csv)
+             * Cor_r_Test_s contains the spearman correlation values (exported as Correlation_Row_Spearman.csv)
 "
 
 #------------------------------------------------
@@ -94,6 +101,5 @@ if (ask_type == 'c'){
     write.csv(as.matrix(Cor_r_Test_s), file = "Correlation_Row_Spearman.csv", row.names = TRUE)
 
 }
-
 cat("\f")       # Clear old outputs
 print(paste("FINISHED"), quote = FALSE)

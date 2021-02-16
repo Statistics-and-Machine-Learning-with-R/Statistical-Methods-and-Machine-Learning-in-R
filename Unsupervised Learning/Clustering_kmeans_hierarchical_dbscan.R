@@ -79,15 +79,7 @@ matrix <- file1[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
 #----------------------------------------------
 "Calculation and Visualization for CLUSTERING"
-#----------------------------------------------
-#Types of Cluster Distances
-#1. "euclidean"  : SQRT(sum_i:(xi-i)2).
-#2. "maximum"    : Maximum distance between two components of x and y
-#3. "manhattan"  : Absolute distance between the two vectors (1 norm aka L1).
-#4. "canberra"   : Sum:i|xi?-yi|/(|xi|+|yi|).
-#5. "binary"     : The vectors are regarded as binary bits, so non-zero elements are "on" and zero elements are "off".
-#6. "minkowski"  : The p norm, the pth root of the sum of the pth powers of the differences of the components.
-#---------------------
+
 "K-Means Clustering"
 #---------------------
 if (ask_clustering=='kmeans') {

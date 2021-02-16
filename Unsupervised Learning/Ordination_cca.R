@@ -27,7 +27,7 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    c- Column number of Cateogrical varibale
    
 3- After providing all the parameters, the code will compute following:
-   * Calculation fpr respective (CCA)) analysis
+   * Calculation for respective (CCA)) analysis
    * Multiple corelation plots              
    * Corelation coeffecient score saved in CSV file
 "

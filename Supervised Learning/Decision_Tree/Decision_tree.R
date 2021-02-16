@@ -1,8 +1,6 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
-
 1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
-
                    Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
       
       Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
@@ -44,8 +42,6 @@ if(!require("rpart.plot")) install.packages("rpart.plot")   # To Visulaize DT
 
 library(rpart)
 library(rpart.plot)
-
-
 #------------------------------------------------
 "SELECTION OF DATASET"
 #------------------------------------------------
@@ -54,10 +50,12 @@ library(rpart.plot)
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
 
 #Choose the Separator for file
-ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : ")) #hint ";"
 fname <- file.choose()     #choose German_State_Results_New.csv
+
+#type of separator used in input data
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
+
 matrix<- read.csv(fname, sep= ask_sep) 
-head(matrix)
 
 #------------------------------------------------
 "Train-Test Data Split"
@@ -77,16 +75,16 @@ TestingSet <- matrix[-index,]
 
 # Using rpart Function for Making the Tree
 mytree <- rpart(Result ~ Mathematics + Biology + History + Litrature + State + City + Wealth  , data = TrainingSet)
-mytree
 
 #------------------------------------------------
 "Plot Decison Tree"
 #------------------------------------------------
-
 # Plotting the Tree
 rpart.plot(mytree, extra = 4)
+
 # Printing Complexity Parameter
 printcp(mytree)
+
 #Plotting Complexity Parameter
 plotcp(mytree)
 
@@ -96,16 +94,15 @@ mytree$variable.importance
 #Pruning the tree to Reduce Overfitting
 mytree <- prune(mytree, cp = 0.21)
 rpart.plot(mytree, extra = 4)
-mytree
 printcp(mytree)
 
 #------------------------------------------------
 "Predict the Output"
 #------------------------------------------------
-
 #Predicting Output
 TestingSet$PassClass <- predict(mytree, newdata = TestingSet, type = "class")
 TestingSet$Prob <- predict(mytree, newdata = TestingSet, type = "prob")
 TestingSet
 
 print(paste("FINISHED"), quote = FALSE)
+

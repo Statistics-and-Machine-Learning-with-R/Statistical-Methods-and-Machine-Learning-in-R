@@ -54,7 +54,7 @@ fname <- file.choose()
 ask_sep <- as.character(readline(prompt = "ENTER either of the types of Separator ',' or ';' : "))
 
 #ask user for correlation to be calculated between columns or rows :
-ask_type <- as.character(readline(prompt = "ENTER r for rows or c for columns : "))
+ask_type <- as.character(readline(prompt = "ENTER 'r' for rows or 'c' for columns : "))
 
 #Input file read
 file1 <- read.csv(fname, sep=ask_sep)

@@ -19,8 +19,19 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    
    a- Select Dataset to work on (after screen pops out) and the type of Separator
    b- Select what type of clustering you want out of Kmeans, Hierarchical and Dbscan
-   c- Select No. of clusters in case of Kmeans, type of clutering in Hierarchical OR eps and minpts in case of DBscan
-   d- You can also use optimum number of clusters as determined by the Nbclust function.
+   c- You can also visualize the optimum number of clusters as determined by the Nbclust function.
+ 
+   For K-Means
+   d- Select distance measure : Euclidean, Manhattan, Bray-Curtis.... 
+   e- Select number of clusters to be calculated
+
+   For Hierarchical (Agglomerative)
+   f- Select distance measure : Euclidean, Manhattan, Bray-Curtis...
+   g- Select linkage criteria : Single, Complete, Average, Ward's method...
+
+   For DBSCAN
+   h- Select epsilon (minimum radius for each datapoint to be consired part of a dense region) 
+   i- Select Minimum Points (least number of points to required to form a cluster in a dense region)
    
 3- After providing all the parameters, the code will compute following:
    * Visulaization of each clustering algorithm along with the qulaity of clustering
@@ -116,7 +127,7 @@ if (ask_clustering=='kmeans') {
   
   #Taking the preferred linkage method from the user:
   cat("\f")       # Clear old outputs
-  ask_clust <- readline(prompt = "SELECT the distance measure from 'single', 'complete', 'average': ")
+  ask_clust <- readline(prompt = "SELECT the distance measure from 'single', 'complete', 'average', 'Ward.D' : ")
   
   #Hierarchical clustering giving number of clusters
   h_clust <- eclust(matrix, "hclust" , hc_metric = ask_dist, hc_method = ask_clust, graph = FALSE)

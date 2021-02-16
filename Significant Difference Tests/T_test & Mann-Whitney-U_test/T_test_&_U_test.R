@@ -1,4 +1,6 @@
 "
+NOTE: First Column is treated as 1 in the Selection of Data:
+
 1- Please make sure your csv file contains only numeric variables with headers for the code and one 
    first column with Name of the Elements (for sample check the dataset provided with the 
    name 'practice file').

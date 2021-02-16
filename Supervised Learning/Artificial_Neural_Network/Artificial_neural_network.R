@@ -1,4 +1,6 @@
 "
+NOTE: First Column is treated as 1 in the Selection of Data:
+
 1- Please select the dataset provided with the name 'German_state_results_New') or any avilable numeric data in this form
 
                    Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n

@@ -1,4 +1,6 @@
 "
+NOTE: First Column is treated as 1 in the Selection of Data:
+
 1- Please make sure your csv file contains  NUMERIC variables with headers for the code and  
    one column with CATEGORICAL variables (for sample check the dataset provided with the 
    name ' German_State_Results').

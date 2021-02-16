@@ -1,5 +1,6 @@
-
 "
+NOTE: First Column is treated as 1 in the Selection of Data:
+
 1- Please make sure your csv file contains  NUMERIC variables. (for sample check the dataset provided with the 
    name ' German_State_Results')
 

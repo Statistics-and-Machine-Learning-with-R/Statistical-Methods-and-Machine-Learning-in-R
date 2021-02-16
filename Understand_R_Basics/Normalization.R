@@ -21,7 +21,9 @@ NOTE: First Column is treated as 1 in the Selection of Data:
 
     a- the dataset to work with
     b- Type of separator used in the file
-    c- The parameters to be dealt with in this script which are center & scale
+    c- range of columns for numeric data
+    d- The parameters to be dealt with in this script which are center & scale
+
 
 ## The value of center determines how column centering is performed
 
@@ -50,28 +52,30 @@ cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables
 
 
-#----------------------
-"Selecting Parameters"
-#----------------------
+#--------------------------------
+"Selecting Parameters and Loading Data Set"
+#--------------------------------
+
+# Loading Data set
+print(paste("Please select Input CSV"), quote = FALSE)
+data <- file.choose()
 
 ask_sep <- as.character(readline(prompt = " ENTER the SEPARATOR for file(',' or ';') : "))
+
+data_matrix <- read.csv(data, header = TRUE, sep = ask_sep)
+
+#Extract continuous variables:
+start_num <- as.integer(readline(prompt = "Enter value for START of range of numerical variable: "))
+cat("\f")       # Clear old outputs
+end_num <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
+
+data_matrix <- data_matrix[,start_num : end_num] #all cont. variables
 
 C <- readline(prompt = "Input TRUE/FALSE for centering :")
 c <- as.logical(C)
 
 S <- readline(prompt = "Input TRUE/FALSE for scaling :")
 s <- as.logical(S)
-
-
-
-#----------------------
-"Loading Data Set"
-#----------------------
-print(paste("Please select Input CSV"), quote = FALSE)
-
-data <- file.choose()
-data_matrix <- read.csv(data, header = TRUE, sep = ask_sep)
-
 
 #--------------
 "Normalization"

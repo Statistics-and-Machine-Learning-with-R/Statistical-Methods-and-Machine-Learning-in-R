@@ -18,6 +18,9 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    which will be asked on running the code in the CONSOLE screen. In this case select:
    
    a- Select Dataset to work on (after screen pops out)
+   b- Select Separator 
+   c- Assign the Classification column
+   
 3- After providing all the parameters, the code will compute following:
    * Computation and Visulaization of Decision Tree
    * Pruning and again visulaization of pruned tree
@@ -60,6 +63,7 @@ matrix<- read.csv(fname, sep= ask_sep)
 #extract classification column
 output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
 
+cat("\f")       #Clear old outputs
 
 #------------------------------------------------
 "Train-Test Data Split"
@@ -89,6 +93,8 @@ dt_formula <- as.formula(paste(classification, rest_var, sep=" ~ "))
 
 # Using rpart Function for Making the Tree
 mytree <- rpart(formula = dt_formula , data = TrainingSet)
+
+cat("\f")       #Clear old outputs
 
 #------------------------------------------------
 "Plot Decison Tree"

@@ -42,8 +42,8 @@ cat("\f")       #Clear old outputs
 rm(list=ls())   #Clear all variables
 
 #Installing  Packages
-if(!require("neuralnet")) install.packages("neuralnet") 
-if(!require("caret")) install.packages("caret") 
+if(!require("neuralnet")) install.packages("neuralnet") #For using Neural network package
+if(!require("caret")) install.packages("caret")         #For confusion matrix
 
 library("neuralnet")
 library("caret")
@@ -64,7 +64,7 @@ head(matrix)
 
 cat("\f")       # Clear old outputs
 
-#taking user's input for acctivation function
+#taking user's input for activation function
 actfct <- as.character(readline(prompt = "Enter either of the activation functions you like to use. 'tanh' or 'logistic': "))
 
 

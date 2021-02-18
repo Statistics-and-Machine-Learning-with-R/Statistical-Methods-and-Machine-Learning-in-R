@@ -15,7 +15,6 @@ NOTE: First Column is treated as 1 in the Selection of Data:
       .                       .                        .                                 .
       
       Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
-
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    
@@ -26,7 +25,7 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    
 3- After providing all the parameters, the code will compute following:
    * STRESS plot              
-   * INDIVIDUAL instances on Principl Coordinates
+   * INDIVIDUAL instances on Coordinates
    * DISTANCE MATRIX will get saved at your current working directory into a CSV fromat
 "
 #------------------------------------------------
@@ -52,28 +51,29 @@ cat("\f")       # Clear old outputs
 #Output file name:
 outputname <- 'Distance_matrix_NMDS'
 
-#User input for data:
+#User input for data
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
 fname <- file.choose()
-
 #Choose the Separator for file
-ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(‘,’ or ‘;’) : "))
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
 
-#numerical data file
-file1 <- read.csv(fname, sep = ask_sep)
+file1 <- read.csv(fname, sep = ask_sep, row.names = 1)
 cat("\f")       # Clear old outputs
+
+#Transpose of data for ecological data
+file2 <- t(file1)
 
 #Extract continuous variables:
 start_num <- as.integer(readline(prompt = "Enter value for START of range of numerical variable: "))
-cat("\f")       # Clear old outputs
 end_num <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
 
-#Sub space the nuermic dataframe:
-matrix <- file1[,start_num : end_num] #all cont. variables
+#Sub space the numeric matrix
+matrix <- file2[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
 
-#User input for Distance Measure
-ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansure 'manhattan', 'euclidean', 'bray' : "))
+#ask user for type of DISTANCE measure:
+ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansure 'manhattan' or 'euclidean' or 'bray' : "))
+
 #------------------------------------------------
 "NMDS RESULTS"
 #------------------------------------------------
@@ -99,9 +99,9 @@ goodness(nmds)
 # Stress plot
 stressplot(nmds) 
 
-# Plotting points in ordination space
-plot(nmds, "sites")   # Produces distance 
-orditorp(nmds, "sites")  
+
+#Individual_Instances on PCs
+print(plot(nmds, display = 'site', type = 'text'))
 
 #--------------------------------------------------
 "EXPORT THE DISTANCE MATRIX INTO CSV"
@@ -114,4 +114,3 @@ write.table(dist_matrix, file = paste(outputname), append = FALSE, quote = TRUE,
 
 cat("\f")       # Clear old outputs
 print(paste("FINISHED"), quote = FALSE)
-

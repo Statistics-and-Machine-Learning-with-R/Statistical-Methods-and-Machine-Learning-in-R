@@ -57,6 +57,10 @@ ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or '
 
 matrix<- read.csv(fname, sep= ask_sep) 
 
+#extract classification column
+output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
+
+
 #------------------------------------------------
 "Train-Test Data Split"
 #------------------------------------------------
@@ -73,8 +77,18 @@ TestingSet <- matrix[-index,]
 "Decison Tree Creation"
 #------------------------------------------------
 
+#getting formula variables:
+classification <- colnames(TrainingSet[output_col])
+rest_var <- colnames(TrainingSet[names(TrainingSet) != classification])
+
+
+#Making Dynamic formula
+rest_var  <- paste(rest_var, collapse = " + ")
+dt_formula <- as.formula(paste(classification, rest_var, sep=" ~ "))
+
+
 # Using rpart Function for Making the Tree
-mytree <- rpart(Result ~ Mathematics + Biology + History + Litrature + State + City + Wealth  , data = TrainingSet)
+mytree <- rpart(formula = dt_formula , data = TrainingSet)
 
 #------------------------------------------------
 "Plot Decison Tree"
@@ -105,4 +119,3 @@ TestingSet$Prob <- predict(mytree, newdata = TestingSet, type = "prob")
 TestingSet
 
 print(paste("FINISHED"), quote = FALSE)
-

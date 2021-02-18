@@ -1,10 +1,9 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
 
-1- Please make sure your csv file contains  NUMERIC variables. (for sample check the dataset provided with the 
-   name ' German_State_Results')
-
-                   Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+1- Please make sure your csv file contains  NUMERIC variables . for example (German_State_Results) datset provided in the main folder.
+                   
+                     Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
       
       Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
       
@@ -16,34 +15,34 @@ NOTE: First Column is treated as 1 in the Selection of Data:
       .                       .                        .                                 .
       
       Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
-
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    
    a- dataset to work on (after screen pops out)
-   b- Ranges of numeric data from columns
+   b- Type of Separator for input and output file
+   c- Ranges of numeric data from columns
+   d- Distance measure to be implemented ('bray', 'manhattan' or 'eucladian')
    
 3- After providing all the parameters, the code will compute following:
-   * SCREE plot              
-   * INDIVIDUAL instances on Principl Coordinates
-   * Bi-plot for individual and variables on PCs
-
-
+   * STRESS plot              
+   * INDIVIDUAL instances on Coordinates
+   * DISTANCE MATRIX will get saved at your current working directory into a CSV fromat
 "
 #------------------------------------------------
-"REQUIRED PACKAGES FOR CA"
+"REQUIRED PACKAGES FOR PCoA"
 #------------------------------------------------
 cat("\f")       # Clear old outputs
 rm(list=ls())   # Clear all variables
 
+
 # Installing  Packages
 # Package for package administration:
-if(!require("factoextra")) install.packages("factoextra") 
-if(!require("FactoMineR")) install.packages("FactoMineR")
+if(!require("vegan")) install.packages("vegan")
+if(!require("ape")) install.packages("ape",repo='https://mac.R-project.org',dependencies = F)
 
 # Add the associated libraries to the programm
-library("factoextra")
-library("FactoMineR")
+library("vegan")
+library("ape")
 
 cat("\f")       # Clear old outputs
 #------------------------------------------------
@@ -52,46 +51,66 @@ cat("\f")       # Clear old outputs
 #Output file name:
 outputname <- 'Distance_matrix_NMDS'
 
+#User input for data
+print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
+fname <- file.choose()
 #Choose the Separator for file
 ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
 
-#User input for data:
-print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
-file1 <- read.csv(file.choose(), sep= ask_sep)
+file1 <- read.csv(fname, sep = ask_sep, row.names = 1)
 cat("\f")       # Clear old outputs
+
+#Transpose of data for ecological data
+file2 <- t(file1)
 
 #Extract continuous variables:
 start_num <- as.integer(readline(prompt = "Enter value for START of range of numerical variable: "))
-cat("\f")       # Clear old outputs
 end_num <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
 
-#Sub space the nuermic dataframe:
-matrix <- file1[,start_num : end_num] #all cont. variables
+#Sub space the numeric matrix
+matrix <- file2[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
 
+#ask user for type of DISTANCE measure:
+ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansure 'manhattan' or 'euclidean' or 'bray' : "))
+
 #------------------------------------------------
-"CA RESULTS"
+"NMDS RESULTS"
 #------------------------------------------------
-ca <- CA(matrix, graph = T)
+"NMDS (Non-metric Multidimensional Scaling)"
+#calculate the distance matrix
+dist = vegdist(matrix, method = ask_dist)
 
-ca_eig <- get_eigenvalue(ca)
-ca_eig
+#reshape distance matrix into viewbale form
+dist_matrix <- as.matrix(dist, labels = T)
 
-fviz_screeplot(ca) +
-  geom_hline(yintercept=33.33, linetype=0, color="red")
 
-# repel= TRUE to avoid text overlapping (slow if many point)
-fviz_ca_biplot(ca, repel = F)
+# apply NMDS on matrix, metaMDS is included in package VEGAN which performs NMDS :
+nmds <- metaMDS(dist_matrix,
+                distance = ask_dist,
+                k = 3,
+                maxit = 999, 
+                trymax = 500,
+                wascores = T)
 
-row <- get_ca_row(ca)
-row
+# Produces a results of test statistics for goodness of fit for each point
+goodness(nmds) 
 
-fviz_ca_row(ca) 
+# Stress plot
+stressplot(nmds) 
+
+
+#Individual_Instances on PCs
+print(plot(nmds, display = 'site', type = 'text'))
+
+#--------------------------------------------------
+"EXPORT THE DISTANCE MATRIX INTO CSV"
+#--------------------------------------------------
+#Write DISTANCE MATRIX into csv file at your current working directory
+write.table(dist_matrix, file = paste(outputname), append = FALSE, quote = TRUE, sep = ask_sep,
+            eol = "\n", na = "NA", dec = ".", row.names = TRUE,
+            col.names = NA, qmethod = c("escape", "double"),
+            fileEncoding = "")
 
 cat("\f")       # Clear old outputs
 print(paste("FINISHED"), quote = FALSE)
-
-
-
-
-

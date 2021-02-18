@@ -1,21 +1,5 @@
 "
-NOTE: First Column is treated as 1 in the Selection of Data:
-
-1- Please make sure your csv file contains  NUMERIC variables .(for sample check the dataset provided with the 
-   name ' German_State_Results')
-
-                   Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
-      
-      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
-      
-      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
-      
-      .                       .                        .                                 .
-      .                       .                        .                                 .
-      .                       .                        .                                 .
-      .                       .                        .                                 .
-      
-      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+1- Please make sure your csv file contains  NUMERIC variables .
 
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
@@ -55,23 +39,24 @@ cat("\f")       # Clear old outputs
 #Output file name:
 outputname <- 'Distance_matrix_PCOA'
 
-#User input for data:
+#User input for data
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
 fname <- file.choose()
-
 #Choose the Separator for file
-ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(‘,’ or ‘;’) : "))
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
 
-file1 <- read.csv(fname, sep = ask_sep)
+file1 <- read.csv(fname, sep = ask_sep, row.names = 1)
 cat("\f")       # Clear old outputs
+
+#Transpose of data for ecological data
+file2 <- t(file1)
 
 #Extract continuous variables:
 start_num <- as.integer(readline(prompt = "Enter value for START of range of numerical variable: "))
-cat("\f")       # Clear old outputs
 end_num <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
 
-#sub select the numeric dataframe:
-matrix <- file1[,start_num : end_num] #all cont. variables
+#Sub space the numeric matrix
+matrix <- file2[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
 
 #ask user for type of DISTANCE measure:
@@ -90,18 +75,16 @@ dist_matrix <- as.matrix(dist, labels = T)
 PCOA <- pcoa(dist_matrix)
 
 #Now plot a bar plot of relative eigenvalues. This is the percentage variance explained by each axis
-barplot(PCOA$values$Relative_eig[1:4])
+barplot(PCOA$values$Relative_eig[1:2])
 
 #Individual Instances on Principle Coordinates
 biplot(PCOA, choices = c(1,2),
-       type = c("text", "points"),
-       display = c('site','species')) # biplot of axis 1 vs 2
-
+       type = "text",
+       display = 'site') # biplot of axis 1 vs 2
 
 
 #Biplot on Principle Coordinates
-biplot(PCOA,file1[,start_num : end_num])
-
+biplot(PCOA,file2[,start_num : end_num])
 #--------------------------------------------------
 "EXPORT THE DISTANCE MATRIX INTO CSV"
 #--------------------------------------------------

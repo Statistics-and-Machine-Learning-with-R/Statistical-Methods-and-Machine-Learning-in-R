@@ -1,6 +1,5 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
-
 1- Please make sure your csv file contains only numeric variables with headers for the code and one
    first column with Name of the Elements (for sample check the dataset provided with the
    name 'German_state_results')
@@ -24,11 +23,9 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    For K-Means
    d- Select distance measure : Euclidean, Manhattan, Bray-Curtis.... 
    e- Select number of clusters to be calculated
-
    For Hierarchical (Agglomerative)
    f- Select distance measure : Euclidean, Manhattan, Bray-Curtis...
    g- Select linkage criteria : Single, Complete, Average, Ward's method...
-
    For DBSCAN
    h- Select epsilon (minimum radius for each datapoint to be consired part of a dense region) 
    i- Select Minimum Points (least number of points to required to form a cluster in a dense region)
@@ -57,25 +54,26 @@ library("NbClust")
 #------------------------------------------------
 "SELECTION OF DATASET AND PARAMETERS"
 #------------------------------------------------
-print(paste("Please select Input CSV"), quote = FALSE)
+#User input for data
+print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
 fname <- file.choose()
-
 #Choose the Separator for file
 ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
 
-#numeric data file
-file1 <- read.csv(fname, header = TRUE, sep = ask_sep)
+file1 <- read.csv(fname, sep = ask_sep, row.names = 1)
+cat("\f")       # Clear old outputs
+
+#Transpose of data for ecological data
+file2 <- t(file1)
 
 #Extract continuous variables:
 start_num <- as.integer(readline(prompt = "Enter value for START of range of numerical variable: "))
-cat("\f")       #Clear old outputs
-end_num   <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
-
+end_num <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
 #User input for type of CLUSTERING
 ask_clustering <- as.character(readline(prompt = "Enter either type of CLUSTERING, 'kmeans' or 'hierarchical' or 'dbscan' : "))
 
 #numerical data
-matrix <- file1[,start_num : end_num] #all cont. variables
+matrix <- file2[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
 #----------------------------------------------
 "Calculation and Visualization for CLUSTERING"

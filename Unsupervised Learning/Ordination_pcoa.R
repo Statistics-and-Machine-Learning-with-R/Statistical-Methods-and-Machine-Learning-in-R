@@ -1,19 +1,35 @@
 "
 1- Please make sure your csv file contains  NUMERIC variables .
 
+   
+                   Column(Instance) 1      Column(Instance) 2         . . . .    Column(Instance) n
+      
+      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
+      
+      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
+      
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      
+      Row(Variable) n      (Value)                  (Value)           . . . .         (Value)
+      
+
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
    
    a- Dataset to work on (after screen pops out)
    b- Ranges of numeric data from columns
-   c- Distance measure to be implemented ('bray', 'manhattan' or 'eucladian')
+   c- Distance measure to be implemented ('manhattan', 'euclidean', 'canberra', 'clark', 
+   'bray', 'kulczynski', 'jaccard', 'gower', 'altGower', 'morisita', 'horn', 'mountford', 'raup', 
+   'binomial', 'chao', 'cao' or 'mahalanobis')
    
 3- After providing all the parameters, the code will compute following:
    * SCREE plot              
    * INDIVIDUAL instances on Principl Coordinates
    * BI-PLOT (INDIVIDUAL instances + VARIABLES) on Principle Coordiantes
    * DISTANCE MATRIX will get saved at your current working directory into a CSV fromat
-
 
 "
 #------------------------------------------------
@@ -60,7 +76,8 @@ matrix <- file2[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
 
 #ask user for type of DISTANCE measure:
-ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansure 'manhattan' or 'euclidean' or 'bray' : "))
+print("manhattan', 'euclidean', 'canberra', 'clark', 'bray', 'kulczynski', 'jaccard', 'gower', 'altGower', 'morisita', 'horn', 'mountford', 'raup', 'binomial', 'chao', 'cao' or 'mahalanobis'")
+ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansure  : "))
 
 #------------------------------------------------
 "PCoA RESULTS"

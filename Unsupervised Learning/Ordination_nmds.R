@@ -1,22 +1,31 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
 
-1- Please make sure your csv file contains  NUMERIC variables . for example (German_State_Results) datset provided in the main folder.
-                   
-                     Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+1- Please make sure your csv file contains  NUMERIC variables .
+
+   
+                   Column(Instance) 1      Column(Instance) 2         . . . .    Column(Instance) n
       
-      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) n      (Value)                  (Value)           . . . .         (Value)
+      
+
 2- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
+   
+   a- Dataset to work on (after screen pops out)
+   b- Ranges of numeric data from columns
+   c- Distance measure to be implemented ('manhattan', 'euclidean', 'canberra', 'clark', 
+   'bray', 'kulczynski', 'jaccard', 'gower', 'altGower', 'morisita', 'horn', 'mountford', 'raup', 
+   'binomial', 'chao', 'cao' or 'mahalanobis')
    
    a- dataset to work on (after screen pops out)
    b- Type of Separator for input and output file
@@ -26,6 +35,7 @@ NOTE: First Column is treated as 1 in the Selection of Data:
 3- After providing all the parameters, the code will compute following:
    * STRESS plot              
    * INDIVIDUAL instances on Coordinates
+   * Biplot for Instances and variables
    * DISTANCE MATRIX will get saved at your current working directory into a CSV fromat
 "
 #------------------------------------------------
@@ -72,7 +82,8 @@ matrix <- file2[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
 
 #ask user for type of DISTANCE measure:
-ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansure 'manhattan' or 'euclidean' or 'bray' : "))
+print("manhattan', 'euclidean', 'canberra', 'clark', 'bray', 'kulczynski', 'jaccard', 'gower', 'altGower', 'morisita', 'horn', 'mountford', 'raup', 'binomial', 'chao', 'cao' or 'mahalanobis'")
+ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansure : "))
 
 #------------------------------------------------
 "NMDS RESULTS"
@@ -82,27 +93,34 @@ ask_dist <- as.character(readline(prompt = "ENTER either of the  DISTANCE meansu
 dist = vegdist(matrix, method = ask_dist)
 
 #reshape distance matrix into viewbale form
-dist_matrix <- as.matrix(dist, labels = T)
+dist_matrix <- as.matrix(matrix, labels = T)
 
 
 # apply NMDS on matrix, metaMDS is included in package VEGAN which performs NMDS :
+
+'trymax = Minimum and maximum numbers of random starts in search of stable solution. 
+After try has been reached, the iteration will stop when two convergent solutions were 
+found or trymax was reached.
+'
 nmds <- metaMDS(dist_matrix,
-                distance = ask_dist,
-                k = 3,
-                maxit = 999, 
+                distance = ask_dist, 
+                k = 2,       # number of dimensions
+                maxit = 999, #maximum iterations that can be done
                 trymax = 500,
-                wascores = T)
+                wascores = T) #function that calculates the Species score
 
 # Produces a results of test statistics for goodness of fit for each point
 goodness(nmds) 
 
 # Stress plot
-stressplot(nmds) 
+print(stressplot(nmds)) 
 
 
 #Individual_Instances on PCs
 print(plot(nmds, display = 'site', type = 'text'))
 
+#Biplot for NMDS
+print(ordiplot(nmds,type="t"))
 #--------------------------------------------------
 "EXPORT THE DISTANCE MATRIX INTO CSV"
 #--------------------------------------------------

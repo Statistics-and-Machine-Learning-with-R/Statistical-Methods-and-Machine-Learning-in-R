@@ -1,18 +1,20 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
 1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
-                   Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+
+                   Column(Samples) 1      Column(Variable) 2     . . . .    Column(Classification) n
       
-      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Variables) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) 2       (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) n       (Value)                  (Value)           . . . .         (Value)
+      
                                         
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
@@ -25,6 +27,7 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    * Computation and Visulaization of Decision Tree
    * Pruning and again visulaization of pruned tree
    * Comparison of predicted output and corresponding actual test data
+   * Computation of Confusion Matrix
 "
 # Cleaning the workspace to start over
 cat("\f")       # Clear old outputs
@@ -32,7 +35,7 @@ rm(list=ls())   # Clear all variables
 
 
 #------------------------------------------------
-"REQUIRED PACKAGES FOR DT"
+"REQUIRED PACKAGES FOR Decison Tree"
 #------------------------------------------------
 
 #Cleaning the workplace to start over
@@ -42,9 +45,11 @@ rm(list=ls())   #Clear all variables
 #Installing  Packages
 if(!require("rpart")) install.packages("rpart")             #Package to create Decision Tree
 if(!require("rpart.plot")) install.packages("rpart.plot")   # To Visulaize DT
+if(!require("caret")) install.packages("caret")   
 
 library(rpart)
 library(rpart.plot)
+library(caret)
 #------------------------------------------------
 "SELECTION OF DATASET"
 #------------------------------------------------
@@ -63,14 +68,19 @@ matrix<- read.csv(fname, sep= ask_sep)
 #extract classification column
 output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
 
+#extract Size of Training set
+training_size <- as.integer(readline(prompt = "Enter a Percentage of training dataset: "))
+
 cat("\f")       #Clear old outputs
 
 #------------------------------------------------
 "Train-Test Data Split"
 #------------------------------------------------
 
+
+training_size <- training_size/100 #extracting Percentage
 n = nrow(matrix)
-smp_size <- floor(0.75 * n)
+smp_size <- floor(training_size * n)  #ask from the user
 index<- sample(seq_len(n),size = smp_size)
 
 #Breaking into Training and Testing Sets:
@@ -112,10 +122,11 @@ plotcp(mytree)
 mytree$variable.importance
 
 #Pruning the tree to Reduce Overfitting
-mytree <- prune(mytree, cp = 0.21)
-rpart.plot(mytree, extra = 4)
+mytree <- prune(mytree, cp = 0.21)  #CP or Complexity Parameter is used to conntrol the size of Decision Tree.
+rpart.plot(mytree, extra = 4) 
 printcp(mytree)
 
+cat("\f")       #Clear old outputs
 #------------------------------------------------
 "Predict the Output"
 #------------------------------------------------
@@ -123,5 +134,9 @@ printcp(mytree)
 TestingSet$PassClass <- predict(mytree, newdata = TestingSet, type = "class")
 TestingSet$Prob <- predict(mytree, newdata = TestingSet, type = "prob")
 TestingSet
+
+
+Conf_Matrix <- confusionMatrix(table(TestingSet$PassClass, TestingSet$Result))
+print(Conf_Matrix)
 
 print(paste("FINISHED"), quote = FALSE)

@@ -5,18 +5,18 @@ NOTE: First Column is treated as 1 in the Selection of Data:
 1- To run the code, select the whole code and run as 'source with echo' (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. 
                    
-                     Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+                   Column(Instance) 1      Column(Instance) 2         . . . .    Column(Instance) n
       
-      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) n      (Value)                  (Value)           . . . .         (Value)
 
 
 
@@ -48,23 +48,28 @@ cat("\f")       # Clear old outputs
 #------------------------------------------------
 "SELECTION OF DATSET AND PARAMETERS"
 #------------------------------------------------
-#Choose the Separator for file
-ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(‘,’ or ‘;’) : ")) #hint ","
-
 #User input for data
 print(paste("Please select Input CSV", " The different samples in columns and the measured variables in the rows."), quote = FALSE)
-file1 <- read.csv(file.choose(), sep= ask_sep)
+fname <- file.choose()
+
+#Choose the Separator for file
+ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
+file1 <- read.csv(fname, sep = ask_sep, row.names = 1)
 cat("\f")       # Clear old outputs
+
+#Transpose of data for ecological data
+file2 <- t(file1)
 
 #Extract continuous variables:
 start_num <- as.integer(readline(prompt = "Enter value for START of range of numerical variable: "))
 end_num <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
+cat("\f")       # Clear old outputs
 
 #ask user for type of  analysis:
 ask_k <- as.integer(readline(prompt = "ENTER no of the cluster to be mapped : "))
 
 #Sub space the numeric matrix
-matrix <- file1[,start_num : end_num] #all cont. variables
+matrix <- file2[,start_num : end_num] #all cont. variables
 
 cat("\f")       # Clear old outputs
 #------------------------------------------------

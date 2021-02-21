@@ -22,7 +22,7 @@ learning, teaching, creating repositories_
 * **Lectures + Tutorials** for Deeper Understanding.
 
 
-##  Tools for Data Analysis in Bio-Informatics:
+##  Tools (RScripts) for Data Analysis in Bio-Informatics:
 
 An important aspect of data in bio-informatics being that the data is not often organized in a manner where Rows represent Instances and Columns represent Variables. Rather it is the other way round mostly in population biology, sample study etc. So our codes are tailored to work with datasets which are configured as following :
 

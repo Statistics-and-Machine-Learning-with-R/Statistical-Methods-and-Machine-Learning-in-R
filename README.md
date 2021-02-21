@@ -24,7 +24,7 @@ learning, teaching, creating repositories_
 
 ##  Programming approach to Bio-Informatics:
 
-An important aspect of data in bio-informatics being that the the data is not organized in a manner where Rows represent Instances and Columns represent Variables. Rather it is the other way round mostly in population biology, sample study etc. So our codes are tailored to work with datasets which are configured as following :
+An important aspect of data in bio-informatics being that the the data is not often organized in a manner where Rows represent Instances and Columns represent Variables. Rather it is the other way round mostly in population biology, sample study etc. So our codes are tailored to work with datasets which are configured as following :
 
                        Column(Instance) 1      Column(Instance) 2     . . . .    Column(Instance) n
       

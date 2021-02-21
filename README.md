@@ -17,7 +17,7 @@ learning, teaching, creating repositories_
 
 ## TABLE OF CONTENT:
 
-* **Tools** for Data Analysis in Bio-Informatics.
+* **Tools(RScripts)** for Data Analysis in Bio-Informatics.
 * **Theoretical Concepts** to the Analyses being performed.
 * **Lectures + Tutorials** for Deeper Understanding.
 

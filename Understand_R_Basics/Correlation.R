@@ -22,7 +22,7 @@ NOTE: First Column is treated as 1 in the Selection of Data:
     
     a- the dataset to work with
     b- Type of separator in your csv file
-    c- Choose correlation to be calculated between rows(instances) or columns(variables)  
+    c- Choose correlation to be calculated between rows(variables) or columns(instances)  
     d- range of columns for numeric data
     
 3 - After the normalized values are calculated you can view the resulting matrices from the environment window (right) &

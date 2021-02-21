@@ -3,18 +3,18 @@ NOTE: First Column is treated as 1 in the Selection of Data:
 
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
 
-                       Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+                       Column(Instance) 1      Column(Instance) 2     . . . .    Column(Instance) n
       
-      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) n      (Value)                  (Value)           . . . .         (Value)
 
 2 - To run the code, select the whole code and run as source (top right in this window) & enter parameter values in the console below
     In this case select
@@ -55,6 +55,8 @@ cat("\f")       # Clear old outputs
 #--------------------------------------------------
 "Plotting QQ-plot"
 #--------------------------------------------------
+
+data_matrix <- t(data_matrix)
 
 for (i in 1:NCOL(data_matrix)) {
   qqnorm(data_matrix[,i])

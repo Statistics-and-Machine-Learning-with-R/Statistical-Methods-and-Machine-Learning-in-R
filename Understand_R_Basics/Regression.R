@@ -2,21 +2,22 @@
 NOTE: First Column is treated as 1 in the Selection of Data:
 
 1 - Please make sure your csv file contains only numeric variables with headers for the code to run.
-                       Column(Variable) 1      Column(Variable) 2     . . . .    Column(Variable) n
+                       Column(Instance) 1      Column(Instance) 2     . . . .    Column(Instance) n
       
-      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Instance) n      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) n      (Value)                  (Value)           . . . .         (Value)
       
 2 - To run the code, select the whole code and run as source (top right in this window) & enter parameter values in the console below
-In this case select
+    In this case select
+    
     a - the dataset to work with
     b- Type of separator and range of columns for numeric data
     
@@ -44,7 +45,7 @@ start_num <- as.integer(readline(prompt = "Enter value for START of range of num
 cat("\f")       # Clear old outputs
 end_num <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
 
-#Sub space the nuermic dataframe:
+#Sub space the numeric data frame:
 data_csv <- file1[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
 
@@ -52,6 +53,9 @@ cat("\f")       # Clear old outputs
 "CALCULATION FOR REGRESSION"
 #-----------------------------------------------
 # Linear Regression
+
+data_csv <- as.data.frame(t(data_csv))
+
 lm1 <- lm(data_csv)
 
 summary(lm1)

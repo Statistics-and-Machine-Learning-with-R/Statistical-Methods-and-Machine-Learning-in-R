@@ -24,7 +24,22 @@ learning, teaching, creating repositories_
 
 ##  Programming approach to Bio-Informatics:
 
-To make the contribution open-source, our team has uploaded all the scripts in R language. This may help to understand the usage of Programming in Bio-Informatic. Moreover, under the provided links you will find subfolders each containing a Data-set file, a Programming script in R, and a Read_me file (description about the program). In order to get access to the scripts click on the links mentioned below.
+An important aspect of data in bio-informatics being that the the data is not organized in a manner where Rows represent Instances and Columns represent Variables. Rather it is the other way round mostly in population biology, sample study etc. So our codes are tailored to work with datasets which are configured as following :
+
+                       Column(Instance) 1      Column(Instance) 2     . . . .    Column(Instance) n
+      
+      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
+      
+      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
+      
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      .                       .                        .                                 .
+      
+      Row(Variable) n      (Value)                  (Value)           . . . .         (Value)
+      
+Our team has uploaded all the scripts in R language. This may help to understand the usage of Programming in Bio-Informatic. Moreover, under the provided links you will find subfolders each containing a Data-set file, a Programming script in R, and a Read_me file (description about the program). In order to get access to the scripts click on the links mentioned below.
   
 * [SIGNIFICANT DIFFERENCE TESTS](https://github.com/Statistics-and-Machine-Learning-with-R/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Significant%20Difference%20Tests)  
 * [UNSUPERVISED LEARNING](https://github.com/Rizvix0/Statistical-Methods-and-Machine-Learning-in-R/tree/master/Unsupervised%20Learning)

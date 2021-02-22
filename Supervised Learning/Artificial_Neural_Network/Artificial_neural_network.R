@@ -64,6 +64,13 @@ ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or '
 
 matrix<- read.csv(fname, sep= ask_sep)
 
+#dummify the data
+dmy <- dummyVars(" ~ .", data = matrix, sep = NULL)
+dmy2 <- data.frame(predict(dmy, newdata = matrix))
+matrix <- dmy2
+
+View(matrix)
+
 #extract classification column
 #please open the window in R console to choose
 output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
@@ -75,15 +82,9 @@ training_size <- as.integer(readline(prompt = "Enter a Percentage of training da
 actfct <- as.character(readline(prompt = "Enter either of the activation functions you like to use. 'tanh' or 'logistic': "))
 
 
-#dummify the data
-dmy <- dummyVars(" ~ .", data = matrix, sep = NULL)
-dmy2 <- data.frame(predict(dmy, newdata = matrix))
-matrix <- dmy2
-
-
 #normalizing our data
 normalize <- function(x) {
-  return ((x - min(x)) / (max(x) - min(x)))
+   return ((x - min(x)) / (max(x) - min(x)))
 }
 
 nor_matrix <- as.data.frame(lapply(matrix, normalize))
@@ -158,5 +159,4 @@ print(res)
 Conf_Matrix <- confusionMatrix(table(res$rounded_nn, res$classification_col))
 print(Conf_Matrix)
 
-cat("\f")       #Clear old outputs
 print(paste("FINISHED"), quote = FALSE)

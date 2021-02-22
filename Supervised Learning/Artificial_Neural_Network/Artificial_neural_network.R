@@ -1,20 +1,18 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
-
 1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
-
-                     Column(Instance) 1      Column(Instance) 2     . . . .    Column(Classification) n
+                   Column(Variable) 1       Column(Variable) 2     . . . .    Column(Classification) n
       
-      Row(Variables) 1       (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Variables) 2       (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Variables) n       (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) n       (Value)                  (Value)           . . . .         (Value)
       
                                         
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters

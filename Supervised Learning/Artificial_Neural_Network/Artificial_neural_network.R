@@ -1,23 +1,24 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
+
 1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
-                   Column(Samples) 1      Column(Variable) 2     . . . .    Column(Classification) n
+
+                     Column(Instance) 1      Column(Instance) 2     . . . .    Column(Classification) n
       
-      Row(Variables) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Variables) 1       (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2       (Value)                  (Value)           . . . .         (Value)
+      Row(Variables) 2       (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Instance) n       (Value)                  (Value)           . . . .         (Value)
+      Row(Variables) n       (Value)                  (Value)           . . . .         (Value)
       
                                         
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
    which will be asked on running the code in the CONSOLE screen. In this case select:
-
    a- Select Dataset to work on (after screen pops out)
    b- Select Separator 
    c- Assign the Classification column
@@ -28,7 +29,6 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    * Computation and Visulaization of Neural Network
    * Comparison of predicted output and corresponding actual test data
    * Confusion Matrix to check false positives etc.
-
 "
 
 # Cleaning the workspace to start over
@@ -51,7 +51,6 @@ if(!require("caret")) install.packages("caret")         #For confusion matrix
 
 library("neuralnet")
 library("caret")
-
 #------------------------------------------------
 "SELECTION OF DATASET"
 #------------------------------------------------
@@ -85,7 +84,7 @@ matrix <- dmy2
 
 #normalizing our data
 normalize <- function(x) {
-   return ((x - min(x)) / (max(x) - min(x)))
+  return ((x - min(x)) / (max(x) - min(x)))
 }
 
 nor_matrix <- as.data.frame(lapply(matrix, normalize))
@@ -99,6 +98,7 @@ cat("\f")       #Clear old outputs
 
 training_size <- training_size/100   #extracting Percentage
 n = nrow(nor_matrix)
+
 smp_size <- floor(training_size * n) #training_size asked from the user
 index<- sample(seq_len(n),size = smp_size)
 
@@ -110,16 +110,13 @@ TestingSet <- nor_matrix[-index,]
 #------------------------------------------------
 "Neural Network Creation"
 #------------------------------------------------
-
 #getting formula variables:
 classification <- colnames(TrainingSet[output_col])
 rest_var <- colnames(TrainingSet[names(TrainingSet) != classification])
 
-
 #Making Dynamic formula
 rest_var  <- paste(rest_var, collapse = " + ")
 nn_formula <- as.formula(paste(classification, rest_var, sep=" ~ "))
-
 
 # Using neuralnet Function for Making the Tree
 library(neuralnet)
@@ -140,7 +137,6 @@ nn <- neuralnet(formula = nn_formula, data=TrainingSet,
 #------------------------------------------------
 # Plotting the Neural Network
 plot(nn)
-
 
 #------------------------------------------------
 "Predict the Output"
@@ -163,5 +159,5 @@ print(res)
 Conf_Matrix <- confusionMatrix(table(res$rounded_nn, res$classification_col))
 print(Conf_Matrix)
 
-
+cat("\f")       #Clear old outputs
 print(paste("FINISHED"), quote = FALSE)

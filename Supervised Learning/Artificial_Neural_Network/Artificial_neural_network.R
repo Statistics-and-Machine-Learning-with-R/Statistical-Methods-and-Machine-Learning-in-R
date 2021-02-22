@@ -154,6 +154,8 @@ classification_col <- TestingSet[,names(TestingSet) %in% classification]
 
 res <- data.frame(rounded_nn, 
                   classification_col)
+
+cat("\f")       #Clear old outputs
 print(res)
 
 #making the confusion matrix

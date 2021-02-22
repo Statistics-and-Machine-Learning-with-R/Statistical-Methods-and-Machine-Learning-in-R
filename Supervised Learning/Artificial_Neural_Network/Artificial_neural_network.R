@@ -72,7 +72,8 @@ matrix <- dmy2
 View(matrix)
 
 #extract classification column
-#please open the window in R console to choose
+#new data(matrix) will be shown in spreadsheet style in R console for you to choose column
+#please move your cursor to column name, and R will give you column number
 output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
 
 #extract Size of Training set
@@ -158,5 +159,6 @@ print(res)
 #making the confusion matrix
 Conf_Matrix <- confusionMatrix(table(res$rounded_nn, res$classification_col))
 print(Conf_Matrix)
+
 
 print(paste("FINISHED"), quote = FALSE)

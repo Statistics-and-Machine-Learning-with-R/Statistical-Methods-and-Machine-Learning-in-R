@@ -2,11 +2,11 @@
 NOTE: First Column is treated as 1 in the Selection of Data:
 1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
 
-                   Column(Samples) 1      Column(Variable) 2     . . . .    Column(Classification) n
+                   Column(Variable) 1       Column(Variable) 2     . . . .    Column(Classification) n
       
-      Row(Variables) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2       (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
@@ -122,7 +122,7 @@ plotcp(mytree)
 mytree$variable.importance
 
 #Pruning the tree to Reduce Overfitting
-mytree <- prune(mytree, cp = 0.21)  #CP or Complexity Parameter is used to conntrol the size of Decision Tree.
+mytree <- prune(mytree, cp = 0.21)  #CP or Complexity Parameter is used to control the size of Decision Tree.
 rpart.plot(mytree, extra = 4) 
 printcp(mytree)
 

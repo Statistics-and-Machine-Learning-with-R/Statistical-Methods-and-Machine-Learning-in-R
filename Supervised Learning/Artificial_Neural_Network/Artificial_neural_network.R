@@ -65,6 +65,7 @@ ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or '
 matrix<- read.csv(fname, sep= ask_sep)
 
 #extract classification column
+#please open the window in R console to choose
 output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
 
 #extract Size of Training set

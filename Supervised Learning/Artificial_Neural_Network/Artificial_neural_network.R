@@ -77,7 +77,7 @@ View(matrix)
 output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
 
 #extract Size of Training set
-training_size <- as.integer(readline(prompt = "Enter a Percentage of training dataset: "))
+training_size <- as.integer(readline(prompt = "Enter a Percentage of training dataset (e.g. 75): "))
 
 #taking user's input for activation function
 actfct <- as.character(readline(prompt = "Enter either of the activation functions you like to use. 'tanh' or 'logistic': "))

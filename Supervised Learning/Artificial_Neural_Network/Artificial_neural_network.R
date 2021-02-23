@@ -1,18 +1,20 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
+
 1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
-                   Column(Variable) 1       Column(Variable) 2     . . . .    Column(Classification) n
+
+                   Column(Instance) 1       Column(Instance) 2     . . . .    Column(Instance) n
       
-      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Instance) n       (Value)                  (Value)           . . . .         (Value)
+ Row(Classification) n     (Value)                  (Value)           . . . .         (Value)
       
                                         
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
@@ -62,7 +64,23 @@ fname <- file.choose()     #choose German_State_Results_New.csv
 #type of separator used in input data
 ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
 
-matrix<- read.csv(fname, sep= ask_sep)
+matrix1<- read.csv(fname, sep= ask_sep, row.names = 1)
+
+#Make data in normal form by taking Transpose
+df_t <- as.data.frame(t(matrix1))
+
+
+#Convert the data type back to numeric
+for (newa in 1:ncol(df_t)){
+  chk <- as.numeric(df_t[1,newa])
+  if (!is.na(chk)){  
+    
+    df_t[ , newa] <- apply(df_t[ , newa, drop= F], 2, function(x) as.numeric(as.character(x)))
+  }
+  
+}
+#matrix to be used
+matrix <- df_t
 
 #dummify the data
 dmy <- dummyVars(" ~ .", data = matrix, sep = NULL)
@@ -85,7 +103,7 @@ actfct <- as.character(readline(prompt = "Enter either of the activation functio
 
 #normalizing our data
 normalize <- function(x) {
-   return ((x - min(x)) / (max(x) - min(x)))
+  return ((x - min(x)) / (max(x) - min(x)))
 }
 
 nor_matrix <- as.data.frame(lapply(matrix, normalize))
@@ -162,5 +180,5 @@ print(res)
 Conf_Matrix <- confusionMatrix(table(res$rounded_nn, res$classification_col))
 print(Conf_Matrix)
 
-
+options(warn = -1)
 print(paste("FINISHED"), quote = FALSE)

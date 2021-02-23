@@ -1,19 +1,19 @@
 "
 NOTE: First Column is treated as 1 in the Selection of Data:
-1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
 
-                   Column(Variable) 1       Column(Variable) 2     . . . .    Column(Classification) n
+1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
+                   Column(Instance) 1       Column(Instance) 2     . . . .    Column(Instance) n
       
-      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
+      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
-      Row(Instance) n       (Value)                  (Value)           . . . .         (Value)
+ Row(Classification) n     (Value)                  (Value)           . . . .         (Value)
       
                                         
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
@@ -22,6 +22,7 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    a- Select Dataset to work on (after screen pops out)
    b- Select Separator 
    c- Assign the Classification column
+   d- Select Percentage of Training data
    
 3- After providing all the parameters, the code will compute following:
    * Computation and Visulaization of Decision Tree
@@ -63,21 +64,37 @@ fname <- file.choose()     #choose German_State_Results_New.csv
 #type of separator used in input data
 ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
 
-matrix<- read.csv(fname, sep= ask_sep) 
+matrix1 <- read.csv(fname, sep= ask_sep, row.names = 1) 
+
+
+#Make data in normal form by taking Transpose
+df_t <- as.data.frame(t(matrix1))
+
+
+#Convert the data type back to numeric
+for (newa in 1:ncol(df_t)){
+  chk <- as.numeric(df_t[1,newa])
+  if (!is.na(chk)){  
+    
+    df_t[ , newa] <- apply(df_t[ , newa, drop= F], 2, function(x) as.numeric(as.character(x)))
+  }
+  
+}
+#matrix to be used
+matrix <- df_t
+View(matrix)
 
 #extract classification column
 output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
 
 #extract Size of Training set
-training_size <- as.integer(readline(prompt = "Enter a Percentage of training dataset: "))
+training_size <- as.integer(readline(prompt = "Enter a Percentage of training dataset (e.g 75): "))
 
 cat("\f")       #Clear old outputs
 
 #------------------------------------------------
 "Train-Test Data Split"
 #------------------------------------------------
-
-
 training_size <- training_size/100 #extracting Percentage
 n = nrow(matrix)
 smp_size <- floor(training_size * n)  #ask from the user
@@ -112,6 +129,7 @@ cat("\f")       #Clear old outputs
 # Plotting the Tree
 rpart.plot(mytree, extra = 4)
 
+
 # Printing Complexity Parameter
 printcp(mytree)
 
@@ -139,4 +157,5 @@ TestingSet
 Conf_Matrix <- confusionMatrix(table(TestingSet$PassClass, TestingSet$Result))
 print(Conf_Matrix)
 
+options(warn = -1)
 print(paste("FINISHED"), quote = FALSE)

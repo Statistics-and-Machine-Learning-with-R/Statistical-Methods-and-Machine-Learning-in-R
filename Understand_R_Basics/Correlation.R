@@ -40,6 +40,9 @@ NOTE: First Column is treated as 1 in the Selection of Data:
              * Cor_r_Test_s contains the spearman correlation values (exported as Correlation_Row_Spearman.csv)
 "
 
+cat("\f")       # Clear old outputs
+rm(list=ls())   # Clear all variables
+
 #------------------------------------------------
 "SELECTION OF DATSET AND PARAMETERS"
 #------------------------------------------------
@@ -89,12 +92,20 @@ if (ask_type == 'c'){
 
   
 } else if  (ask_type == 'r') {
-  
-    data_csv <- t(data_csv)
     
-    Cor_r_Test_k <- cor(data_csv, method = "kendall", use = "complete.obs")
-    Cor_r_Test_p <- cor(data_csv, method = "pearson", use = "complete.obs")
-    Cor_r_Test_s <- cor(data_csv, method = "spearman", use = "complete.obs")
+    ask_row_names <- as.character(readline(prompt = "Does the first variable column in your dataset contain rownames (Y or N)?  : "))
+    
+    if (ask_row_names == 'Y') {
+      
+    rownames(data_csv) <- file1[,1]
+    
+    }
+    
+    data_csv2 <- t(data_csv)
+    
+    Cor_r_Test_k <- cor(data_csv2, method = "kendall", use = "complete.obs")
+    Cor_r_Test_p <- cor(data_csv2, method = "pearson", use = "complete.obs")
+    Cor_r_Test_s <- cor(data_csv2, method = "spearman", use = "complete.obs")
     
     write.csv(as.matrix(Cor_r_Test_k), file = "Correlation_Row_Kendall.csv", row.names = TRUE)  
     write.csv(as.matrix(Cor_r_Test_p), file = "Correlation_Row_Pearson.csv", row.names = TRUE)

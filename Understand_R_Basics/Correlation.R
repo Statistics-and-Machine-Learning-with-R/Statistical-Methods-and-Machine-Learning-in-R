@@ -24,6 +24,7 @@ NOTE: First Column is treated as 1 in the Selection of Data:
     b- Type of separator in your csv file
     c- Choose correlation to be calculated between rows(variables) or columns(instances)  
     d- range of columns for numeric data
+    e- whether the first column of your dataset contains the row names
     
 3 - After the normalized values are calculated you can view the resulting matrices from the environment window (right) &
     they will be exported to your present working directory (location of this RScript) as csv files

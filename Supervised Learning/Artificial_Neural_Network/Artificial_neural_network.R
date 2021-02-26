@@ -1,20 +1,20 @@
 "
+NOTE: Please make sure your data is scaled before using this script, or you can use min-max
+scaling implemented in the script
 NOTE: First Column is treated as 1 in the Selection of Data:
-
 1- Please select the dataset provided with the name 'German_state_results_New') or any numeric data available.
-
-                   Column(Instance) 1       Column(Instance) 2     . . . .    Column(Instance) n
+                   Column(Variable) 1       Column(Variable) 2     . . . .    Column(Classification) n
       
-      Row(Variable) 1      (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) 1      (Value)                  (Value)           . . . .         (Value)
       
-      Row(Variable) 2      (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) 2      (Value)                  (Value)           . . . .         (Value)
       
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       .                       .                        .                                 .
       
- Row(Classification) n     (Value)                  (Value)           . . . .         (Value)
+      Row(Instance) n       (Value)                  (Value)           . . . .         (Value)
       
                                         
 2- To run the code, select the whole code and run as source (top right in this window) & enter parameters
@@ -24,6 +24,7 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    c- Assign the Classification column
    d- Select the size of Training set
    e- Select the type of Activation function you want
+   f- Select the scaling option if your data is not scaled
    
 3- After providing all the parameters, the code will compute following:
    * Computation and Visulaization of Neural Network
@@ -64,23 +65,7 @@ fname <- file.choose()     #choose German_State_Results_New.csv
 #type of separator used in input data
 ask_sep <- as.character(readline(prompt = "ENTER the SEPARATOR for file(',' or ';') : "))
 
-matrix1<- read.csv(fname, sep= ask_sep, row.names = 1)
-
-#Make data in normal form by taking Transpose
-df_t <- as.data.frame(t(matrix1))
-
-
-#Convert the data type back to numeric
-for (newa in 1:ncol(df_t)){
-  chk <- as.numeric(df_t[1,newa])
-  if (!is.na(chk)){  
-    
-    df_t[ , newa] <- apply(df_t[ , newa, drop= F], 2, function(x) as.numeric(as.character(x)))
-  }
-  
-}
-#matrix to be used
-matrix <- df_t
+matrix<- read.csv(fname, sep= ask_sep)
 
 #dummify the data
 dmy <- dummyVars(" ~ .", data = matrix, sep = NULL)
@@ -95,18 +80,22 @@ View(matrix)
 output_col <- as.integer(readline(prompt = "Enter the Column number of Classification Column: "))
 
 #extract Size of Training set
-training_size <- as.integer(readline(prompt = "Enter a Percentage of training dataset (e.g. 75): "))
+training_size <- as.integer(readline(prompt = "Enter a Percentage of training dataset: "))
 
 #taking user's input for activation function
 actfct <- as.character(readline(prompt = "Enter either of the activation functions you like to use. 'tanh' or 'logistic': "))
 
+#taking user's input for scaling function
+ask_scaling <- as.character(readline(prompt = "Enter yes if you would like to scale your data (min-max scaling is used): "))
 
-#normalizing our data
-normalize <- function(x) {
-  return ((x - min(x)) / (max(x) - min(x)))
+if (ask_scaling == 'yes'){
+   #scaling our data
+   scaling <- function(x) {
+   return ((x - min(x)) / (max(x) - min(x)))
+   }
+   matrix <- as.data.frame(lapply(matrix, scaling))
+   
 }
-
-nor_matrix <- as.data.frame(lapply(matrix, normalize))
 
 cat("\f")       #Clear old outputs
 
@@ -115,15 +104,15 @@ cat("\f")       #Clear old outputs
 "Train-Test Data Split"
 #------------------------------------------------
 
-training_size <- training_size/100   #extracting Percentage
-n = nrow(nor_matrix)
+training_size <- training_size/100   #extracting the Percentage
+n = nrow(matrix)
 
 smp_size <- floor(training_size * n) #training_size asked from the user
 index<- sample(seq_len(n),size = smp_size)
 
 #Breaking into Training and Testing Sets:
-TrainingSet <- nor_matrix[index,]
-TestingSet <- nor_matrix[-index,]
+TrainingSet <- matrix[index,]
+TestingSet  <- matrix[-index,]
 
 
 #------------------------------------------------
@@ -161,24 +150,27 @@ plot(nn)
 "Predict the Output"
 #------------------------------------------------
 
+#taking the classification column which we asked the user initially
+classification_col <- TestingSet[,output_col]
+
+#taking the rest of columns other than the classification column
+rest_col <- TestingSet[,-output_col]
+
 #Predicting Output
-nn.results <- predict(nn, TestingSet)
+nn.results<- predict(nn, rest_col)
 
 #scaling the result back
-rounded_nn<-sapply(nn.results,round,digits=0)
+nn.results<-sapply(nn.results,round,digits=0)
 
-#taking the classification column which we asked the user initially
-classification_col <- TestingSet[,names(TestingSet) %in% classification]
-
-res <- data.frame(rounded_nn, 
+res <- data.frame(nn.results, 
                   classification_col)
 
 cat("\f")       #Clear old outputs
 print(res)
 
 #making the confusion matrix
-Conf_Matrix <- confusionMatrix(table(res$rounded_nn, res$classification_col))
+Conf_Matrix <- confusionMatrix(table(nn.results, res$classification_col))
 print(Conf_Matrix)
 
-options(warn = -1)
+
 print(paste("FINISHED"), quote = FALSE)

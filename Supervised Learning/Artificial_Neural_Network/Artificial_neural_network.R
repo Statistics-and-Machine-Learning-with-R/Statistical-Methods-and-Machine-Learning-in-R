@@ -22,12 +22,12 @@ NOTE: First Column is treated as 1 in the Selection of Data:
    a- Select Dataset to work on (after screen pops out)
    b- Select Separator 
    c- Assign the Classification column
-   d- Select the size of Training set
+   d- Select the size of the Training set
    e- Select the type of Activation function you want
    f- Select the scaling option if your data is not scaled
    
-3- After providing all the parameters, the code will compute following:
-   * Computation and Visulaization of Neural Network
+3- After providing all the parameters, the code will compute the following:
+   * Computation and Visualization of Neural Network
    * Comparison of predicted output and corresponding actual test data
    * Confusion Matrix to check false positives etc.
 "
@@ -91,7 +91,7 @@ ask_scaling <- as.character(readline(prompt = "Enter yes if you would like to sc
 if (ask_scaling == 'yes'){
    #scaling our data
    scaling <- function(x) {
-   return ((x - min(x)) / (max(x) - min(x)))
+      return ((x - min(x)) / (max(x) - min(x)))
    }
    matrix <- as.data.frame(lapply(matrix, scaling))
    
@@ -162,10 +162,10 @@ nn.results<- predict(nn, rest_col)
 #scaling the result back
 nn.results<-sapply(nn.results,round,digits=0)
 
-res <- data.frame(nn.results, 
-                  classification_col)
+res <- data.frame(nn.results, classification_col)
 
 cat("\f")       #Clear old outputs
+
 print(res)
 
 #making the confusion matrix

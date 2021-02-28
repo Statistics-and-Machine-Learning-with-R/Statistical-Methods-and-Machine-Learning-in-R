@@ -21,14 +21,22 @@ NOTE: First Column is treated as 1 in the Selection of Data:
     In this case select:
     
     a- the dataset to work with
-    b- Type of separator in your csv file
-    c- Choose correlation to be calculated between rows(variables) or columns(instances)  
+    b- type of separator in your csv file
+    c- choose correlation to be calculated between rows(variables) or columns(instances)  
     d- range of columns for numeric data
-    e- whether the first column of your dataset contains the row names
+    e- significance value for correlation - the minimum value for correlation you would like to assign (e.g. 0.05)
+    f- For row wise calculation of correlation - whether the first column of your dataset contains the row names
     
 3 - After the normalized values are calculated you can view the resulting matrices from the environment window (right) &
     they will be exported to your present working directory (location of this RScript) as csv files
-             Method can be kendall, pearson or spearman
+    
+             Methods are kendall, pearson or spearman
+ 
+             1: Pearson Correlation (Calculates correlation, but requires linear correlation)
+             2: Spearman Correlation (Correlation using ranks, do not require a linear correlation)
+             3: Kendalls Tau Correlation (Correlation using ranks, do not require a linear correlation)--> Results of Kendallas Tau and Spearman are
+                quite similar. But Kendalls Tau: usually smaller values than Spearmans rho correlation. Calculations based on concordant and discordant 
+                pairs. Insensitive to error. P values are more accurate with smaller sample sizes.
              
              For column wise
              * Cor_c_Test_k contains the kendall correlation values (exported as Correlation_Col_Kendall.csv)
@@ -69,6 +77,9 @@ start_num <- as.integer(readline(prompt = "Enter value for START of range of num
 cat("\f")       # Clear old outputs
 end_num <- as.integer(readline(prompt = "Enter value for END of range of numerical variable: "))
 
+#ask user for significant value of correlation :
+sig_p <- as.numeric(readline(prompt = "significance value for correlation - the minimum value for correlation you would like to assign (e.g. 0.05) : "))
+
 #Sub space the numeric data frame:
 data_csv <- file1[,start_num : end_num] #all cont. variables
 cat("\f")       # Clear old outputs
@@ -86,6 +97,14 @@ if (ask_type == 'c'){
     Cor_c_Test_k <- cor(data_csv, method = "kendall", use = "complete.obs")
     Cor_c_Test_p <- cor(data_csv, method = "pearson", use = "complete.obs")
     Cor_c_Test_s <- cor(data_csv, method = "spearman", use = "complete.obs")
+    
+    Cor_c_Test_k <- as.data.frame(Cor_c_Test_k)
+    Cor_c_Test_p <- as.data.frame(Cor_c_Test_p)
+    Cor_c_Test_s <- as.data.frame(Cor_c_Test_s)
+    
+    Cor_c_Test_k <- replace(Cor_c_Test_k, Cor_c_Test_k < sig_p, "No_correlation")
+    Cor_c_Test_p <- replace(Cor_c_Test_p, Cor_c_Test_p < sig_p, "No_correlation")
+    Cor_c_Test_s <- replace(Cor_c_Test_s, Cor_c_Test_s < sig_p, "No_correlation")
     
     write.csv(as.matrix(Cor_c_Test_k), file = "Correlation_Col_Kendall.csv", row.names = TRUE)  
     write.csv(as.matrix(Cor_c_Test_p), file = "Correlation_Col_Pearson.csv", row.names = TRUE)
@@ -107,6 +126,14 @@ if (ask_type == 'c'){
     Cor_r_Test_k <- cor(data_csv2, method = "kendall", use = "complete.obs")
     Cor_r_Test_p <- cor(data_csv2, method = "pearson", use = "complete.obs")
     Cor_r_Test_s <- cor(data_csv2, method = "spearman", use = "complete.obs")
+    
+    Cor_r_Test_k <- as.data.frame(Cor_r_Test_k)
+    Cor_r_Test_p <- as.data.frame(Cor_r_Test_p)
+    Cor_r_Test_s <- as.data.frame(Cor_r_Test_s)
+    
+    Cor_r_Test_k <- replace(Cor_r_Test_k, Cor_r_Test_k < sig_p, "No_correlation")
+    Cor_r_Test_p <- replace(Cor_r_Test_p, Cor_r_Test_p < sig_p, "No_correlation")
+    Cor_r_Test_s <- replace(Cor_r_Test_s, Cor_r_Test_s < sig_p, "No_correlation")
     
     write.csv(as.matrix(Cor_r_Test_k), file = "Correlation_Row_Kendall.csv", row.names = TRUE)  
     write.csv(as.matrix(Cor_r_Test_p), file = "Correlation_Row_Pearson.csv", row.names = TRUE)

@@ -122,7 +122,7 @@ if (ask_clustering=='kmeans') {
   
   #Taking the preferred linkage method from the user:
   cat("\f")       # Clear old outputs
-  ask_clust <- readline(prompt = "SELECT the distance measure from 'single', 'complete', 'average', 'Ward.D' : ")
+  ask_clust <- readline(prompt = "SELECT the distance measure from 'single', 'complete', 'average', 'ward.D' : ")
   
   #Hierarchical clustering giving number of clusters
   h_clust <- eclust(matrix, "hclust" , hc_metric = ask_dist, hc_method = ask_clust, graph = FALSE)

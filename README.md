@@ -1,5 +1,5 @@
 # Statistical Methods & Machine Learning with R
-## [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
+## [Statistical Methods & Machine Learning in R](http://www.mpa.ovgu.de/index.php/statistical-analysis/)
 Click on above link to visit our website.
 
 This repo has been created and organized to work as a mini guide for students with none or very little background in the field of Computer Science, especially in 

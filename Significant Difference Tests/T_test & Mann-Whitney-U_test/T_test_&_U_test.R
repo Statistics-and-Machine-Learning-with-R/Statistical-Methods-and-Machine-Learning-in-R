@@ -113,7 +113,7 @@ if (ask_test == 't'){
   pValue_TTest                                     <-  (rep(0, nrow(matrix))) # + 2
   BonferoniCorrection_TTest                        <-  (rep(0, nrow(matrix))) # + 3
   BenjaminHochbergerCorrection_TTest               <-  (rep(0, nrow(matrix))) # + 4
-  EMPTY_Second                                     <-  (rep('', nrow(matrix)))# + 5
+  EMPTY_Second                                     <-  (rep("", nrow(matrix)))# + 5
   average_group_1                                  <-  (rep(0, nrow(matrix))) # + 6
   average_group_2                                  <-  (rep(0, nrow(matrix))) # + 7
   average_group_1div2                              <-  (rep(0, nrow(matrix))) # + 8
@@ -134,8 +134,8 @@ if (ask_test == 't'){
   #Shapiro test values to check normality:
   
   for (i in 1:nrow(matrix)) { 
-    newMatrix[i,ncol(matrix) + 10]   <- shapiro.test(as.numeric(matrix[,i]))$statistic # w-value
-    newMatrix[i,ncol(matrix) + 11]   <- shapiro.test(as.numeric(matrix[,i]))$p.value   #p-value
+    newMatrix[i,ncol(matrix) + 10]   <- shapiro.test(as.numeric(matrix[i,]))$statistic # w-value
+    newMatrix[i,ncol(matrix) + 11]   <- shapiro.test(as.numeric(matrix[i,]))$p.value   #p-value
     
   }
   
@@ -177,7 +177,7 @@ if (ask_test == 't'){
   pValue_UTest                                     <-  (rep(0, nrow(matrix))) # + 2
   BonferoniCorrection_UTest                        <-  (rep(0, nrow(matrix))) # + 3
   BenjaminHochbergerCorrection_UTest               <-  (rep(0, nrow(matrix))) # + 4
-  EMPTY_Second                                     <-  (rep('', nrow(matrix)))# + 5
+  EMPTY_Second                                     <-  (rep("", nrow(matrix)))# + 5
   average_group_1                                  <-  (rep(0, nrow(matrix))) # + 6
   average_group_2                                  <-  (rep(0, nrow(matrix))) # + 7
   average_group_1div2                              <-  (rep(0, nrow(matrix))) # + 8

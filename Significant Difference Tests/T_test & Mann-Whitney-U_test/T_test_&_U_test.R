@@ -198,8 +198,8 @@ if (ask_test == 't'){
   #Shapiro test values to check normality:
   
   for (i in 1:nrow(matrix)) { 
-    newMatrix[i,ncol(matrix) + 10]   <- shapiro.test(as.numeric(matrix[,i]))$statistic # w-value
-    newMatrix[i,ncol(matrix) + 11]   <- shapiro.test(as.numeric(matrix[,i]))$p.value   #p-value
+    newMatrix[i,ncol(matrix) + 10]   <- shapiro.test(as.numeric(matrix[i,]))$statistic # w-value
+    newMatrix[i,ncol(matrix) + 11]   <- shapiro.test(as.numeric(matrix[i,]))$p.value   #p-value
   }
   
   # Calculate the U-TEST for all variables: 

@@ -169,7 +169,7 @@ If you want to provide your valuable feedack for further improvements and sugges
 ***
 
 
-<a href="url"><img src="![profile](https://user-images.githubusercontent.com/57228346/140664526-8fae8535-74fc-45a4-81b3-0a1cbbd41830.jpeg)" align="right" height="300" width="250" ></a>  <br/> <br/>
+<a href="url"><img src="https://user-images.githubusercontent.com/57228346/140664526-8fae8535-74fc-45a4-81b3-0a1cbbd41830.jpeg" align="right" height="300" width="250" ></a>  <br/> <br/>
 <br/>
 <br/>
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Rahul Mondal***

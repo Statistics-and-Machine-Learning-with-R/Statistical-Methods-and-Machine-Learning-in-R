@@ -121,11 +121,6 @@ http://www.mpa.ovgu.de/index.php/statistical-analysis/
  
 ***
 
-## Feedback Form:
-If you want to provide your valuable feedack for further improvements and suggestion do visit the [Feedback Form](https://forms.gle/AfRu4zn4xzr2PqfT7)
-
-***
-
 ## About Team:
 <a href="url"><img src="https://user-images.githubusercontent.com/49519053/101390010-7d2f6100-38c2-11eb-9a7c-fe3a15aa5635.png" align="right" height="250" width="250" ></a>  <br/> <br/>
 <br/>
@@ -139,7 +134,6 @@ If you want to provide your valuable feedack for further improvements and sugges
 &nbsp;***Linked-In: https://www.linkedin.com/in/dr-ing-robert-heyer-a288a219b/***
 <br/>
 
-<br/>
 <br/>
 <br/>
 
@@ -183,7 +177,6 @@ If you want to provide your valuable feedack for further improvements and sugges
 
 <br/>
 <br/>
-<br/>
 
 ***
 
@@ -200,7 +193,6 @@ If you want to provide your valuable feedack for further improvements and sugges
 &nbsp;***Linked-In : linkedin.com/in/abdullahrizvi/***
 <br/>
 
-<br/>
 <br/>
 <br/>
 <br/>

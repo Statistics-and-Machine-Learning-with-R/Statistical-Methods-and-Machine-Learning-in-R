@@ -127,7 +127,7 @@ If you want to provide your valuable feedack for further improvements and sugges
 ***
 
 ## About Team:
-<a href="url"><img src="https://user-images.githubusercontent.com/49519053/101390010-7d2f6100-38c2-11eb-9a7c-fe3a15aa5635.png" align="right" height="300" width="250" ></a>  <br/> <br/>
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/101390010-7d2f6100-38c2-11eb-9a7c-fe3a15aa5635.png" align="right" height="250" width="250" ></a>  <br/> <br/>
 <br/>
 <br/>
 
@@ -188,7 +188,7 @@ If you want to provide your valuable feedack for further improvements and sugges
 ***
 
 
-<a href="url"><img src="https://user-images.githubusercontent.com/49519053/100612409-39ad8380-3313-11eb-9eed-fbb748b150d4.jpeg" align="right" height="300" width="250" ></a>  <br/> <br/>
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/100612409-39ad8380-3313-11eb-9eed-fbb748b150d4.jpeg" align="right" height="250" width="250" ></a>  <br/> <br/>
 <br/>
 <br/>
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Syed Abdullah Rizvi***
@@ -209,7 +209,7 @@ If you want to provide your valuable feedack for further improvements and sugges
 ***
 
 
-<a href="url"><img src="https://user-images.githubusercontent.com/49519053/98542815-c96e8d80-2291-11eb-9554-8863560e2cf7.jpeg" align="right" height="300" width="250" ></a>  <br/> <br/>
+<a href="url"><img src="https://user-images.githubusercontent.com/49519053/98542815-c96e8d80-2291-11eb-9554-8863560e2cf7.jpeg" align="right" height="250" width="250" ></a>  <br/> <br/>
 <br/>
 <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ***Ammar Ateeq***

@@ -117,9 +117,6 @@ http://www.mpa.ovgu.de/index.php/statistical-analysis/
 
 ***
  
- **Do not forget to clone the repository to you GITHUB-DEKSTOP.<br/> This way you will get the folders on your dekstop(with all the datasets and scripts).**
- 
-***
 
 ## About Team:
 <a href="url"><img src="https://user-images.githubusercontent.com/49519053/101390010-7d2f6100-38c2-11eb-9a7c-fe3a15aa5635.png" align="right" height="250" width="250" ></a>  <br/> <br/>
